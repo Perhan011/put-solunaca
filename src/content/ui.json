@@ -1,0 +1,102 @@
+{
+  "brand.name": {
+    "cir": "ПУТ СОЛУНАЦА",
+    "lat": "PUT SOLUNACA",
+    "en":  "PUT SOLUNACA"
+  },
+
+  "nav.home": {
+    "cir": "Насловна",
+    "lat": "Naslovna",
+    "en":  "Home"
+  },
+  "nav.gallery": {
+    "cir": "Галерија",
+    "lat": "Galerija",
+    "en":  "Gallery"
+  },
+  "nav.biographies": {
+    "cir": "Биографије",
+    "lat": "Biografije",
+    "en":  "Biographies"
+  },
+  "nav.contact": {
+    "cir": "Контакт",
+    "lat": "Kontakt",
+    "en":  "Contact"
+  },
+
+  "home.eyebrow": {
+    "cir": "Виртуелна презентација",
+    "lat": "Virtuelna prezentacija",
+    "en":  "Virtual presentation"
+  },
+  "home.title": {
+    "cir": "Пут Солунаца",
+    "lat": "Put Solunaca",
+    "en":  "Put Solunaca"
+  },
+  "home.tagline": {
+    "cir": "Балкански ратови · Велики рат · Солунски фронт",
+    "lat": "Balkanski ratovi · Veliki rat · Solunski front",
+    "en":  "Balkan Wars · The Great War · Salonika Front"
+  },
+  "home.intro": {
+    "cir": "Сајт је у изради. Пред тобом је тек скела — боје, фонтови и атмосфера управо су постављени. У следећим фазама долазе: насловни 3Д модел метка, биографије са пре/после ефектом скрола, и експлозија као транзиција између страница.",
+    "lat": "Sajt je u izradi. Pred tobom je tek skela — boje, fontovi i atmosfera upravo su postavljeni. U sledećim fazama dolaze: naslovni 3D model metka, biografije sa pre/posle efektom skrola, i eksplozija kao tranzicija između stranica.",
+    "en":  "Site under construction. Before you is just the scaffolding — colors, fonts and atmosphere are now in place. The phases ahead bring the 3D bullet hero, biographies with a before/after scroll reveal, and an explosion as the page transition."
+  },
+  "home.status": {
+    "cir": "— Фаза 5 / 15: глобални лејаут постављен.",
+    "lat": "— Faza 5 / 15: globalni lejaut postavljen.",
+    "en":  "— Phase 5 / 15: global layout in place."
+  },
+
+  "gallery.eyebrow": {
+    "cir": "Галерија",
+    "lat": "Galerija",
+    "en":  "Gallery"
+  },
+  "gallery.title": {
+    "cir": "Слике и видео",
+    "lat": "Slike i video",
+    "en":  "Images & Video"
+  },
+  "gallery.intro": {
+    "cir": "АИ рестаурирани кадрови са фронта — ускоро.",
+    "lat": "AI restaurirani kadrovi sa fronta — uskoro.",
+    "en":  "AI-restored frames from the front — coming soon."
+  },
+
+  "bios.eyebrow": {
+    "cir": "Значајне личности",
+    "lat": "Značajne ličnosti",
+    "en":  "Notable figures"
+  },
+  "bios.title": {
+    "cir": "Биографије",
+    "lat": "Biografije",
+    "en":  "Biographies"
+  },
+  "bios.intro": {
+    "cir": "Војвода Живојин Мишић, краљ Александар I, регент Александар, генерал Бојовић и многи други. Са пре/после ефектом скрола.",
+    "lat": "Vojvoda Živojin Mišić, kralj Aleksandar I, regent Aleksandar, general Bojović i mnogi drugi. Sa pre/posle efektom skrola.",
+    "en":  "Vojvoda Živojin Mišić, King Alexander I, Regent Alexander, General Bojović and many others — with a before/after scroll reveal."
+  },
+
+  "contact.eyebrow": {
+    "cir": "Контакт",
+    "lat": "Kontakt",
+    "en":  "Contact"
+  },
+  "contact.title": {
+    "cir": "Контакт",
+    "lat": "Kontakt",
+    "en":  "Contact"
+  },
+  "contact.intro": {
+    "cir": "Форма и подаци за контакт — ускоро.",
+    "lat": "Forma i podaci za kontakt — uskoro.",
+    "en":  "Form and contact details — coming soon."
+  }
+}

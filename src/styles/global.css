@@ -225,3 +225,220 @@ hr,
 :focus:not(:focus-visible) {
   outline: none;
 }
+
+/* ============================================
+   HEADER + NAVIGACIJA
+   ============================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background: rgba(5, 6, 9, 0.78);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-block: var(--space-4);
+}
+
+/* === BRAND (logo + tekst) === */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--fg);
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+
+.brand:hover {
+  opacity: 0.85;
+}
+
+.brand__bar {
+  display: block;
+  width: 3px;
+  height: 1.6em;
+  background: var(--accent);
+  flex-shrink: 0;
+  border-radius: var(--r-sm);
+}
+
+.brand__text {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+  letter-spacing: 0.22em;
+  color: var(--fg);
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* === NAVIGACIJA === */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.nav__link {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--fg);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  padding-block: var(--space-2);
+  position: relative;
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.nav__link:hover,
+.nav__link[data-active] {
+  color: var(--fg);
+}
+
+.nav__link:hover::after,
+.nav__link[data-active]::after {
+  transform: scaleX(1);
+}
+
+/* === LAT / ЋИР / EN SWITCH === */
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: rgba(10, 14, 20, 0.4);
+}
+
+.lang-switch__btn {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wider);
+  color: var(--fg-muted);
+  background: transparent;
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  text-transform: uppercase;
+  min-width: 3rem;
+  line-height: 1;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.lang-switch__btn + .lang-switch__btn {
+  border-inline-start: 1px solid var(--rule);
+}
+
+.lang-switch__btn:hover {
+  color: var(--fg);
+  background-color: rgba(140, 120, 83, 0.08);
+}
+
+.lang-switch__btn[aria-pressed="true"] {
+  color: var(--color-white);
+  background-color: var(--accent);
+}
+
+.lang-switch__btn[aria-pressed="true"]:hover {
+  background-color: var(--accent);
+  color: var(--color-white);
+}
+
+/* === MOBILE NAV === */
+@media (max-width: 767px) {
+  .site-header__inner {
+    gap: var(--space-3);
+    padding-block: var(--space-3);
+    flex-wrap: wrap;
+  }
+  .nav__list {
+    gap: var(--space-4);
+    font-size: var(--fs-xs);
+  }
+  .nav__link {
+    font-size: var(--fs-xs);
+  }
+  .brand__text {
+    font-size: var(--fs-sm);
+    letter-spacing: 0.16em;
+  }
+  .lang-switch__btn {
+    padding: var(--space-1) var(--space-2);
+    min-width: 2.5rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-block-start: var(--space-10);
+  padding-block: var(--space-7);
+  background: var(--bg);
+}
+
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.site-footer__meta {
+  font-size: var(--fs-xs);
+  color: var(--fg-muted);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  font-weight: var(--fw-medium);
+}
+
+/* ============================================
+   PAGE LAYOUT (zajedničko za sve stranice)
+   ============================================ */
+
+.page-main {
+  padding-block: var(--space-10) var(--space-9);
+  min-height: 60vh;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-block-end: var(--space-7);
+}
+
+.page-header h1 {
+  margin-block-start: var(--space-3);
+}
