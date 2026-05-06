@@ -1,0 +1,112 @@
+/* ============================================
+   PUT SOLUNACA — DIZAJN TOKENI
+   Sve boje, fontovi, razmaci u jednom mestu.
+   Promeniš ovde — promenilo se svuda na sajtu.
+   ============================================ */
+
+:root {
+  /* === BOJE — BREND === */
+  --color-red:    #9E1B32;  /* kraljevska crvena */
+  --color-blue:   #0C2340;  /* duboka plava */
+  --color-bronze: #8C7853;  /* stara bronza */
+  --color-white:  #FFFFFF;
+
+  /* === BOJE — NEUTRALI (ratna paleta) === */
+  --color-black:  #050609;  /* near-black, telo sajta */
+  --color-soot:   #0E1218;  /* malo svetlije, sekcije */
+  --color-ash:    #1A1F27;  /* karte, paneli */
+  --color-iron:   #2A3038;  /* borderi, podele */
+  --color-fog:    #6B7380;  /* prigušen tekst */
+  --color-bone:   #E8E2D5;  /* topla bela — kao stara hartija */
+
+  /* === SEMANTIČKE BOJE (koristi ove u stilovima) === */
+  --bg:          var(--color-black);
+  --bg-elevated: var(--color-soot);
+  --bg-card:     var(--color-ash);
+  --fg:          var(--color-bone);
+  --fg-muted:    var(--color-fog);
+  --accent:      var(--color-red);
+  --accent-2:    var(--color-bronze);
+  --rule:        var(--color-iron);
+  --ink:         var(--color-blue);
+
+  /* === TIPOGRAFIJA === */
+  --font-display: 'Fira Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-body:    'Roboto', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* Skala 1.25 — major third */
+  --fs-xs:   0.75rem;     /* 12px — caption */
+  --fs-sm:   0.875rem;    /* 14px — small */
+  --fs-base: 1rem;        /* 16px — body */
+  --fs-md:   1.25rem;     /* 20px — lead */
+  --fs-lg:   1.563rem;    /* 25px — h4 */
+  --fs-xl:   1.953rem;    /* 31px — h3 */
+  --fs-2xl:  2.441rem;    /* 39px — h2 */
+  --fs-3xl:  3.052rem;    /* 49px — h1 small */
+  --fs-4xl:  3.815rem;    /* 61px */
+  --fs-5xl:  4.768rem;    /* 76px */
+  --fs-6xl:  5.96rem;     /* 95px — display */
+
+  /* Težine */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* Linijska visina */
+  --lh-tight:  1.1;
+  --lh-snug:   1.25;
+  --lh-normal: 1.5;
+  --lh-loose:  1.75;
+
+  /* Letter-spacing */
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.05em;
+  --tracking-wider:   0.15em;  /* za male caps i tag labele */
+
+  /* === RAZMACI (8px grid) === */
+  --space-1:  0.25rem;   /* 4 */
+  --space-2:  0.5rem;    /* 8 */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.5rem;    /* 24 */
+  --space-6:  2rem;      /* 32 */
+  --space-7:  3rem;      /* 48 */
+  --space-8:  4rem;      /* 64 */
+  --space-9:  6rem;      /* 96 */
+  --space-10: 8rem;      /* 128 */
+  --space-11: 12rem;     /* 192 */
+
+  /* === LAYOUT === */
+  --container:        72rem;   /* 1152px */
+  --container-narrow: 50rem;   /*  800px */
+  --container-wide:   90rem;   /* 1440px */
+
+  /* === RADIUS === */
+  --r-sm: 2px;
+  --r-md: 4px;
+  --r-lg: 8px;
+  --r-xl: 16px;
+
+  /* === SENKE === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.75);
+
+  /* === TRANZICIJE / EASING === */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:    150ms;
+  --dur-base:    300ms;
+  --dur-slow:    600ms;
+  --dur-cinema:  1200ms;
+
+  /* === Z-INDEX SLOJEVI === */
+  --z-base:    1;
+  --z-content: 10;
+  --z-nav:     100;
+  --z-overlay: 1000;
+  --z-modal:   2000;
+  --z-toast:   3000;
+}

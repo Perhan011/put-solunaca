@@ -1,15 +1,55 @@
 <!doctype html>
-<html lang="sr">
+<html lang="sr-Latn" data-script="lat">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050609" />
+    <meta
+      name="description"
+      content="Put Solunaca — virtuelna prezentacija srpske vojske na Solunskom frontu, Balkanski ratovi i Veliki rat."
+    />
     <title>Put Solunaca</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,600;0,700;0,900;1,500;1,700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
-    <main>
-      <h1>Put Solunaca</h1>
-      <p>Sajt je u izradi…</p>
+    <main class="container" style="padding-block: var(--space-10) var(--space-9)">
+      <p class="eyebrow">Virtuelna prezentacija</p>
+      <h1 style="margin-block-start: var(--space-4)">Put Solunaca</h1>
+      <p
+        class="display"
+        style="
+          font-size: var(--fs-md);
+          color: var(--accent-2);
+          margin-block-start: var(--space-3);
+        "
+      >
+        Balkanski ratovi · Veliki rat · Solunski front
+      </p>
+
+      <hr />
+
+      <p style="max-width: 60ch; font-size: var(--fs-md)">
+        Sajt je u izradi. Pred tobom je tek skela — <em>boje, fontovi i atmosfera</em>
+        upravo su postavljeni. U sledećim fazama dolaze: navigacija sa prebacivanjem
+        ćirilice i latinice, naslovni 3D model metka, biografije sa
+        <em>pre/posle</em> efektom skroluta, i eksplozija kao tranzicija između
+        stranica.
+      </p>
+
+      <p style="margin-block-start: var(--space-5); color: var(--fg-muted)">
+        — Faza 4 / 15: dizajn sistem postavljen.
+      </p>
     </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
