@@ -1,0 +1,635 @@
+/* ============================================
+   HOME PAGE — sekcije ispod hero animacije
+   ============================================ */
+
+.home {
+  position: relative;
+  z-index: var(--z-content);
+  /* Lift sections up so the first one starts over the hero canvas, not after it. */
+  margin-top: -55vh;
+}
+
+/* First section fades in from transparent at top — hero canvas shows through during the overlap. */
+.home > .section:first-child {
+  background:
+    linear-gradient(180deg,
+      rgba(5, 6, 9, 0) 0%,
+      rgba(5, 6, 9, 0.55) 15%,
+      rgba(5, 6, 9, 0.92) 40%,
+      var(--bg) 70%
+    );
+  padding-block-start: clamp(var(--space-10), 22vw, var(--space-11));
+}
+
+/* === Univerzalna sekcija === */
+.section {
+  position: relative;
+  padding-block: clamp(var(--space-9), 12vw, var(--space-11));
+  overflow: clip;
+}
+
+.section--dark     { background: var(--bg); }
+.section--elevated { background: var(--bg-elevated); }
+
+.section--bordered::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule) 30%, var(--accent-2) 50%, var(--rule) 70%, transparent);
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-block-end: var(--space-8);
+  max-width: 60ch;
+}
+
+.section__head--centered {
+  text-align: center;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-2xl), 4.5vw, var(--fs-4xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.section__title em {
+  font-style: italic;
+  font-weight: var(--fw-medium);
+  color: var(--accent-2);
+}
+
+.section__title .accent {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.section__lead {
+  font-size: clamp(var(--fs-md), 2vw, var(--fs-lg));
+  color: var(--fg);
+  line-height: var(--lh-loose);
+  max-width: 56ch;
+}
+
+/* ============================================
+   1. MANIFEST
+   ============================================ */
+.manifest__quote {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-2xl), 5.5vw, var(--fs-5xl));
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  max-width: 22ch;
+  margin-block-end: var(--space-7);
+}
+
+.manifest__quote .crimson {
+  color: var(--accent);
+}
+
+.manifest__quote::before {
+  content: "—";
+  display: block;
+  font-size: 0.5em;
+  color: var(--accent);
+  margin-block-end: var(--space-3);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0;
+}
+
+.manifest__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 58ch;
+  font-size: var(--fs-md);
+  line-height: var(--lh-loose);
+  color: var(--fg);
+}
+
+.manifest__body strong {
+  color: var(--accent-2);
+  font-weight: var(--fw-medium);
+}
+
+.manifest__signature {
+  margin-block-start: var(--space-7);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-md);
+  color: var(--fg-muted);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ============================================
+   2. RAZMERE — Number grid
+   ============================================ */
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.number-card {
+  position: relative;
+  padding: var(--space-7) var(--space-6) var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+.number-card:hover {
+  border-color: var(--accent-2);
+  transform: translateY(-2px);
+}
+
+.number-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.number-card__value {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-3xl), 4vw, var(--fs-5xl));
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+}
+
+.number-card__unit {
+  display: inline-block;
+  font-size: 0.5em;
+  margin-inline-start: 0.25em;
+  color: var(--accent-2);
+  font-weight: var(--fw-medium);
+  vertical-align: top;
+  letter-spacing: 0;
+}
+
+.number-card__label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-base);
+  color: var(--fg);
+  line-height: var(--lh-snug);
+  margin-block-start: var(--space-2);
+}
+
+.number-card__note {
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+  line-height: var(--lh-normal);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   3. GVOZDENI PUK — Story chapters
+   ============================================ */
+.chapters {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  margin-block-start: var(--space-8);
+  border-inline-start: 1px solid var(--rule);
+  padding-inline-start: var(--space-7);
+}
+
+.chapter {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.chapter::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--space-7) - 5px);
+  top: 0.3em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg-elevated), 0 0 16px rgba(158, 27, 50, 0.6);
+}
+
+.chapter__year {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  color: var(--accent-2);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+.chapter__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: clamp(var(--fs-lg), 2.5vw, var(--fs-xl));
+  line-height: var(--lh-tight);
+  color: var(--fg);
+}
+
+.chapter__body {
+  font-size: var(--fs-base);
+  line-height: var(--lh-loose);
+  color: var(--fg);
+  max-width: 60ch;
+}
+
+.chapter__body em {
+  color: var(--accent-2);
+  font-style: normal;
+  font-weight: var(--fw-medium);
+}
+
+/* ============================================
+   4. LIČNOSTI — Portrait cards
+   ============================================ */
+.persons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: var(--space-5);
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.person-card__portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background:
+    linear-gradient(165deg, rgba(158, 27, 50, 0.25) 0%, rgba(12, 35, 64, 0.4) 50%, rgba(140, 120, 83, 0.3) 100%),
+    var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+.person-card:hover .person-card__portrait {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.person-card__initials {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-3xl), 5vw, var(--fs-5xl));
+  color: rgba(232, 226, 213, 0.18);
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.person-card__portrait::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 60%;
+  background: linear-gradient(180deg, transparent, rgba(5, 6, 9, 0.6));
+  pointer-events: none;
+}
+
+.person-card__name {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-md);
+  line-height: var(--lh-tight);
+  color: var(--fg);
+}
+
+.person-card__role {
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+  line-height: var(--lh-snug);
+}
+
+/* ============================================
+   5. EPIZODE — Battle preview cards
+   ============================================ */
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.episode-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  color: var(--fg);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+.episode-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.episode-card::after {
+  content: "→";
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  color: var(--fg-muted);
+  font-size: var(--fs-md);
+  transition: transform var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+
+.episode-card:hover::after {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.episode-card__date {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--accent-2);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+.episode-card__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-tight);
+  color: var(--fg);
+  padding-right: var(--space-6);
+}
+
+.episode-card__brief {
+  margin-block-start: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--fg);
+  line-height: var(--lh-loose);
+  opacity: 0.85;
+}
+
+/* ============================================
+   6. PRE / POSLE teaser
+   ============================================ */
+.prepost {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .prepost {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.prepost__copy h2 {
+  margin-block-end: var(--space-4);
+}
+
+.prepost__copy p {
+  font-size: var(--fs-md);
+  color: var(--fg);
+  line-height: var(--lh-loose);
+  max-width: 50ch;
+  margin-block-end: var(--space-5);
+}
+
+.prepost__demo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.prepost__half {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--space-3);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+.prepost__half--before {
+  background:
+    linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.7)),
+    radial-gradient(ellipse at 50% 35%, rgba(140, 120, 83, 0.25), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(232, 226, 213, 0.04) 0 2px, transparent 2px 8px),
+    #1A1F27;
+  color: var(--fg-muted);
+}
+
+.prepost__half--after {
+  background:
+    linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.7)),
+    radial-gradient(ellipse at 50% 35%, rgba(158, 27, 50, 0.18), transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(140, 120, 83, 0.25), transparent 60%),
+    #2A3038;
+  color: var(--fg);
+}
+
+.prepost__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(158, 27, 50, 0.6);
+  transform: translateX(-50%);
+}
+
+.prepost__divider::before,
+.prepost__divider::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.prepost__divider::before { top: 50%; }
+.prepost__divider::after  { top: 50%; transform: translate(-50%, -50%) scale(2); background: transparent; border: 1px solid var(--accent); }
+
+/* ============================================
+   7. CTA — sponzorstvo / kontakt
+   ============================================ */
+.cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding-block: var(--space-9);
+}
+
+.cta__quote {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-2xl), 4.5vw, var(--fs-4xl));
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+.cta__lead {
+  font-size: var(--fs-md);
+  color: var(--fg);
+  max-width: 52ch;
+  line-height: var(--lh-loose);
+}
+
+.cta__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-block-start: var(--space-3);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.button--accent {
+  background: var(--accent);
+  color: var(--color-white);
+  border: 1px solid var(--accent);
+}
+
+.button--accent:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--rule);
+}
+
+.button--ghost:hover {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.button__arrow {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+/* ============================================
+   Scroll reveal — incoming elementi
+   ============================================ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 800ms var(--ease-out),
+    transform 800ms var(--ease-out);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-delay="1"] { transition-delay: 80ms; }
+[data-reveal-delay="2"] { transition-delay: 160ms; }
+[data-reveal-delay="3"] { transition-delay: 240ms; }
+[data-reveal-delay="4"] { transition-delay: 320ms; }
+[data-reveal-delay="5"] { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================
+   Responsive — mobile tweaks
+   ============================================ */
+@media (max-width: 640px) {
+  .section {
+    padding-block: var(--space-8);
+  }
+  .chapters {
+    padding-inline-start: var(--space-5);
+  }
+  .chapter::before {
+    left: calc(-1 * var(--space-5) - 5px);
+  }
+  .manifest__quote {
+    font-size: clamp(var(--fs-xl), 8vw, var(--fs-3xl));
+  }
+  .number-card {
+    padding: var(--space-5);
+  }
+}

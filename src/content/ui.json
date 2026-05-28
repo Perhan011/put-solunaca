@@ -26,6 +26,63 @@
     "en":  "Contact"
   },
 
+  "hero.seg1": {
+    "cir": "1915. Аустроугарска гази Србију.",
+    "lat": "1915. Austrougarska gazi Srbiju.",
+    "en":  "1915. Austria-Hungary tramples Serbia."
+  },
+  "hero.seg2": {
+    "cir": "Војска одступа. Опстаје.",
+    "lat": "Vojska odstupa. Opstaje.",
+    "en":  "The army retreats. It survives."
+  },
+  "hero.seg3": {
+    "cir": "1916. Пробој Солунског фронта.",
+    "lat": "1916. Proboj Solunskog fronta.",
+    "en":  "1916. Breakthrough of the Salonika Front."
+  },
+  "hero.seg4": {
+    "cir": "Путања Гвозденог пука.",
+    "lat": "Putanja Gvozdenog puka.",
+    "en":  "The path of the Iron Regiment."
+  },
+  "hero.seg5": {
+    "cir": "Солун · Скопље · Ниш · Београд.",
+    "lat": "Solun · Skoplje · Niš · Beograd.",
+    "en":  "Salonika · Skopje · Niš · Belgrade."
+  },
+  "hero.seg6": {
+    "cir": "Ово је њихов пут.",
+    "lat": "Ovo je njihov put.",
+    "en":  "This is their path."
+  },
+  "hero.hint": {
+    "cir": "Скролуј",
+    "lat": "Skroluj",
+    "en":  "Scroll"
+  },
+
+  "hero.pin.solun": {
+    "cir": "Солун",
+    "lat": "Solun",
+    "en":  "Salonika"
+  },
+  "hero.pin.skoplje": {
+    "cir": "Скопље",
+    "lat": "Skoplje",
+    "en":  "Skopje"
+  },
+  "hero.pin.nis": {
+    "cir": "Ниш",
+    "lat": "Niš",
+    "en":  "Niš"
+  },
+  "hero.pin.beograd": {
+    "cir": "Београд",
+    "lat": "Beograd",
+    "en":  "Belgrade"
+  },
+
   "home.eyebrow": {
     "cir": "Виртуелна презентација",
     "lat": "Virtuelna prezentacija",

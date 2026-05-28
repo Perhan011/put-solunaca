@@ -15,7 +15,7 @@
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
+  /* Native smooth-scroll uklonjeno — kosi sa GSAP ScrollTriggerom i pin mehanikom. */
 }
 
 body {
@@ -234,10 +234,16 @@ hr,
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
-  background: rgba(5, 6, 9, 0.78);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 6, 9, 0.95) 0%,
+    rgba(5, 6, 9, 0.88) 70%,
+    rgba(5, 6, 9, 0.78) 100%
+  );
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-bottom: 1px solid var(--rule);
+  box-shadow: 0 8px 32px -16px rgba(0, 0, 0, 0.6);
 }
 
 .site-header__inner {
@@ -371,28 +377,72 @@ hr,
   color: var(--color-white);
 }
 
-/* === MOBILE NAV === */
+/* === MOBILE NAV ===
+ * 2-row compact layout:
+ *   Row 1: Brand (left) + Lang switch (right)
+ *   Row 2: Nav links — horizontally scrollable if needed
+ */
 @media (max-width: 767px) {
   .site-header__inner {
-    gap: var(--space-3);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand lang"
+      "nav   nav";
+    column-gap: var(--space-3);
+    row-gap: var(--space-2);
     padding-block: var(--space-3);
-    flex-wrap: wrap;
+    align-items: center;
   }
-  .nav__list {
-    gap: var(--space-4);
-    font-size: var(--fs-xs);
-  }
-  .nav__link {
-    font-size: var(--fs-xs);
-  }
+  .brand        { grid-area: brand; }
+  .lang-switch  { grid-area: lang; justify-self: end; }
+  .nav          { grid-area: nav; }
+
   .brand__text {
     font-size: var(--fs-sm);
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
+  }
+
+  .nav__list {
+    gap: var(--space-5);
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-block: 2px;
+  }
+  .nav__list::-webkit-scrollbar { display: none; }
+
+  .nav__link {
+    font-size: var(--fs-xs);
+    letter-spacing: 0.12em;
+    padding-block: var(--space-2);
+    white-space: nowrap;
+  }
+
+  .lang-switch__btn {
+    padding: 4px 8px;
+    min-width: 2.3rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* Very small screens — squeeze further */
+@media (max-width: 380px) {
+  .brand__text {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+  .nav__list {
+    gap: var(--space-3);
+  }
+  .nav__link {
+    font-size: 0.65rem;
   }
   .lang-switch__btn {
-    padding: var(--space-1) var(--space-2);
-    min-width: 2.5rem;
-    font-size: 0.6875rem;
+    padding: 3px 6px;
+    min-width: 2rem;
+    font-size: 0.58rem;
   }
 }
 

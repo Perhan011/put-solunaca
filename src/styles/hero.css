@@ -1,0 +1,225 @@
+/* ============================================
+   HERO SCROLL — pinned canvas + scroll storytelling
+   ============================================ */
+
+hero-scroll-canvas {
+  display: block;
+  width: 100%;
+  background: var(--bg);
+}
+
+.hero-scroll {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.hero-scroll__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Vignette — gradient od vrha/dna za čitljivost teksta i headera preko jakih frejmova */
+.hero-scroll__vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(5, 6, 9, 0.55) 0%, rgba(5, 6, 9, 0.0) 18%),
+    linear-gradient(0deg,   rgba(5, 6, 9, 0.65) 0%, rgba(5, 6, 9, 0.0) 35%),
+    radial-gradient(ellipse at center, rgba(5, 6, 9, 0.0) 55%, rgba(5, 6, 9, 0.45) 100%);
+}
+
+.hero-scroll__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-6) var(--space-6);
+}
+
+/* === City pin markers (Шот C → D) === */
+.hero-scroll__pins {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-scroll__pin {
+  position: absolute;
+  left: var(--pin-x);
+  top: var(--pin-y);
+  --pin-scale: 0.6;
+  transform: translate(-50%, -50%) scale(var(--pin-scale));
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0;
+  transition: opacity 200ms linear, transform 400ms var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.hero-scroll__pin-dot {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow:
+    0 0 0 3px rgba(158, 27, 50, 0.25),
+    0 0 24px rgba(158, 27, 50, 0.7),
+    0 2px 6px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
+}
+
+.hero-scroll__pin-dot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(158, 27, 50, 0.55);
+  animation: hero-pin-pulse 2.6s var(--ease-out) infinite;
+}
+
+@keyframes hero-pin-pulse {
+  0%   { transform: scale(0.7); opacity: 0.9; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.hero-scroll__pin-label {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(0.9rem, 1.6vw, 1.25rem);
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.95),
+    0 4px 16px rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
+  background: linear-gradient(90deg, rgba(5, 6, 9, 0.55), rgba(5, 6, 9, 0.25));
+  padding: 2px 10px 3px;
+  border-left: 2px solid var(--accent);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll__pin-dot::after {
+    animation: none;
+  }
+}
+
+/* Mobile pins — smaller text, tighter spacing */
+@media (max-width: 767px) {
+  .hero-scroll__pin {
+    gap: var(--space-1);
+  }
+  .hero-scroll__pin-dot {
+    width: 8px;
+    height: 8px;
+  }
+  .hero-scroll__pin-label {
+    font-size: 0.8rem;
+    padding: 1px 6px 2px;
+  }
+}
+
+.hero-scroll__progress {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(232, 226, 213, 0.08);
+  overflow: hidden;
+  transition: opacity 600ms var(--ease-out);
+}
+
+.hero-scroll__progress-bar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 200ms linear;
+}
+
+.hero-scroll__progress--done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-scroll__text-layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+/* Tekst segmenti uklonjeni — sadržaj sekcija (.home > .section) sada se kreće preko canvasa. */
+
+.hero-scroll__hint {
+  position: absolute;
+  inset: auto 0 calc(var(--space-6) + 12vh) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  color: var(--fg);
+  opacity: 0.65;
+  text-transform: uppercase;
+  animation: hero-hint-bounce 2.4s var(--ease-in-out) infinite;
+}
+
+.hero-scroll__hint-arrow {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@keyframes hero-hint-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.65; }
+  50%      { transform: translateY(6px); opacity: 0.95; }
+}
+
+/* Hide hint once scrolling has begun (ScrollTrigger will fade it). */
+.hero-scroll--scrolled .hero-scroll__hint {
+  opacity: 0;
+}
+
+/* Placeholder mode visual cue — subtle diagonal pattern */
+.hero-scroll[data-placeholder="true"]::after {
+  content: "PLACEHOLDER MODE";
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  z-index: 3;
+  padding: var(--space-1) var(--space-3);
+  background: rgba(158, 27, 50, 0.85);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-wider);
+  border-radius: var(--r-sm);
+  pointer-events: none;
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll__hint {
+    animation: none;
+  }
+}

@@ -10,16 +10,10 @@ const HTML_LANG = {
 };
 
 function detectDefault() {
-  const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-
-  if (lang.startsWith("sr")) {
-    if (lang.includes("latn")) return "lat";
-    return "cir";
-  }
-  if (lang.startsWith("hr") || lang.startsWith("bs") || lang.startsWith("me")) {
-    return "lat";
-  }
-  return "en";
+  // Default: srpska ćirilica za sve nove posetioce.
+  // Ovo je istorijski srpski sajt — ćirilica je primarno pismo.
+  // Korisnik može da prebaci preko LAT/ЋИР/EN dugmadi u headeru.
+  return "cir";
 }
 
 export function getCurrentScript() {

@@ -19,35 +19,316 @@
 
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/hero.css" />
+    <link rel="stylesheet" href="/src/styles/home.css" />
   </head>
   <body>
     <site-header class="site-header"></site-header>
 
-    <main class="container page-main">
-      <header class="page-header">
-        <p class="eyebrow" data-i18n="home.eyebrow">Virtuelna prezentacija</p>
-        <h1 data-i18n="home.title">Put Solunaca</h1>
-        <p
-          class="display"
-          data-i18n="home.tagline"
-          style="font-size: var(--fs-md); color: var(--accent-2); font-style: italic"
-        >
-          Balkanski ratovi · Veliki rat · Solunski front
-        </p>
-      </header>
+    <hero-scroll-canvas
+      frame-count-desktop="120"
+      frame-count-mobile="60"
+      pin-distance-vh="150"
+    ></hero-scroll-canvas>
 
-      <hr />
+    <main class="home">
 
-      <p class="lead" data-i18n="home.intro" style="max-width: 60ch">
-        Sajt je u izradi.
-      </p>
+      <!-- 1. MANIFEST -->
+      <section class="section section--dark section--bordered">
+        <div class="container container-narrow">
+          <p class="eyebrow" data-reveal data-i18n="home.manifest.eyebrow">Манифест</p>
+          <h2 class="manifest__quote" data-reveal data-reveal-delay="1" data-i18n="home.manifest.quote">
+            Овај сајт је дуг — према онима који су отишли да би ми остали.
+          </h2>
+          <div class="manifest__body">
+            <p data-reveal data-reveal-delay="2" data-i18n="home.manifest.p1">
+              Зато што се пут којим су ишли мерио не километрима — него вером. Зато што су две године касније, иста она војска коју су отписали по мочварама Албаније, ушла у ослобођени Београд.
+            </p>
+            <p data-reveal data-reveal-delay="3" data-i18n="home.manifest.p2">
+              <strong>Пут Солунаца</strong> је покушај да тај пут вратимо лицима, бројевима, картама и кадровима. Не као књига која се пише ради књиге — него као одговор онима који питају: <em>зашто бих ја то памтио?</em>
+            </p>
+            <p data-reveal data-reveal-delay="4" data-i18n="home.manifest.p3">
+              Зато што без њих не би било нас.
+            </p>
+          </div>
+          <p class="manifest__signature" data-reveal data-reveal-delay="5" data-i18n="home.manifest.sig">
+            — Аутори
+          </p>
+        </div>
+      </section>
 
-      <p
-        data-i18n="home.status"
-        style="margin-block-start: var(--space-5); color: var(--fg-muted); font-size: var(--fs-sm)"
-      >
-        — Faza 5 / 15.
-      </p>
+      <!-- 2. RAZMERE -->
+      <section class="section section--elevated section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="home.numbers.eyebrow">Размере</p>
+            <h2 class="section__title" data-i18n="home.numbers.title">
+              Шест бројева <em>који кажу све.</em>
+            </h2>
+            <p class="section__lead" data-i18n="home.numbers.lead">
+              Без хероике. Без патетике. Чисти бројеви Великог рата — онаквим какви су били.
+            </p>
+          </div>
+
+          <div class="numbers-grid">
+            <article class="number-card" data-reveal data-reveal-delay="1">
+              <p class="number-card__value">1.247.000</p>
+              <p class="number-card__label" data-i18n="home.numbers.n1.label">мобилисаних Срба</p>
+              <p class="number-card__note" data-i18n="home.numbers.n1.note">28% укупног становништва Краљевине Србије 1914.</p>
+            </article>
+
+            <article class="number-card" data-reveal data-reveal-delay="2">
+              <p class="number-card__value">369.815</p>
+              <p class="number-card__label" data-i18n="home.numbers.n2.label">погинулих војника</p>
+              <p class="number-card__note" data-i18n="home.numbers.n2.note">Не рачунајући цивилне жртве — њих је било још више.</p>
+            </article>
+
+            <article class="number-card" data-reveal data-reveal-delay="3">
+              <p class="number-card__value">600<span class="number-card__unit">км</span></p>
+              <p class="number-card__label" data-i18n="home.numbers.n3.label">путања Гвозденог пука</p>
+              <p class="number-card__note" data-i18n="home.numbers.n3.note">Од Солуна до Београда — на ногама, пред непријатељем.</p>
+            </article>
+
+            <article class="number-card" data-reveal data-reveal-delay="4">
+              <p class="number-card__value">45<span class="number-card__unit">дана</span></p>
+              <p class="number-card__label" data-i18n="home.numbers.n4.label">од пробоја до Београда</p>
+              <p class="number-card__note" data-i18n="home.numbers.n4.note">14. септембра 1918 — 1. новембра 1918.</p>
+            </article>
+
+            <article class="number-card" data-reveal data-reveal-delay="5">
+              <p class="number-card__value">2.521<span class="number-card__unit">м</span></p>
+              <p class="number-card__label" data-i18n="home.numbers.n5.label">висина Кајмакчалана</p>
+              <p class="number-card__note" data-i18n="home.numbers.n5.note">Гребен који су узели турским бајонетом и кундаком. Септембар 1916.</p>
+            </article>
+
+            <article class="number-card" data-reveal data-reveal-delay="5">
+              <p class="number-card__value">14</p>
+              <p class="number-card__label" data-i18n="home.numbers.n6.label">савезничких армија на Солунском фронту</p>
+              <p class="number-card__note" data-i18n="home.numbers.n6.note">Срби, Французи, Британци, Грци, Италијани, Руси, Канађани и други.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. GVOZDENI PUK — Story chapters -->
+      <section class="section section--dark section--bordered">
+        <div class="container container-narrow">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="home.story.eyebrow">Прича</p>
+            <h2 class="section__title" data-i18n="home.story.title">
+              Гвоздени пук.
+            </h2>
+            <p class="section__lead" data-i18n="home.story.lead">
+              Прва пешадијска бригада Прве армије. Име су добили онако како се име добија — у борби, једном за свагда.
+            </p>
+          </div>
+
+          <div class="chapters">
+            <article class="chapter" data-reveal>
+              <p class="chapter__year">Август 1914</p>
+              <h3 class="chapter__title" data-i18n="home.story.ch1.title">Цер. Прва савезничка победа Великог рата.</h3>
+              <p class="chapter__body" data-i18n="home.story.ch1.body">
+                У три дана борби на падинама Цера, Друга армија војводе <em>Степе Степановића</em> одбила је аустроугарску офанзиву. Прва савезничка победа у Великом рату — пре него што су на западу схватили да рат уопште почиње.
+              </p>
+            </article>
+
+            <article class="chapter" data-reveal>
+              <p class="chapter__year">Новембар–децембар 1914</p>
+              <h3 class="chapter__title" data-i18n="home.story.ch2.title">Колубара. Чудо команданта Мишића.</h3>
+              <p class="chapter__body" data-i18n="home.story.ch2.body">
+                Када је све деловало изгубљено и када је војска одступала кроз снег, <em>Живојин Мишић</em> је дао заповест за противнапад. Колубарска битка завршена је слом аустроугарске Балканске армије. Мишић је постао војвода.
+              </p>
+            </article>
+
+            <article class="chapter" data-reveal>
+              <p class="chapter__year">Зима 1915–1916</p>
+              <h3 class="chapter__title" data-i18n="home.story.ch3.title">Албанска голгота.</h3>
+              <p class="chapter__body" data-i18n="home.story.ch3.body">
+                Опкољени с три стране — Аустроугарска са севера, Бугарска са истока, Немачка преко Дунава — српска војска је одступила преко албанских планина. <em>240.000 људи</em> кренуло је пут јадрана. До Крфа је стигло 150.000. Остали су остали у снегу.
+              </p>
+            </article>
+
+            <article class="chapter" data-reveal>
+              <p class="chapter__year">Септембар 1916</p>
+              <h3 class="chapter__title" data-i18n="home.story.ch4.title">Кајмакчалан. Гребен на 2.521 метар.</h3>
+              <p class="chapter__body" data-i18n="home.story.ch4.body">
+                После опоравка на Крфу, реорганизована војска кренула је у борбу. Под командом <em>Петра Бојовића</em>, на највишем врху Солунског фронта, четири дана борбе прса у прса. Прва пешадијска бригада уписала се у историју — отада је Гвоздени пук.
+              </p>
+            </article>
+
+            <article class="chapter" data-reveal>
+              <p class="chapter__year">14. септембар 1918</p>
+              <h3 class="chapter__title" data-i18n="home.story.ch5.title">Пробој Солунског фронта.</h3>
+              <p class="chapter__body" data-i18n="home.story.ch5.body">
+                У зору, после 1.300 топовских удара по бугарским положајима, српска Друга армија и француски корпус кренули су у напад код Добровог поља. <em>За 24 часа</em> пробијена је одбрамбена линија коју су савезници цртали као неосвојиву.
+              </p>
+            </article>
+
+            <article class="chapter" data-reveal>
+              <p class="chapter__year">1. новембар 1918</p>
+              <h3 class="chapter__title" data-i18n="home.story.ch6.title">Београд. На капији.</h3>
+              <p class="chapter__body" data-i18n="home.story.ch6.body">
+                За 45 дана од пробоја — <em>600 километара</em>. Од Солуна, преко Скопља и Ниша. Гвоздени пук је ушао у ослобођени Београд међу првим јединицама. На капији је чекала влада у изгнанству.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. LIČNOSTI -->
+      <section class="section section--elevated section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="home.persons.eyebrow">Личности</p>
+            <h2 class="section__title" data-i18n="home.persons.title">
+              Они <em>који су ово водили.</em>
+            </h2>
+            <p class="section__lead" data-i18n="home.persons.lead">
+              Војводе и регенти. Имена која ћете чути у свакој реченици ове приче.
+            </p>
+          </div>
+
+          <div class="persons-grid">
+            <a class="person-card" href="/biografije.html" data-reveal data-reveal-delay="1">
+              <div class="person-card__portrait" aria-hidden="true">
+                <span class="person-card__initials">ЖМ</span>
+              </div>
+              <h3 class="person-card__name" data-i18n="home.persons.misic.name">Војвода Живојин Мишић</h3>
+              <p class="person-card__role" data-i18n="home.persons.misic.role">Командант Прве армије · победник Колубаре · Кајмакчалан</p>
+            </a>
+
+            <a class="person-card" href="/biografije.html" data-reveal data-reveal-delay="2">
+              <div class="person-card__portrait" aria-hidden="true">
+                <span class="person-card__initials">СС</span>
+              </div>
+              <h3 class="person-card__name" data-i18n="home.persons.stepa.name">Војвода Степа Степановић</h3>
+              <p class="person-card__role" data-i18n="home.persons.stepa.role">Командант Друге армије · херој Цера · први савезнички тријумф</p>
+            </a>
+
+            <a class="person-card" href="/biografije.html" data-reveal data-reveal-delay="3">
+              <div class="person-card__portrait" aria-hidden="true">
+                <span class="person-card__initials">ПБ</span>
+              </div>
+              <h3 class="person-card__name" data-i18n="home.persons.bojovic.name">Војвода Петар Бојовић</h3>
+              <p class="person-card__role" data-i18n="home.persons.bojovic.role">Командант Треће армије · пробој Солунског фронта</p>
+            </a>
+
+            <a class="person-card" href="/biografije.html" data-reveal data-reveal-delay="4">
+              <div class="person-card__portrait" aria-hidden="true">
+                <span class="person-card__initials">АК</span>
+              </div>
+              <h3 class="person-card__name" data-i18n="home.persons.aleksandar.name">Регент Александар Карађорђевић</h3>
+              <p class="person-card__role" data-i18n="home.persons.aleksandar.role">Врховни командант · симбол отпора · "Уједињитељ"</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. EPIZODE -->
+      <section class="section section--dark section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="home.episodes.eyebrow">Епизоде</p>
+            <h2 class="section__title" data-i18n="home.episodes.title">
+              Битке <em>које су одредиле век.</em>
+            </h2>
+            <p class="section__lead" data-i18n="home.episodes.lead">
+              Свака епизода је дубоки рон у једну битку — мапе, цитати, наређења, фотографије, сећања оних који су били тамо.
+            </p>
+          </div>
+
+          <div class="episodes-grid">
+            <a class="episode-card" href="#" data-reveal data-reveal-delay="1">
+              <p class="episode-card__date">16–19. август 1914</p>
+              <h3 class="episode-card__title" data-i18n="home.ep.cer.title">Церска битка</h3>
+              <p class="episode-card__brief" data-i18n="home.ep.cer.brief">Три дана. Прва савезничка победа Великог рата.</p>
+            </a>
+
+            <a class="episode-card" href="#" data-reveal data-reveal-delay="2">
+              <p class="episode-card__date">16. новембар – 15. децембар 1914</p>
+              <h3 class="episode-card__title" data-i18n="home.ep.kolubara.title">Колубарска битка</h3>
+              <p class="episode-card__brief" data-i18n="home.ep.kolubara.brief">Чудо команданта Мишића. Слом аустроугарске Балканске армије.</p>
+            </a>
+
+            <a class="episode-card" href="#" data-reveal data-reveal-delay="3">
+              <p class="episode-card__date">Новембар 1915 – јануар 1916</p>
+              <h3 class="episode-card__title" data-i18n="home.ep.golgota.title">Албанска голгота</h3>
+              <p class="episode-card__brief" data-i18n="home.ep.golgota.brief">Одступница преко планина у зиму. Више од 90.000 не стиже до мора.</p>
+            </a>
+
+            <a class="episode-card" href="#" data-reveal data-reveal-delay="4">
+              <p class="episode-card__date">12–30. септембар 1916</p>
+              <h3 class="episode-card__title" data-i18n="home.ep.kajmakcalan.title">Кајмакчалан</h3>
+              <p class="episode-card__brief" data-i18n="home.ep.kajmakcalan.brief">Гребен на 2.521 метар. Бајонет, кундак, четири дана.</p>
+            </a>
+
+            <a class="episode-card" href="#" data-reveal data-reveal-delay="5">
+              <p class="episode-card__date">14–24. септембар 1918</p>
+              <h3 class="episode-card__title" data-i18n="home.ep.proboj.title">Пробој Солунског фронта</h3>
+              <p class="episode-card__brief" data-i18n="home.ep.proboj.brief">1.300 топова. 24 сата. Линија која је сматрана неосвојивом — пала.</p>
+            </a>
+
+            <a class="episode-card" href="#" data-reveal data-reveal-delay="5">
+              <p class="episode-card__date">1. новембар 1918</p>
+              <h3 class="episode-card__title" data-i18n="home.ep.beograd.title">Ослобођење Београда</h3>
+              <p class="episode-card__brief" data-i18n="home.ep.beograd.brief">45 дана од пробоја. 600 километара. Гвоздени пук на капијама.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. PRE I POSLE -->
+      <section class="section section--elevated section--bordered">
+        <div class="container">
+          <div class="prepost">
+            <div class="prepost__copy" data-reveal>
+              <p class="eyebrow" data-i18n="home.prepost.eyebrow">Пре · После</p>
+              <h2 class="section__title" data-i18n="home.prepost.title">
+                Кадрови <em>враћени у живот.</em>
+              </h2>
+              <p data-i18n="home.prepost.body1">
+                Више од хиљаду црно-белих фотографија — рестаурирано вештачком интелигенцијом. Лица која су 110 година чекала да их погледате — у боји, у даху.
+              </p>
+              <p data-i18n="home.prepost.body2">
+                Скрол открива пре и после. Слика није реткост — реткост је пажња са којом је гледамо.
+              </p>
+              <a class="button button--ghost" href="/galerija.html">
+                <span data-i18n="home.prepost.cta">Отвори галерију</span>
+                <span class="button__arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="prepost__demo" data-reveal data-reveal-delay="2" aria-hidden="true">
+              <div class="prepost__half prepost__half--before">Пре</div>
+              <div class="prepost__half prepost__half--after">После</div>
+              <div class="prepost__divider"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. CTA -->
+      <section class="section section--dark">
+        <div class="container container-narrow cta">
+          <p class="eyebrow" data-reveal data-i18n="home.cta.eyebrow">Подршка</p>
+          <h2 class="cta__quote" data-reveal data-reveal-delay="1" data-i18n="home.cta.quote">
+            Спомен <em>се не пише сам.</em>
+          </h2>
+          <p class="cta__lead" data-reveal data-reveal-delay="2" data-i18n="home.cta.lead">
+            Овај сајт је покренут као дар следећој генерацији. Ако делите визију, ако имате архив, ако можете да помогнете да ова прича остане — јавите се.
+          </p>
+          <div class="cta__actions" data-reveal data-reveal-delay="3">
+            <a class="button button--accent" href="/kontakt.html">
+              <span data-i18n="home.cta.primary">Контакт</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="button button--ghost" href="/biografije.html">
+              <span data-i18n="home.cta.secondary">Прочитај даље</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <site-footer class="site-footer"></site-footer>
