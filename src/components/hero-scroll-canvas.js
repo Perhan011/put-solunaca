@@ -4,6 +4,9 @@ import { applyScriptToElement } from "../i18n.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Bump when the hero frame sequence is regenerated (busts stale caches).
+const FRAME_VERSION = "3";
+
 // Scroll-driven hero text choreography, layered over the frame sequence.
 // Progress windows are tuned to the visual content of the 120-frame cut:
 //   0.00–0.21 ров · 0.22–0.31 јуриш · 0.32–0.41 експлозија
@@ -61,6 +64,19 @@ const HERO_PINS = [
 
 const PIN_FADE_IN = 0.04;
 const PIN_FADE_OUT = 0.04;
+
+// Smooth route curve through the four city pins (same %-coordinate space):
+// solun (14,78) → skoplje (32,62) → niš (54,44) → beograd (76,26).
+// viewBox is 0–100 on both axes, stretched to the viewport (preserveAspectRatio
+// none), so these coordinates line up with the pin x%/y% positions.
+const ROUTE_PATH_D =
+  "M 14 78 C 21 73 26 68 32 62 C 40 55 47 51 54 44 C 62 37 69 32 76 26";
+
+// The route "draws" across this scroll window, then fades before Шот E.
+const ROUTE_DRAW_START = 0.42;
+const ROUTE_DRAW_END = 0.70;
+const ROUTE_FADE_START = 0.745;
+const ROUTE_FADE_END = 0.80;
 
 class HeroScrollCanvas extends HTMLElement {
   constructor() {
@@ -198,6 +214,25 @@ class HeroScrollCanvas extends HTMLElement {
         el.style.setProperty("--pin-scale", scale.toFixed(2));
       });
     }
+
+    // Route line — progressively drawn across the map, then faded before Шот E.
+    if (this.routeRevealEl && this.routeSvg) {
+      let t = (progress - ROUTE_DRAW_START) / (ROUTE_DRAW_END - ROUTE_DRAW_START);
+      t = Math.max(0, Math.min(1, t));
+      // easeInOutQuad — accelerates then settles, like a tracing pen.
+      const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+      // Reveal clip grows in x from the first pin (~14) past the last (~76).
+      this.routeRevealEl.setAttribute("width", (16 + eased * 64).toFixed(2));
+
+      let opacity = 0;
+      if (progress >= ROUTE_DRAW_START - 0.02 && progress <= ROUTE_FADE_START) {
+        opacity = Math.min(1, (progress - (ROUTE_DRAW_START - 0.02)) / 0.03);
+      } else if (progress > ROUTE_FADE_START && progress <= ROUTE_FADE_END) {
+        opacity = Math.max(0, 1 - (progress - ROUTE_FADE_START) / (ROUTE_FADE_END - ROUTE_FADE_START));
+      }
+      this.routeSvg.style.opacity = opacity.toFixed(3);
+    }
   }
 
   renderShell() {
@@ -226,6 +261,15 @@ class HeroScrollCanvas extends HTMLElement {
       <div class="hero-scroll" data-placeholder="${this.placeholderMode}">
         <canvas class="hero-scroll__canvas" aria-hidden="true"></canvas>
         <div class="hero-scroll__vignette" aria-hidden="true"></div>
+        <svg class="hero-scroll__route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <clipPath id="hero-route-clip" clipPathUnits="userSpaceOnUse">
+            <rect class="hero-scroll__route-reveal" x="-2" y="0" width="0" height="100"></rect>
+          </clipPath>
+          <g clip-path="url(#hero-route-clip)">
+            <path class="hero-scroll__route-casing" d="${ROUTE_PATH_D}" vector-effect="non-scaling-stroke"></path>
+            <path class="hero-scroll__route-path" d="${ROUTE_PATH_D}" vector-effect="non-scaling-stroke"></path>
+          </g>
+        </svg>
         <div class="hero-scroll__pins" aria-hidden="true">
           ${pinMarkup}
         </div>
@@ -253,6 +297,11 @@ class HeroScrollCanvas extends HTMLElement {
     this.pinEls = Array.from(this.querySelectorAll(".hero-scroll__pin"));
     this.hintEl = this.querySelector(".hero-scroll__hint");
 
+    // Route line — drawn by growing a clip rect across it (the path's x is
+    // monotonic left→right, so a horizontal wipe reveals it start→end).
+    this.routeSvg = this.querySelector(".hero-scroll__route");
+    this.routeRevealEl = this.querySelector(".hero-scroll__route-reveal");
+
     // Apply current locale to hero text, pins and hint
     applyScriptToElement(this);
   }
@@ -272,7 +321,10 @@ class HeroScrollCanvas extends HTMLElement {
 
   framePath(index) {
     const padded = String(index).padStart(4, "0");
-    return `${this.framesPath}/frame_${padded}.webp`;
+    // Cache-busting version — bump whenever the frame set is regenerated so
+    // returning visitors (and our own browser during QA) don't see stale
+    // cached WebP from a previous cut.
+    return `${this.framesPath}/frame_${padded}.webp?v=${FRAME_VERSION}`;
   }
 
   placeholderDataUrl(index) {

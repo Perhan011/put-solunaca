@@ -37,6 +37,44 @@ hero-scroll-canvas {
     radial-gradient(ellipse at center, rgba(5, 6, 9, 0.0) 55%, rgba(5, 6, 9, 0.45) 100%);
 }
 
+/* === Iron Regiment route — scroll-drawn line over the map (Шот C → D) === */
+.hero-scroll__route {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  opacity: 0; /* gated by scroll progress in JS */
+}
+
+/* Dark casing under the bright line, for legibility on the busy map */
+.hero-scroll__route-casing {
+  fill: none;
+  stroke: rgba(8, 8, 10, 0.6);
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-scroll__route-path {
+  fill: none;
+  stroke: #ef3b2c;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter:
+    drop-shadow(0 0 3px rgba(239, 59, 44, 1))
+    drop-shadow(0 0 8px rgba(239, 59, 44, 0.85))
+    drop-shadow(0 0 16px rgba(239, 59, 44, 0.45));
+}
+
+@media (max-width: 767px) {
+  .hero-scroll__route-path { stroke-width: 4; }
+  .hero-scroll__route-casing { stroke-width: 7; }
+}
+
 .hero-scroll__overlay {
   position: absolute;
   inset: 0;
