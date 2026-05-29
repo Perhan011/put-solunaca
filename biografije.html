@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050609" />
-    <meta name="description" content="Put Solunaca — biografije značajnih ličnosti Solunskog fronta." />
+    <meta name="description" content="Put Solunaca — ličnosti serijala: Ljubomir Kojović, Milunka Savić, vojvode Mišić, Stepa i Bojović, Flora Sandes i regent Aleksandar." />
     <title>Put Solunaca — Biografije</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,21 +16,180 @@
 
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/home.css" />
   </head>
   <body>
     <site-header class="site-header"></site-header>
 
-    <main class="container page-main">
-      <header class="page-header">
-        <p class="eyebrow" data-i18n="bios.eyebrow">Značajne ličnosti</p>
-        <h1 data-i18n="bios.title">Biografije</h1>
-      </header>
+    <main>
+      <!-- INTRO -->
+      <section class="section section--dark section--bordered">
+        <div class="container container-narrow">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="bios.eyebrow">Личности серијала</p>
+            <h1 class="section__title" data-i18n="bios.title">
+              Лица иза <em>сваког кадра.</em>
+            </h1>
+            <p class="section__lead" data-i18n="bios.lead">
+              „Пут Солунаца“ не прати војску као апстракцију, него људе са именом и презименом. Ово су судбине кроз које серијал води — од шумара из Топлице до војвода који су командовали целом армијом.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <hr />
+      <!-- LJUBA — VODIČ -->
+      <section class="section section--elevated section--bordered">
+        <div class="container">
+          <div class="guide">
+            <div class="guide__portrait" data-reveal aria-hidden="true">
+              <span class="guide__initials">ЉК</span>
+            </div>
+            <div class="guide__copy" data-reveal data-reveal-delay="1">
+              <p class="eyebrow" data-i18n="bios.ljuba.eyebrow">Водич кроз серијал</p>
+              <h2 class="section__title" data-i18n="bios.ljuba.title">Љубомир Којовић</h2>
+              <p data-i18n="bios.ljuba.p1">
+                Шумар из топличких шума који је пушку узео као резервиста, а вратио се као троструки витез Карађорђеве звезде. Није измишљен лик за потребе драме — он је историјски аксиом, симбол целог топличког народа који је опанак заменио чизмом.
+              </p>
+              <p data-i18n="bios.ljuba.p2">
+                Прешао је цео пут пука — Брегалницу, Цер, Колубару, Албанску голготу и Кајмакчалан. Кроз његове очи серијал види рат не са командног брда, него из рова. Када француски генерал Сарај у депеши каже да је он најхрабрији официр пука, он даје легитимитет сваком војнику који је стајао поред њега.
+              </p>
+              <p data-i18n="bios.ljuba.p3">
+                Погинуо је при форсирању Црне реке 1916, и сахрањен стотинама километара од куће — у македонском селу Живојино. Споменик му стоји у Коњарнику, а прави гроб далеко на југу: тачно тај раскорак серијал претвара у причу о завету и сећању.
+              </p>
+              <p class="guide__stat" data-i18n="bios.ljuba.stat">
+                Три Карађорђеве звезде · најхрабрији официр пука · водич кроз свих десет епизода
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <p class="lead" data-i18n="bios.intro" style="max-width: 60ch">
-        Vojvoda Živojin Mišić, kralj Aleksandar I, regent Aleksandar, general Bojović i mnogi drugi. Sa pre/posle efektom skrola.
-      </p>
+      <!-- SABORCI I KOMANDANTI -->
+      <section class="section section--dark section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="bios.others.eyebrow">Саборци и команданти</p>
+            <h2 class="section__title" data-i18n="bios.others.title">
+              Они којима серијал <em>даје глас.</em>
+            </h2>
+            <p class="section__lead" data-i18n="bios.others.lead">
+              Жене које су јуришале раме уз раме са мушкарцима, пуковник који је ушао у песму и војводе чија су имена постала синоними за победу.
+            </p>
+          </div>
+
+          <div class="bio-grid">
+            <article class="bio-card" data-reveal data-reveal-delay="1">
+              <div class="bio-card__head">
+                <div class="bio-card__avatar" aria-hidden="true">МС</div>
+                <div>
+                  <h3 class="bio-card__name" data-i18n="bios.milunka.name">Милунка Савић</h3>
+                  <p class="bio-card__meta" data-i18n="bios.milunka.meta">1890—1973 · наредник · Гвоздени пук</p>
+                </div>
+              </div>
+              <p class="bio-card__body" data-i18n="bios.milunka.body">
+                Најодликованија жена у историји ратовања. Под мушким именом отишла је уместо брата, а онда остала — јер је на бојишту вредела колико десеторица. Носилац Карађорђеве звезде, француског Ратног крста са златном палмом и Легије части. У серијалу је не видимо као споменик, већ као <em>саборца који крвари у истом блату</em>.
+              </p>
+            </article>
+
+            <article class="bio-card" data-reveal data-reveal-delay="2">
+              <div class="bio-card__head">
+                <div class="bio-card__avatar" aria-hidden="true">Бр</div>
+                <div>
+                  <h3 class="bio-card__name" data-i18n="bios.brka.name">Миливоје Стојановић Брка</h3>
+                  <p class="bio-card__meta" data-i18n="bios.brka.meta">†1914 · пуковник · легенда пука</p>
+                </div>
+              </div>
+              <p class="bio-card__body" data-i18n="bios.brka.body">
+                Командант чије су име и физичка појава ушли у легенду пука. Водио је своје људе кроз Цер и Колубару, а погинуо на Кременици 1914. Његова епопеја носи цео трећи део серијала — јуриш праћен звуцима <em>„Марша на Дрину“</em>.
+              </p>
+            </article>
+
+            <article class="bio-card" data-reveal data-reveal-delay="3">
+              <div class="bio-card__head">
+                <div class="bio-card__avatar" aria-hidden="true">ФС</div>
+                <div>
+                  <h3 class="bio-card__name" data-i18n="bios.flora.name">Флора Сандс</h3>
+                  <p class="bio-card__meta" data-i18n="bios.flora.meta">1876—1956 · Енглескиња · добровољац</p>
+                </div>
+              </div>
+              <p class="bio-card__body" data-i18n="bios.flora.body">
+                Енглеска племкиња која је дошла као болничарка, а остала као војник. Једина жена из Британије која се званично борила у Првом светском рату — и то у српској војсци, раме уз раме са Топличанима. Њен лик отвара врата страним тржиштима и показује колико је пут Гвозденог пука одјекнуо у свету.
+              </p>
+            </article>
+
+            <article class="bio-card" data-reveal data-reveal-delay="1">
+              <div class="bio-card__head">
+                <div class="bio-card__avatar" aria-hidden="true">ЖМ</div>
+                <div>
+                  <h3 class="bio-card__name" data-i18n="bios.misic.name">Војвода Живојин Мишић</h3>
+                  <p class="bio-card__meta" data-i18n="bios.misic.meta">1855—1921 · војвода · командант Прве армије</p>
+                </div>
+              </div>
+              <p class="bio-card__body" data-i18n="bios.misic.body">
+                Када је све деловало изгубљено и када је војска одступала кроз снег, дао је заповест за противнапад на Колубари. Битка је завршена сломом аустроугарске Балканске армије, а Мишић је постао војвода. Његово <em>„чудо“</em> серијал приказује не као генијалност појединца, него као веру у уморног војника.
+              </p>
+            </article>
+
+            <article class="bio-card" data-reveal data-reveal-delay="2">
+              <div class="bio-card__head">
+                <div class="bio-card__avatar" aria-hidden="true">СС</div>
+                <div>
+                  <h3 class="bio-card__name" data-i18n="bios.stepa.name">Војвода Степа Степановић</h3>
+                  <p class="bio-card__meta" data-i18n="bios.stepa.meta">1856—1929 · војвода · командант Друге армије</p>
+                </div>
+              </div>
+              <p class="bio-card__body" data-i18n="bios.stepa.body">
+                На падинама Цера његова Друга армија однела је прву савезничку победу Великог рата — пре него што су на западу схватили да рат уопште почиње. Чин војводе добио је на самом бојишту. Скроман до краја, остао је симбол команданта који дели судбину са својим људима.
+              </p>
+            </article>
+
+            <article class="bio-card" data-reveal data-reveal-delay="3">
+              <div class="bio-card__head">
+                <div class="bio-card__avatar" aria-hidden="true">ПБ</div>
+                <div>
+                  <h3 class="bio-card__name" data-i18n="bios.bojovic.name">Војвода Петар Бојовић</h3>
+                  <p class="bio-card__meta" data-i18n="bios.bojovic.meta">1858—1945 · војвода · командант на Кајмакчалану</p>
+                </div>
+              </div>
+              <p class="bio-card__body" data-i18n="bios.bojovic.body">
+                Под његовом командом, на 2.521 метар висине, Прва армија је турским бајонетом и кундаком узела највиши врх Солунског фронта. После четири дана борбе прса у прса, Прва пешадијска бригада уписала се у историју — <em>отада је Гвоздени пук</em>.
+              </p>
+            </article>
+
+            <article class="bio-card" data-reveal data-reveal-delay="1">
+              <div class="bio-card__head">
+                <div class="bio-card__avatar" aria-hidden="true">АК</div>
+                <div>
+                  <h3 class="bio-card__name" data-i18n="bios.aleksandar.name">Регент Александар Карађорђевић</h3>
+                  <p class="bio-card__meta" data-i18n="bios.aleksandar.meta">1888—1934 · регент · врховни командант</p>
+                </div>
+              </div>
+              <p class="bio-card__body" data-i18n="bios.aleksandar.body">
+                Врховни командант који је остао са војском и у најцрњим данима повлачења преко Албаније. Симбол отпора и каснији <em>„Уједињитељ“</em>. У серијалу је присутан као далека, али стална тачка ослонца — глас државе која ни у изгнанству није престала да постоји.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--dark">
+        <div class="container container-narrow cta">
+          <p class="eyebrow" data-reveal data-i18n="home.cta.eyebrow">Подршка</p>
+          <h2 class="cta__quote" data-reveal data-reveal-delay="1" data-i18n="home.cta.quote">
+            Спомен <em>се не пише сам.</em>
+          </h2>
+          <div class="cta__actions" data-reveal data-reveal-delay="2">
+            <a class="button button--accent" href="/kontakt.html">
+              <span data-i18n="nav.contact">Контакт</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="button button--ghost" href="/galerija.html">
+              <span data-i18n="nav.gallery">Галерија</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <site-footer class="site-footer"></site-footer>

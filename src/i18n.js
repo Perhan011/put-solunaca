@@ -28,7 +28,11 @@ export function applyScriptToElement(root) {
     const entry = ui[key];
     if (!entry) return;
     const text = entry[script] ?? entry.lat ?? entry.en;
-    if (text != null) el.textContent = text;
+    // Dictionary is trusted/static; allow inline markup (<em>, <strong>) in values.
+    if (text != null) {
+      if (text.includes("<")) el.innerHTML = text;
+      else el.textContent = text;
+    }
   });
   root.querySelectorAll("[data-i18n-aria]").forEach((el) => {
     const key = el.dataset.i18nAria;

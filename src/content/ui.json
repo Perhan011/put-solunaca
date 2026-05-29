@@ -26,40 +26,59 @@
     "en":  "Contact"
   },
 
-  "hero.seg1": {
-    "cir": "1915. Аустроугарска гази Србију.",
-    "lat": "1915. Austrougarska gazi Srbiju.",
-    "en":  "1915. Austria-Hungary tramples Serbia."
-  },
-  "hero.seg2": {
-    "cir": "Војска одступа. Опстаје.",
-    "lat": "Vojska odstupa. Opstaje.",
-    "en":  "The army retreats. It survives."
-  },
-  "hero.seg3": {
-    "cir": "1916. Пробој Солунског фронта.",
-    "lat": "1916. Proboj Solunskog fronta.",
-    "en":  "1916. Breakthrough of the Salonika Front."
-  },
-  "hero.seg4": {
-    "cir": "Путања Гвозденог пука.",
-    "lat": "Putanja Gvozdenog puka.",
-    "en":  "The path of the Iron Regiment."
-  },
-  "hero.seg5": {
-    "cir": "Солун · Скопље · Ниш · Београд.",
-    "lat": "Solun · Skoplje · Niš · Beograd.",
-    "en":  "Salonika · Skopje · Niš · Belgrade."
-  },
-  "hero.seg6": {
-    "cir": "Ово је њихов пут.",
-    "lat": "Ovo je njihov put.",
-    "en":  "This is their path."
-  },
   "hero.hint": {
     "cir": "Скролуј",
     "lat": "Skroluj",
     "en":  "Scroll"
+  },
+
+  "hero.intro.kicker": {
+    "cir": "ГВОЗДЕНИ ПУК · 1912—1920",
+    "lat": "GVOZDENI PUK · 1912—1920",
+    "en":  "THE IRON REGIMENT · 1912—1920"
+  },
+  "hero.intro.title": {
+    "cir": "ПУТ СОЛУНАЦА",
+    "lat": "PUT SOLUNACA",
+    "en":  "PUT SOLUNACA"
+  },
+  "hero.intro.sub": {
+    "cir": "Прича о војсци која се вратила.",
+    "lat": "Priča o vojsci koja se vratila.",
+    "en":  "The story of an army that came back."
+  },
+
+  "hero.charge.left": {
+    "cir": "Кад је све\nбило изгубљено —",
+    "lat": "Kad je sve\nbilo izgubljeno —",
+    "en":  "When all\nseemed lost —"
+  },
+  "hero.charge.right": {
+    "cir": "кренули су\nнапред.",
+    "lat": "krenuli su\nnapred.",
+    "en":  "they went\nforward."
+  },
+
+  "hero.blast.left": {
+    "cir": "Кроз ватру",
+    "lat": "Kroz vatru",
+    "en":  "Through fire"
+  },
+  "hero.blast.right": {
+    "cir": "и кроз пепео.",
+    "lat": "i kroz pepeo.",
+    "en":  "and through ash."
+  },
+
+  "hero.closing.kicker": {
+    "cir": "1. новембар 1918.",
+    "lat": "1. novembar 1918.",
+    "en":  "1 November 1918."
+  },
+  "hero.closing.title": {
+    "cir": "Вратили су се.",
+    "lat": "Vratili su se.",
+    "en":  "They came back."
   },
 
   "hero.pin.solun": {
@@ -83,77 +102,1270 @@
     "en":  "Belgrade"
   },
 
-  "home.eyebrow": {
-    "cir": "Виртуелна презентација",
-    "lat": "Virtuelna prezentacija",
-    "en":  "Virtual presentation"
+  "home.manifest.eyebrow": {
+    "cir": "Манифест",
+    "lat": "Manifest",
+    "en":  "Manifesto"
   },
-  "home.title": {
-    "cir": "Пут Солунаца",
-    "lat": "Put Solunaca",
-    "en":  "Put Solunaca"
+  "home.manifest.quote": {
+    "cir": "Овај серијал је дуг — према онима који су отишли да би ми остали.",
+    "lat": "Ovaj serijal je dug — prema onima koji su otišli da bi mi ostali.",
+    "en":  "This series is a debt — to those who left so that we could remain."
   },
-  "home.tagline": {
-    "cir": "Балкански ратови · Велики рат · Солунски фронт",
-    "lat": "Balkanski ratovi · Veliki rat · Solunski front",
-    "en":  "Balkan Wars · The Great War · Salonika Front"
+  "home.manifest.p1": {
+    "cir": "Зато што се пут којим су ишли мерио не километрима — него вером. Зато што су две године касније, иста она војска коју су отписали по мочварама Албаније, ушла у ослобођени Београд.",
+    "lat": "Zato što se put kojim su išli merio ne kilometrima — nego verom. Zato što su dve godine kasnije, ista ona vojska koju su otpisali po močvarama Albanije, ušla u oslobođeni Beograd.",
+    "en":  "Because the road they walked was measured not in kilometers — but in faith. Because two years later, the very army written off in the marshes of Albania marched into a liberated Belgrade."
   },
-  "home.intro": {
-    "cir": "Сајт је у изради. Пред тобом је тек скела — боје, фонтови и атмосфера управо су постављени. У следећим фазама долазе: насловни 3Д модел метка, биографије са пре/после ефектом скрола, и експлозија као транзиција између страница.",
-    "lat": "Sajt je u izradi. Pred tobom je tek skela — boje, fontovi i atmosfera upravo su postavljeni. U sledećim fazama dolaze: naslovni 3D model metka, biografije sa pre/posle efektom skrola, i eksplozija kao tranzicija između stranica.",
-    "en":  "Site under construction. Before you is just the scaffolding — colors, fonts and atmosphere are now in place. The phases ahead bring the 3D bullet hero, biographies with a before/after scroll reveal, and an explosion as the page transition."
+  "home.manifest.p2": {
+    "cir": "<strong>Пут Солунаца</strong> је документарно-играни серијал који тај пут враћа лицима, бројевима, картама и кадровима. Не као још једна емисија о генералима који померају фигуре на мапи — него као прича о домаћинима који су опанак заменили чизмом да би одбранили кућни праг.",
+    "lat": "<strong>Put Solunaca</strong> je dokumentarno-igrani serijal koji taj put vraća licima, brojevima, kartama i kadrovima. Ne kao još jedna emisija o generalima koji pomeraju figure na mapi — nego kao priča o domaćinima koji su opanak zamenili čizmom da bi odbranili kućni prag.",
+    "en":  "<strong>Put Solunaca</strong> is a documentary-drama series that gives that road back its faces, numbers, maps and frames. Not another show about generals moving pieces on a map — but the story of farmers who traded the peasant sandal for the boot to defend their own doorstep."
   },
-  "home.status": {
-    "cir": "— Фаза 5 / 15: глобални лејаут постављен.",
-    "lat": "— Faza 5 / 15: globalni lejaut postavljen.",
-    "en":  "— Phase 5 / 15: global layout in place."
+  "home.manifest.p3": {
+    "cir": "Зато што без њих не би било нас.",
+    "lat": "Zato što bez njih ne bi bilo nas.",
+    "en":  "Because without them, there would be no us."
   },
-
-  "gallery.eyebrow": {
-    "cir": "Галерија",
-    "lat": "Galerija",
-    "en":  "Gallery"
-  },
-  "gallery.title": {
-    "cir": "Слике и видео",
-    "lat": "Slike i video",
-    "en":  "Images & Video"
-  },
-  "gallery.intro": {
-    "cir": "АИ рестаурирани кадрови са фронта — ускоро.",
-    "lat": "AI restaurirani kadrovi sa fronta — uskoro.",
-    "en":  "AI-restored frames from the front — coming soon."
+  "home.manifest.sig": {
+    "cir": "— Немања Тонић, аутор серијала",
+    "lat": "— Nemanja Tonić, autor serijala",
+    "en":  "— Nemanja Tonić, series author"
   },
 
-  "bios.eyebrow": {
-    "cir": "Значајне личности",
-    "lat": "Značajne ličnosti",
-    "en":  "Notable figures"
+  "home.about.eyebrow": {
+    "cir": "Пројекат",
+    "lat": "Projekat",
+    "en":  "The project"
   },
-  "bios.title": {
+  "home.about.title": {
+    "cir": "Први српски <em>АИ документарац.</em>",
+    "lat": "Prvi srpski <em>AI dokumentarac.</em>",
+    "en":  "Serbia's first <em>AI documentary.</em>"
+  },
+  "home.about.lead": {
+    "cir": "Документарно-играни серијал о целокупном постојању Гвозденог пука — од питоме Топлице 1912. до демобилизације 1920. Десет епизода. Пут 16.000 људи који су задивили свет.",
+    "lat": "Dokumentarno-igrani serijal o celokupnom postojanju Gvozdenog puka — od pitome Toplice 1912. do demobilizacije 1920. Deset epizoda. Put 16.000 ljudi koji su zadivili svet.",
+    "en":  "A documentary-drama series spanning the entire existence of the Iron Regiment — from the quiet of Toplica in 1912 to demobilization in 1920. Ten episodes. The path of 16,000 men who astonished the world."
+  },
+  "home.about.fact1.label": {
+    "cir": "Формат",
+    "lat": "Format",
+    "en":  "Format"
+  },
+  "home.about.fact1.value": {
+    "cir": "Документарно-играни серијал",
+    "lat": "Dokumentarno-igrani serijal",
+    "en":  "Documentary-drama series"
+  },
+  "home.about.fact2.label": {
+    "cir": "Период",
+    "lat": "Period",
+    "en":  "Period"
+  },
+  "home.about.fact3.label": {
+    "cir": "Епизоде",
+    "lat": "Epizode",
+    "en":  "Episodes"
+  },
+  "home.about.fact3.value": {
+    "cir": "Десет",
+    "lat": "Deset",
+    "en":  "Ten"
+  },
+  "home.about.fact4.label": {
+    "cir": "Водич",
+    "lat": "Vodič",
+    "en":  "Guide"
+  },
+  "home.about.fact4.value": {
+    "cir": "Љубомир Којовић",
+    "lat": "Ljubomir Kojović",
+    "en":  "Ljubomir Kojović"
+  },
+  "home.about.p1": {
+    "cir": "Не бавимо се прошлошћу само због јубилеја. У 2026, тачно 110 година од великих битака и у времену када је историјски ревизионизам на врхунцу, доносимо причу засновану на <em>војним депешама и материјалним доказима</em>.",
+    "lat": "Ne bavimo se prošlošću samo zbog jubileja. U 2026, tačno 110 godina od velikih bitaka i u vremenu kada je istorijski revizionizam na vrhuncu, donosimo priču zasnovanu na <em>vojnim depešama i materijalnim dokazima</em>.",
+    "en":  "We don't revisit the past merely for an anniversary. In 2026, exactly 110 years after the great battles and at a time when historical revisionism is at its peak, we bring a story grounded in <em>military dispatches and material evidence</em>."
+  },
+  "home.about.p2": {
+    "cir": "И доносимо је другачије. „Пут Солунаца“ спаја хладну прецизност науке — преко двадесет историчара, архивиста и чувара меморијала — са људском судбином појединца. <em>Историја са именом и презименом.</em>",
+    "lat": "I donosimo je drugačije. „Put Solunaca“ spaja hladnu preciznost nauke — preko dvadeset istoričara, arhivista i čuvara memorijala — sa ljudskom sudbinom pojedinca. <em>Istorija sa imenom i prezimenom.</em>",
+    "en":  "And we bring it differently. \"Put Solunaca\" joins the cold precision of scholarship — over twenty historians, archivists and memorial keepers — with the human fate of the individual. <em>History with a first and last name.</em>"
+  },
+
+  "home.numbers.eyebrow": {
+    "cir": "Размере",
+    "lat": "Razmere",
+    "en":  "Scale"
+  },
+  "home.numbers.title": {
+    "cir": "Шест бројева <em>који кажу све.</em>",
+    "lat": "Šest brojeva <em>koji kažu sve.</em>",
+    "en":  "Six numbers <em>that say it all.</em>"
+  },
+  "home.numbers.lead": {
+    "cir": "Без хероике. Без патетике. Чисти бројеви Великог рата — онаквим какви су били.",
+    "lat": "Bez heroike. Bez patetike. Čisti brojevi Velikog rata — onakvim kakvi su bili.",
+    "en":  "No heroics. No pathos. The plain numbers of the Great War — exactly as they were."
+  },
+  "home.numbers.n1.label": {
+    "cir": "мобилисаних Срба",
+    "lat": "mobilisanih Srba",
+    "en":  "Serbs mobilized"
+  },
+  "home.numbers.n1.note": {
+    "cir": "28% укупног становништва Краљевине Србије 1914.",
+    "lat": "28% ukupnog stanovništva Kraljevine Srbije 1914.",
+    "en":  "28% of the entire population of the Kingdom of Serbia in 1914."
+  },
+  "home.numbers.n2.label": {
+    "cir": "погинулих војника",
+    "lat": "poginulih vojnika",
+    "en":  "soldiers killed"
+  },
+  "home.numbers.n2.note": {
+    "cir": "Не рачунајући цивилне жртве — њих је било још више.",
+    "lat": "Ne računajući civilne žrtve — njih je bilo još više.",
+    "en":  "Not counting civilian losses — of which there were even more."
+  },
+  "home.numbers.n3.label": {
+    "cir": "путања Гвозденог пука",
+    "lat": "putanja Gvozdenog puka",
+    "en":  "the Iron Regiment's path"
+  },
+  "home.numbers.n3.note": {
+    "cir": "Од Солуна до Београда — на ногама, пред непријатељем.",
+    "lat": "Od Soluna do Beograda — na nogama, pred neprijateljem.",
+    "en":  "From Salonika to Belgrade — on foot, in the face of the enemy."
+  },
+  "home.numbers.n4.label": {
+    "cir": "од пробоја до Београда",
+    "lat": "od proboja do Beograda",
+    "en":  "from the breakthrough to Belgrade"
+  },
+  "home.numbers.n4.note": {
+    "cir": "14. септембра 1918 — 1. новембра 1918.",
+    "lat": "14. septembra 1918 — 1. novembra 1918.",
+    "en":  "14 September 1918 — 1 November 1918."
+  },
+  "home.numbers.n5.label": {
+    "cir": "висина Кајмакчалана",
+    "lat": "visina Kajmakčalana",
+    "en":  "height of Kajmakčalan"
+  },
+  "home.numbers.n5.note": {
+    "cir": "Гребен који су узели турским бајонетом и кундаком. Септембар 1916.",
+    "lat": "Greben koji su uzeli turskim bajonetom i kundakom. Septembar 1916.",
+    "en":  "A ridge taken with bayonet and rifle-butt. September 1916."
+  },
+  "home.numbers.n6.label": {
+    "cir": "савезничких армија на Солунском фронту",
+    "lat": "savezničkih armija na Solunskom frontu",
+    "en":  "Allied armies on the Salonika Front"
+  },
+  "home.numbers.n6.note": {
+    "cir": "Срби, Французи, Британци, Грци, Италијани, Руси, Канађани и други.",
+    "lat": "Srbi, Francuzi, Britanci, Grci, Italijani, Rusi, Kanađani i drugi.",
+    "en":  "Serbs, French, British, Greeks, Italians, Russians, Canadians and others."
+  },
+
+  "home.guide.eyebrow": {
+    "cir": "Наш водич",
+    "lat": "Naš vodič",
+    "en":  "Our guide"
+  },
+  "home.guide.title": {
+    "cir": "Љубомир Којовић. <em>Нишан, не звезда.</em>",
+    "lat": "Ljubomir Kojović. <em>Nišan, ne zvezda.</em>",
+    "en":  "Ljubomir Kojović. <em>A benchmark, not a star.</em>"
+  },
+  "home.guide.p1": {
+    "cir": "Зашто баш он — поред Милунке Савић коју цео свет слави, или пуковника Брке који је ушао у песму? Зато што Љуба није измишљен лик за потребе драме. Он је историјски аксиом.",
+    "lat": "Zašto baš on — pored Milunke Savić koju ceo svet slavi, ili pukovnika Brke koji je ušao u pesmu? Zato što Ljuba nije izmišljen lik za potrebe drame. On je istorijski aksiom.",
+    "en":  "Why him — beside Milunka Savić, whom the whole world celebrates, or Colonel Brka, who passed into song? Because Ljuba is not a character invented for drama. He is a historical axiom."
+  },
+  "home.guide.p2": {
+    "cir": "Шумар који је шуму заменио ровом — симбол целог топличког народа. Троструки витез Карађорђеве звезде, у војсци где је и један такав орден значио бесмртност. Када француски генерал Сарај каже да је он најхрабрији официр пука, он даје легитимитет сваком војнику који је стајао поред њега.",
+    "lat": "Šumar koji je šumu zamenio rovom — simbol celog topličkog naroda. Trostruki vitez Karađorđeve zvezde, u vojsci gde je i jedan takav orden značio besmrtnost. Kada francuski general Saraj kaže da je on najhrabriji oficir puka, on daje legitimitet svakom vojniku koji je stajao pored njega.",
+    "en":  "A forester who traded the forest for the trench — a symbol of the whole people of Toplica. A triple knight of the Order of the Star of Karađorđe, in an army where even one such decoration meant immortality. When the French general Sarrail calls him the bravest officer in the regiment, he lends legitimacy to every soldier who stood beside him."
+  },
+  "home.guide.p3": {
+    "cir": "Кроз Љубине очи видимо Милунку не као споменик, већ као саборца који крвари у истом блату. Његова судбина је мост између архивске хладноће и људске емоције — и између споменика у Коњарнику и правог гроба, стотинама километара далеко, у македонском селу Живојино.",
+    "lat": "Kroz Ljubine oči vidimo Milunku ne kao spomenik, već kao saborca koji krvari u istom blatu. Njegova sudbina je most između arhivske hladnoće i ljudske emocije — i između spomenika u Konjarniku i pravog groba, stotinama kilometara daleko, u makedonskom selu Živojino.",
+    "en":  "Through Ljuba's eyes we see Milunka not as a monument but as a comrade bleeding in the same mud. His fate is the bridge between archival cold and human emotion — and between the monument in Konjarnik and the real grave, hundreds of kilometers away, in the Macedonian village of Živojino."
+  },
+  "home.guide.stat": {
+    "cir": "Три Карађорђеве звезде · први на листи најхрабријих · француско признање",
+    "lat": "Tri Karađorđeve zvezde · prvi na listi najhrabrijih · francusko priznanje",
+    "en":  "Three Stars of Karađorđe · first on the list of the bravest · French recognition"
+  },
+
+  "home.story.eyebrow": {
+    "cir": "Прича",
+    "lat": "Priča",
+    "en":  "The story"
+  },
+  "home.story.title": {
+    "cir": "Гвоздени пук.",
+    "lat": "Gvozdeni puk.",
+    "en":  "The Iron Regiment."
+  },
+  "home.story.lead": {
+    "cir": "Прва пешадијска бригада Прве армије. Име су добили онако како се име добија — у борби, једном за свагда. Ово је лук којим серијал води.",
+    "lat": "Prva pešadijska brigada Prve armije. Ime su dobili onako kako se ime dobija — u borbi, jednom za svagda. Ovo je luk kojim serijal vodi.",
+    "en":  "The First Infantry Brigade of the First Army. They earned their name the only way a name is earned — in battle, once and for all. This is the arc the series follows."
+  },
+  "home.story.ch1.title": {
+    "cir": "Цер. Прва савезничка победа Великог рата.",
+    "lat": "Cer. Prva saveznička pobeda Velikog rata.",
+    "en":  "Cer. The first Allied victory of the Great War."
+  },
+  "home.story.ch1.body": {
+    "cir": "У три дана борби на падинама Цера, Друга армија војводе <em>Степе Степановића</em> одбила је аустроугарску офанзиву. Прва савезничка победа у Великом рату — пре него што су на западу схватили да рат уопште почиње.",
+    "lat": "U tri dana borbi na padinama Cera, Druga armija vojvode <em>Stepe Stepanovića</em> odbila je austrougarsku ofanzivu. Prva saveznička pobeda u Velikom ratu — pre nego što su na zapadu shvatili da rat uopšte počinje.",
+    "en":  "In three days of fighting on the slopes of Cer, the Second Army of Vojvoda <em>Stepa Stepanović</em> repelled the Austro-Hungarian offensive. The first Allied victory of the Great War — before the West had even grasped that the war had begun."
+  },
+  "home.story.ch2.title": {
+    "cir": "Колубара. Чудо команданта Мишића.",
+    "lat": "Kolubara. Čudo komandanta Mišića.",
+    "en":  "Kolubara. Commander Mišić's miracle."
+  },
+  "home.story.ch2.body": {
+    "cir": "Када је све деловало изгубљено и када је војска одступала кроз снег, <em>Живојин Мишић</em> је дао заповест за противнапад. Колубарска битка завршена је сломом аустроугарске Балканске армије. Мишић је постао војвода.",
+    "lat": "Kada je sve delovalo izgubljeno i kada je vojska odstupala kroz sneg, <em>Živojin Mišić</em> je dao zapovest za protivnapad. Kolubarska bitka završena je slomom austrougarske Balkanske armije. Mišić je postao vojvoda.",
+    "en":  "When all seemed lost and the army was retreating through the snow, <em>Živojin Mišić</em> gave the order to counterattack. The Battle of Kolubara ended with the collapse of the Austro-Hungarian Balkan Army. Mišić was made vojvoda."
+  },
+  "home.story.ch3.title": {
+    "cir": "Албанска голгота.",
+    "lat": "Albanska golgota.",
+    "en":  "The Albanian Golgotha."
+  },
+  "home.story.ch3.body": {
+    "cir": "Опкољени с три стране — Аустроугарска са севера, Бугарска са истока, Немачка преко Дунава — српска војска је одступила преко албанских планина. <em>240.000 људи</em> кренуло је пут Јадрана. До Крфа је стигло 150.000. Остали су остали у снегу.",
+    "lat": "Opkoljeni s tri strane — Austrougarska sa severa, Bugarska sa istoka, Nemačka preko Dunava — srpska vojska je odstupila preko albanskih planina. <em>240.000 ljudi</em> krenulo je put Jadrana. Do Krfa je stiglo 150.000. Ostali su ostali u snegu.",
+    "en":  "Encircled on three sides — Austria-Hungary from the north, Bulgaria from the east, Germany across the Danube — the Serbian army retreated over the Albanian mountains. <em>240,000 people</em> set out for the Adriatic. 150,000 reached Corfu. The rest remained in the snow."
+  },
+  "home.story.ch4.title": {
+    "cir": "Кајмакчалан. Гребен на 2.521 метар.",
+    "lat": "Kajmakčalan. Greben na 2.521 metar.",
+    "en":  "Kajmakčalan. A ridge at 2,521 meters."
+  },
+  "home.story.ch4.body": {
+    "cir": "После опоравка на Крфу, реорганизована војска кренула је у борбу. Под командом <em>Петра Бојовића</em>, на највишем врху Солунског фронта, четири дана борбе прса у прса. Прва пешадијска бригада уписала се у историју — отада је Гвоздени пук.",
+    "lat": "Posle oporavka na Krfu, reorganizovana vojska krenula je u borbu. Pod komandom <em>Petra Bojovića</em>, na najvišem vrhu Solunskog fronta, četiri dana borbe prsa u prsa. Prva pešadijska brigada upisala se u istoriju — otada je Gvozdeni puk.",
+    "en":  "After recovering on Corfu, the reorganized army returned to battle. Under the command of <em>Petar Bojović</em>, on the highest peak of the Salonika Front, four days of hand-to-hand fighting. The First Infantry Brigade wrote itself into history — from then on, the Iron Regiment."
+  },
+  "home.story.ch5.title": {
+    "cir": "Пробој Солунског фронта.",
+    "lat": "Proboj Solunskog fronta.",
+    "en":  "The Salonika Front breakthrough."
+  },
+  "home.story.ch5.body": {
+    "cir": "У зору, после 1.300 топовских удара по бугарским положајима, српска Друга армија и француски корпус кренули су у напад код Добровог поља. <em>За 24 часа</em> пробијена је одбрамбена линија коју су савезници цртали као неосвојиву.",
+    "lat": "U zoru, posle 1.300 topovskih udara po bugarskim položajima, srpska Druga armija i francuski korpus krenuli su u napad kod Dobrovog polja. <em>Za 24 časa</em> probijena je odbrambena linija koju su saveznici crtali kao neosvojivu.",
+    "en":  "At dawn, after 1,300 artillery strikes on the Bulgarian positions, the Serbian Second Army and a French corps attacked at Dobro Pole. <em>Within 24 hours</em> they broke a defensive line the Allies had drawn as impregnable."
+  },
+  "home.story.ch6.title": {
+    "cir": "Београд. На капији.",
+    "lat": "Beograd. Na kapiji.",
+    "en":  "Belgrade. At the gate."
+  },
+  "home.story.ch6.body": {
+    "cir": "За 45 дана од пробоја — <em>600 километара</em>. Од Солуна, преко Скопља и Ниша. Гвоздени пук је ушао у ослобођени Београд међу првим јединицама. На капији је чекала влада у изгнанству.",
+    "lat": "Za 45 dana od proboja — <em>600 kilometara</em>. Od Soluna, preko Skoplja i Niša. Gvozdeni puk je ušao u oslobođeni Beograd među prvim jedinicama. Na kapiji je čekala vlada u izgnanstvu.",
+    "en":  "Forty-five days from the breakthrough — <em>600 kilometers</em>. From Salonika, through Skopje and Niš. The Iron Regiment entered liberated Belgrade among the first units. At the gate, the government-in-exile was waiting."
+  },
+
+  "home.episodes.eyebrow": {
+    "cir": "Силабус",
+    "lat": "Silabus",
+    "en":  "Syllabus"
+  },
+  "home.episodes.title": {
+    "cir": "Десет епизода. <em>Један пут.</em>",
+    "lat": "Deset epizoda. <em>Jedan put.</em>",
+    "en":  "Ten episodes. <em>One path.</em>"
+  },
+  "home.episodes.lead": {
+    "cir": "Свака епизода има јасну структуру — документарни део (историчари, архив, терен) и играни део рекреиран вештачком интелигенцијом.",
+    "lat": "Svaka epizoda ima jasnu strukturu — dokumentarni deo (istoričari, arhiv, teren) i igrani deo rekreiran veštačkom inteligencijom.",
+    "en":  "Each episode has a clear structure — a documentary part (historians, archive, field) and a dramatized part recreated with artificial intelligence."
+  },
+  "home.ep.e1.title": {
+    "cir": "Топличка тишина",
+    "lat": "Toplička tišina",
+    "en":  "The Silence of Toplica"
+  },
+  "home.ep.e1.brief": {
+    "cir": "Топлица као гранична област. Љуба у шумама Коњарника, вест о мобилизацији, растанак под Хисаром.",
+    "lat": "Toplica kao granična oblast. Ljuba u šumama Konjarnika, vest o mobilizaciji, rastanak pod Hisarom.",
+    "en":  "Toplica as a borderland. Ljuba in the forests of Konjarnik, word of mobilization, a farewell beneath Hisar."
+  },
+  "home.ep.e2.title": {
+    "cir": "Име од челика",
+    "lat": "Ime od čelika",
+    "en":  "A Name of Steel"
+  },
+  "home.ep.e2.brief": {
+    "cir": "Брегалница. Бруталан ноћни јуриш и порекло надимка „Гвоздени“. Љубина прва Карађорђева звезда.",
+    "lat": "Bregalnica. Brutalan noćni juriš i poreklo nadimka „Gvozdeni“. Ljubina prva Karađorđeva zvezda.",
+    "en":  "Bregalnica. A brutal night assault and the origin of the name \"the Iron ones.\" Ljuba's first Star of Karađorđe."
+  },
+  "home.ep.e3.title": {
+    "cir": "Бркина епопеја",
+    "lat": "Brkina epopeja",
+    "en":  "Brka's Epic"
+  },
+  "home.ep.e3.brief": {
+    "cir": "Цер и Колубара. Стратегија Мишића и погибија пуковника Брке на Кременици, уз „Марш на Дрину“.",
+    "lat": "Cer i Kolubara. Strategija Mišića i pogibija pukovnika Brke na Kremenici, uz „Marš na Drinu“.",
+    "en":  "Cer and Kolubara. Mišić's strategy and the death of Colonel Brka at Kremenica, to the strains of \"March on the Drina.\""
+  },
+  "home.ep.e4.title": {
+    "cir": "Гвоздене жене",
+    "lat": "Gvozdene žene",
+    "en":  "Women of Iron"
+  },
+  "home.ep.e4.brief": {
+    "cir": "Милунка Савић и Флора Сандс. Како је пук прихватио жене као равноправне борце.",
+    "lat": "Milunka Savić i Flora Sands. Kako je puk prihvatio žene kao ravnopravne borce.",
+    "en":  "Milunka Savić and Flora Sandes. How the regiment accepted women as equal fighters."
+  },
+  "home.ep.e5.title": {
+    "cir": "Снежни завет",
+    "lat": "Snežni zavet",
+    "en":  "The Snow Vow"
+  },
+  "home.ep.e5.brief": {
+    "cir": "Слом Србије и Албанска голгота. Љуба носи сина Јована кроз снег; застава скривена под кошуљама.",
+    "lat": "Slom Srbije i Albanska golgota. Ljuba nosi sina Jovana kroz sneg; zastava skrivena pod košuljama.",
+    "en":  "The fall of Serbia and the Albanian Golgotha. Ljuba carries his son Jovan through the snow; the colors hidden beneath the soldiers' shirts."
+  },
+  "home.ep.e6.title": {
+    "cir": "Васкрс у Дасији",
+    "lat": "Vaskrs u Dasiji",
+    "en":  "Resurrection at Dassia"
+  },
+  "home.ep.e6.brief": {
+    "cir": "Долазак на Крф. Маслињаци, опоравак и реорганизација. Јован одлази бродом за Француску.",
+    "lat": "Dolazak na Krf. Maslinjaci, oporavak i reorganizacija. Jovan odlazi brodom za Francusku.",
+    "en":  "Arrival on Corfu. Olive groves, recovery and reorganization. Jovan sails for France."
+  },
+  "home.ep.e7.title": {
+    "cir": "Капија отаџбине",
+    "lat": "Kapija otadžbine",
+    "en":  "The Gate of the Homeland"
+  },
+  "home.ep.e7.brief": {
+    "cir": "Форсирање Црне реке. Депеша генерала Сараја, три Карађорђеве звезде — и Љубина погибија код Живојина.",
+    "lat": "Forsiranje Crne reke. Depeša generala Saraja, tri Karađorđeve zvezde — i Ljubina pogibija kod Živojina.",
+    "en":  "The crossing of the Crna River. General Sarrail's dispatch, three Stars of Karađorđe — and Ljuba's death near Živojino."
+  },
+  "home.ep.e8.title": {
+    "cir": "Солунска огледала",
+    "lat": "Solunska ogledala",
+    "en":  "Mirrors of Salonika"
+  },
+  "home.ep.e8.brief": {
+    "cir": "Српско гробље на Зејтинлику. Незнани Гвоздени и писма која никада нису стигла кући.",
+    "lat": "Srpsko groblje na Zejtinliku. Neznani Gvozdeni i pisma koja nikada nisu stigla kući.",
+    "en":  "The Serbian cemetery at Zeitenlik. The unknown Iron men and the letters that never reached home."
+  },
+  "home.ep.e9.title": {
+    "cir": "Олуја са југа",
+    "lat": "Oluja sa juga",
+    "en":  "Storm from the South"
+  },
+  "home.ep.e9.brief": {
+    "cir": "Пробој Солунског фронта. „Бржи од француске коњице.“ Ослобађање Ниша и Прокупља.",
+    "lat": "Proboj Solunskog fronta. „Brži od francuske konjice.“ Oslobađanje Niša i Prokuplja.",
+    "en":  "The Salonika Front breakthrough. \"Faster than the French cavalry.\" The liberation of Niš and Prokuplje."
+  },
+  "home.ep.e10.title": {
+    "cir": "Завет за будућност",
+    "lat": "Zavet za budućnost",
+    "en":  "A Vow for the Future"
+  },
+  "home.ep.e10.brief": {
+    "cir": "Демобилизација и гашење пука. Три звезде предате породици. Споменик у Коњарнику данас.",
+    "lat": "Demobilizacija i gašenje puka. Tri zvezde predate porodici. Spomenik u Konjarniku danas.",
+    "en":  "Demobilization and the regiment's dissolution. Three stars handed to the family. The Konjarnik monument today."
+  },
+
+  "home.persons.eyebrow": {
+    "cir": "Личности",
+    "lat": "Ličnosti",
+    "en":  "Figures"
+  },
+  "home.persons.title": {
+    "cir": "Лица <em>ове приче.</em>",
+    "lat": "Lica <em>ove priče.</em>",
+    "en":  "The faces <em>of this story.</em>"
+  },
+  "home.persons.lead": {
+    "cir": "Кроз њих пратимо пут пука — од топличких шума до зејтинличких крстова.",
+    "lat": "Kroz njih pratimo put puka — od topličkih šuma do zejtinličkih krstova.",
+    "en":  "Through them we follow the regiment's path — from the forests of Toplica to the crosses of Zeitenlik."
+  },
+  "home.persons.ljuba.name": {
+    "cir": "Љубомир Којовић",
+    "lat": "Ljubomir Kojović",
+    "en":  "Ljubomir Kojović"
+  },
+  "home.persons.ljuba.role": {
+    "cir": "Шумар · троструки витез Карађорђеве звезде · водич кроз серијал",
+    "lat": "Šumar · trostruki vitez Karađorđeve zvezde · vodič kroz serijal",
+    "en":  "Forester · triple knight of the Star of Karađorđe · guide through the series"
+  },
+  "home.persons.milunka.name": {
+    "cir": "Милунка Савић",
+    "lat": "Milunka Savić",
+    "en":  "Milunka Savić"
+  },
+  "home.persons.milunka.role": {
+    "cir": "Најодликованија жена у историји ратовања · саборац у истом рову",
+    "lat": "Najodlikovanija žena u istoriji ratovanja · saborac u istom rovu",
+    "en":  "The most decorated woman in the history of warfare · a comrade in the same trench"
+  },
+  "home.persons.brka.name": {
+    "cir": "Миливоје Стојановић Брка",
+    "lat": "Milivoje Stojanović Brka",
+    "en":  "Milivoje Stojanović Brka"
+  },
+  "home.persons.brka.role": {
+    "cir": "Пуковник, легенда пука · погинуо на Кременици 1914.",
+    "lat": "Pukovnik, legenda puka · poginuo na Kremenici 1914.",
+    "en":  "Colonel, legend of the regiment · killed at Kremenica in 1914."
+  },
+  "home.persons.flora.name": {
+    "cir": "Флора Сандс",
+    "lat": "Flora Sands",
+    "en":  "Flora Sandes"
+  },
+  "home.persons.flora.role": {
+    "cir": "Енглеска племкиња која је јуришала раме уз раме са Топличанима",
+    "lat": "Engleska plemkinja koja je jurišala rame uz rame sa Topličanima",
+    "en":  "An English gentlewoman who charged shoulder to shoulder with the men of Toplica"
+  },
+  "home.persons.misic.name": {
+    "cir": "Војвода Живојин Мишић",
+    "lat": "Vojvoda Živojin Mišić",
+    "en":  "Vojvoda Živojin Mišić"
+  },
+  "home.persons.misic.role": {
+    "cir": "Командант Прве армије · чудо Колубаре · Кајмакчалан",
+    "lat": "Komandant Prve armije · čudo Kolubare · Kajmakčalan",
+    "en":  "Commander of the First Army · the miracle of Kolubara · Kajmakčalan"
+  },
+  "home.persons.aleksandar.name": {
+    "cir": "Регент Александар Карађорђевић",
+    "lat": "Regent Aleksandar Karađorđević",
+    "en":  "Regent Alexander Karađorđević"
+  },
+  "home.persons.aleksandar.role": {
+    "cir": "Врховни командант · симбол отпора · „Уједињитељ“",
+    "lat": "Vrhovni komandant · simbol otpora · „Ujedinitelj“",
+    "en":  "Supreme commander · symbol of resistance · \"the Unifier\""
+  },
+
+  "home.ai.eyebrow": {
+    "cir": "Технологија",
+    "lat": "Tehnologija",
+    "en":  "Technology"
+  },
+  "home.ai.title": {
+    "cir": "Историја, <em>враћена у покрет.</em>",
+    "lat": "Istorija, <em>vraćena u pokret.</em>",
+    "en":  "History, <em>set back in motion.</em>"
+  },
+  "home.ai.body1": {
+    "cir": "Уместо хиљаду статиста — генеративна вештачка интелигенција. Јуриши на Брегалници, форсирање Црне реке, масовне сцене. И оживљене фотографије Љубе, Милунке и Брке.",
+    "lat": "Umesto hiljadu statista — generativna veštačka inteligencija. Juriši na Bregalnici, forsiranje Crne reke, masovne scene. I oživljene fotografije Ljube, Milunke i Brke.",
+    "en":  "Instead of a thousand extras — generative artificial intelligence. The charges at Bregalnica, the crossing of the Crna River, mass scenes. And revived photographs of Ljuba, Milunka and Brka."
+  },
+  "home.ai.body2": {
+    "cir": "АИ само за атмосферу — дим, маглу, силуете у даљини. За крупне планове: прави људи, аутентична реквизита и супервизија историчара над сваким кадром. 4К, Dolby Atmos и „Марш на Дрину“ у савременој оркестрацији.",
+    "lat": "AI samo za atmosferu — dim, maglu, siluete u daljini. Za krupne planove: pravi ljudi, autentična rekvizita i supervizija istoričara nad svakim kadrom. 4K, Dolby Atmos i „Marš na Drinu“ u savremenoj orkestraciji.",
+    "en":  "AI only for atmosphere — smoke, mist, silhouettes in the distance. For close-ups: real people, authentic props and a historian's oversight of every frame. 4K, Dolby Atmos and \"March on the Drina\" in a modern orchestration."
+  },
+  "home.ai.cta": {
+    "cir": "Погледај галерију",
+    "lat": "Pogledaj galeriju",
+    "en":  "See the gallery"
+  },
+  "home.ai.before": {
+    "cir": "Архив",
+    "lat": "Arhiv",
+    "en":  "Archive"
+  },
+  "home.ai.after": {
+    "cir": "Оживљено",
+    "lat": "Oživljeno",
+    "en":  "Revived"
+  },
+
+  "home.experts.eyebrow": {
+    "cir": "Саговорници",
+    "lat": "Sagovornici",
+    "en":  "Contributors"
+  },
+  "home.experts.title": {
+    "cir": "Преко двадесет <em>чувара истине.</em>",
+    "lat": "Preko dvadeset <em>čuvara istine.</em>",
+    "en":  "Over twenty <em>keepers of the truth.</em>"
+  },
+  "home.experts.lead": {
+    "cir": "Историчари, архивисти и чувари меморијала чија реч сваки кадар мери у милиметар.",
+    "lat": "Istoričari, arhivisti i čuvari memorijala čija reč svaki kadar meri u milimetar.",
+    "en":  "Historians, archivists and memorial keepers whose word measures every frame to the millimeter."
+  },
+  "home.experts.x1.name": {
+    "cir": "Дарко Жарић",
+    "lat": "Darko Žarić",
+    "en":  "Darko Žarić"
+  },
+  "home.experts.x1.role": {
+    "cir": "Музеј Топлице, Прокупље · чувар архива Којовића",
+    "lat": "Muzej Toplice, Prokuplje · čuvar arhiva Kojovića",
+    "en":  "Museum of Toplica, Prokuplje · keeper of the Kojović archive"
+  },
+  "home.experts.x2.name": {
+    "cir": "Др Миле Бјелајац",
+    "lat": "Dr Mile Bjelajac",
+    "en":  "Dr. Mile Bjelajac"
+  },
+  "home.experts.x2.role": {
+    "cir": "Институт за новију историју · војна елита у светским оквирима",
+    "lat": "Institut za noviju istoriju · vojna elita u svetskim okvirima",
+    "en":  "Institute for Recent History · military elite by world standards"
+  },
+  "home.experts.x3.name": {
+    "cir": "Милутин Станчић",
+    "lat": "Milutin Stančić",
+    "en":  "Milutin Stančić"
+  },
+  "home.experts.x3.role": {
+    "cir": "СПОНА, Скопље · пронашао Љубин гроб у Живојину",
+    "lat": "SPONA, Skoplje · pronašao Ljubin grob u Živojinu",
+    "en":  "SPONA, Skopje · found Ljuba's grave in Živojino"
+  },
+  "home.experts.x4.name": {
+    "cir": "Љубомир Сарамандић",
+    "lat": "Ljubomir Saramandić",
+    "en":  "Ljubomir Saramandić"
+  },
+  "home.experts.x4.role": {
+    "cir": "Српска кућа, Крф · познаје сваки метар Дасије",
+    "lat": "Srpska kuća, Krf · poznaje svaki metar Dasije",
+    "en":  "The Serbian House, Corfu · knows every meter of Dassia"
+  },
+  "home.experts.x5.name": {
+    "cir": "Крстимир Цопас",
+    "lat": "Krstimir Copas",
+    "en":  "Krstimir Copas"
+  },
+  "home.experts.x5.role": {
+    "cir": "Зејтинлик, Солун · чувар српског војничког гробља",
+    "lat": "Zejtinlik, Solun · čuvar srpskog vojničkog groblja",
+    "en":  "Zeitenlik, Salonika · keeper of the Serbian military cemetery"
+  },
+  "home.experts.x6.name": {
+    "cir": "Др Дејан Антић",
+    "lat": "Dr Dejan Antić",
+    "en":  "Dr. Dejan Antić"
+  },
+  "home.experts.x6.role": {
+    "cir": "Универзитет у Нишу · психологија Топличана",
+    "lat": "Univerzitet u Nišu · psihologija Topličana",
+    "en":  "University of Niš · the psychology of the Toplica people"
+  },
+  "home.experts.x7.name": {
+    "cir": "Др Далибор Денда",
+    "lat": "Dr Dalibor Denda",
+    "en":  "Dr. Dalibor Denda"
+  },
+  "home.experts.x7.role": {
+    "cir": "Институт за стратегијска истраживања · форсирање реке код Брода",
+    "lat": "Institut za strategijska istraživanja · forsiranje reke kod Broda",
+    "en":  "Institute for Strategic Research · the river crossing at Brod"
+  },
+  "home.experts.more.name": {
+    "cir": "…и још петнаесторо",
+    "lat": "…i još petnaestoro",
+    "en":  "…and fifteen more"
+  },
+  "home.experts.more.role": {
+    "cir": "историчара, архивиста, кустоса и потомака ратника",
+    "lat": "istoričara, arhivista, kustosa i potomaka ratnika",
+    "en":  "historians, archivists, curators and descendants of the soldiers"
+  },
+
+  "home.loc.eyebrow": {
+    "cir": "Локације",
+    "lat": "Lokacije",
+    "en":  "Locations"
+  },
+  "home.loc.title": {
+    "cir": "Тамо где се <em>све догодило.</em>",
+    "lat": "Tamo gde se <em>sve dogodilo.</em>",
+    "en":  "Where <em>it all happened.</em>"
+  },
+  "home.loc.lead": {
+    "cir": "Снимамо на оригиналним локацијама — у три државе, дуж целог пута пука.",
+    "lat": "Snimamo na originalnim lokacijama — u tri države, duž celog puta puka.",
+    "en":  "We film on the original locations — across three countries, along the regiment's entire path."
+  },
+  "home.loc.rs.title": {
+    "cir": "Србија",
+    "lat": "Srbija",
+    "en":  "Serbia"
+  },
+  "home.loc.rs.1": {
+    "cir": "Прокупље · брдо Хисар",
+    "lat": "Prokuplje · brdo Hisar",
+    "en":  "Prokuplje · Hisar hill"
+  },
+  "home.loc.rs.2": {
+    "cir": "Житорађа · село Коњарник",
+    "lat": "Žitorađa · selo Konjarnik",
+    "en":  "Žitorađa · village of Konjarnik"
+  },
+  "home.loc.rs.3": {
+    "cir": "Планина Цер · Текериш",
+    "lat": "Planina Cer · Tekeriš",
+    "en":  "Mount Cer · Tekeriš"
+  },
+  "home.loc.rs.4": {
+    "cir": "Колубара · Кременица",
+    "lat": "Kolubara · Kremenica",
+    "en":  "Kolubara · Kremenica"
+  },
+  "home.loc.rs.5": {
+    "cir": "Београд · Војни архив и Кинотека",
+    "lat": "Beograd · Vojni arhiv i Kinoteka",
+    "en":  "Belgrade · Military Archive and Film Archive"
+  },
+  "home.loc.mk.title": {
+    "cir": "Северна Македонија",
+    "lat": "Severna Makedonija",
+    "en":  "North Macedonia"
+  },
+  "home.loc.mk.1": {
+    "cir": "Штип · Кале и Брегалница",
+    "lat": "Štip · Kale i Bregalnica",
+    "en":  "Štip · Kale and the Bregalnica"
+  },
+  "home.loc.mk.2": {
+    "cir": "Битољ · град и војна болница",
+    "lat": "Bitolj · grad i vojna bolnica",
+    "en":  "Bitola · the town and the military hospital"
+  },
+  "home.loc.mk.3": {
+    "cir": "Село Брод · обала Црне реке",
+    "lat": "Selo Brod · obala Crne reke",
+    "en":  "Village of Brod · the banks of the Crna River"
+  },
+  "home.loc.mk.4": {
+    "cir": "Село Живојино · Љубин гроб",
+    "lat": "Selo Živojino · Ljubin grob",
+    "en":  "Village of Živojino · Ljuba's grave"
+  },
+  "home.loc.mk.5": {
+    "cir": "Кота 1212 · планина Ниџе",
+    "lat": "Kota 1212 · planina Nidže",
+    "en":  "Hill 1212 · Mount Nidže"
+  },
+  "home.loc.gr.title": {
+    "cir": "Грчка",
+    "lat": "Grčka",
+    "en":  "Greece"
+  },
+  "home.loc.gr.1": {
+    "cir": "Крф · Дасија и Ипсос",
+    "lat": "Krf · Dasija i Ipsos",
+    "en":  "Corfu · Dassia and Ipsos"
+  },
+  "home.loc.gr.2": {
+    "cir": "Острво Видо · Плава гробница",
+    "lat": "Ostrvo Vido · Plava grobnica",
+    "en":  "Vido Island · the Blue Tomb"
+  },
+  "home.loc.gr.3": {
+    "cir": "Солун · гробље Зејтинлик",
+    "lat": "Solun · groblje Zejtinlik",
+    "en":  "Salonika · Zeitenlik cemetery"
+  },
+  "home.loc.gr.4": {
+    "cir": "Кајмакчалан · врх Свети Илија",
+    "lat": "Kajmakčalan · vrh Sveti Ilija",
+    "en":  "Kajmakčalan · Sveti Ilija peak"
+  },
+
+  "home.reach.eyebrow": {
+    "cir": "Домет",
+    "lat": "Domet",
+    "en":  "Reach"
+  },
+  "home.reach.title": {
+    "cir": "Прича <em>која путује даље.</em>",
+    "lat": "Priča <em>koja putuje dalje.</em>",
+    "en":  "A story <em>that travels further.</em>"
+  },
+  "home.reach.lead": {
+    "cir": "Од премијере до трајног архива — серијал је замишљен да живи и после последње епизоде.",
+    "lat": "Od premijere do trajnog arhiva — serijal je zamišljen da živi i posle poslednje epizode.",
+    "en":  "From premiere to permanent archive — the series is built to live on past its final episode."
+  },
+  "home.reach.r1.title": {
+    "cir": "ТВ премијера",
+    "lat": "TV premijera",
+    "en":  "TV premiere"
+  },
+  "home.reach.r1.body": {
+    "cir": "Емитовање на телевизији која негује српску традицију и историју.",
+    "lat": "Emitovanje na televiziji koja neguje srpsku tradiciju i istoriju.",
+    "en":  "Broadcast on a television channel that cherishes Serbian tradition and history."
+  },
+  "home.reach.r2.title": {
+    "cir": "Digital-first",
+    "lat": "Digital-first",
+    "en":  "Digital-first"
+  },
+  "home.reach.r2.body": {
+    "cir": "Шездесет кратких видеа за TikTok и Instagram — сваки херој и свака занимљивост граде пажњу пре премијере.",
+    "lat": "Šezdeset kratkih videa za TikTok i Instagram — svaki heroj i svaka zanimljivost grade pažnju pre premijere.",
+    "en":  "Sixty short videos for TikTok and Instagram — each hero and each detail builds anticipation before the premiere."
+  },
+  "home.reach.r3.title": {
+    "cir": "Извозни потенцијал",
+    "lat": "Izvozni potencijal",
+    "en":  "Export potential"
+  },
+  "home.reach.r3.body": {
+    "cir": "Лик генерала Сараја и Флоре Сандс отвара врата француском и грчком тржишту.",
+    "lat": "Lik generala Saraja i Flore Sands otvara vrata francuskom i grčkom tržištu.",
+    "en":  "The figures of General Sarrail and Flora Sandes open doors to the French and Greek markets."
+  },
+  "home.reach.r4.title": {
+    "cir": "Трајни архив",
+    "lat": "Trajni arhiv",
+    "en":  "A lasting archive"
+  },
+  "home.reach.r4.body": {
+    "cir": "Двадесет и више саговорника и мапиран терен — грађа за школе и академије наредних 50 година.",
+    "lat": "Dvadeset i više sagovornika i mapiran teren — građa za škole i akademije narednih 50 godina.",
+    "en":  "Twenty-plus contributors and mapped terrain — material for schools and academies for the next 50 years."
+  },
+
+  "home.cta.eyebrow": {
+    "cir": "Подршка",
+    "lat": "Podrška",
+    "en":  "Support"
+  },
+  "home.cta.quote": {
+    "cir": "Спомен <em>се не пише сам.</em>",
+    "lat": "Spomen <em>se ne piše sam.</em>",
+    "en":  "Remembrance <em>does not write itself.</em>"
+  },
+  "home.cta.lead": {
+    "cir": "„Пут Солунаца“ тражи партнере, архиве и сведоке. Ако делите визију, ако чувате породично предање или документ — јавите се. Спомен се гради заједно.",
+    "lat": "„Put Solunaca“ traži partnere, arhive i svedoke. Ako delite viziju, ako čuvate porodično predanje ili dokument — javite se. Spomen se gradi zajedno.",
+    "en":  "\"Put Solunaca\" is looking for partners, archives and witnesses. If you share the vision, if you keep a family memory or a document — get in touch. Remembrance is built together."
+  },
+  "home.cta.primary": {
+    "cir": "Контакт",
+    "lat": "Kontakt",
+    "en":  "Contact"
+  },
+  "home.cta.secondary": {
     "cir": "Биографије",
     "lat": "Biografije",
     "en":  "Biographies"
   },
-  "bios.intro": {
-    "cir": "Војвода Живојин Мишић, краљ Александар I, регент Александар, генерал Бојовић и многи други. Са пре/после ефектом скрола.",
-    "lat": "Vojvoda Živojin Mišić, kralj Aleksandar I, regent Aleksandar, general Bojović i mnogi drugi. Sa pre/posle efektom skrola.",
-    "en":  "Vojvoda Živojin Mišić, King Alexander I, Regent Alexander, General Bojović and many others — with a before/after scroll reveal."
+
+  "bios.eyebrow": {
+    "cir": "Личности серијала",
+    "lat": "Ličnosti serijala",
+    "en":  "The series' figures"
+  },
+  "bios.title": {
+    "cir": "Лица иза <em>сваког кадра.</em>",
+    "lat": "Lica iza <em>svakog kadra.</em>",
+    "en":  "The faces behind <em>every frame.</em>"
+  },
+  "bios.lead": {
+    "cir": "„Пут Солунаца“ не прати војску као апстракцију, него људе са именом и презименом. Ово су судбине кроз које серијал води — од шумара из Топлице до војвода који су командовали целом армијом.",
+    "lat": "„Put Solunaca“ ne prati vojsku kao apstrakciju, nego ljude sa imenom i prezimenom. Ovo su sudbine kroz koje serijal vodi — od šumara iz Toplice do vojvoda koji su komandovali celom armijom.",
+    "en":  "\"Put Solunaca\" does not follow the army as an abstraction, but people with a first and last name. These are the lives the series follows — from a forester from Toplica to the field marshals who commanded entire armies."
+  },
+
+  "bios.ljuba.eyebrow": {
+    "cir": "Водич кроз серијал",
+    "lat": "Vodič kroz serijal",
+    "en":  "Guide through the series"
+  },
+  "bios.ljuba.title": {
+    "cir": "Љубомир Којовић",
+    "lat": "Ljubomir Kojović",
+    "en":  "Ljubomir Kojović"
+  },
+  "bios.ljuba.p1": {
+    "cir": "Шумар из топличких шума који је пушку узео као резервиста, а вратио се као троструки витез Карађорђеве звезде. Није измишљен лик за потребе драме — он је историјски аксиом, симбол целог топличког народа који је опанак заменио чизмом.",
+    "lat": "Šumar iz topličkih šuma koji je pušku uzeo kao rezervista, a vratio se kao trostruki vitez Karađorđeve zvezde. Nije izmišljen lik za potrebe drame — on je istorijski aksiom, simbol celog topličkog naroda koji je opanak zamenio čizmom.",
+    "en":  "A forester from the woods of Toplica who took up a rifle as a reservist and came back a triple knight of the Order of the Star of Karađorđe. He is not a character invented for drama — he is a historical axiom, a symbol of the whole people of Toplica who traded the peasant sandal for the boot."
+  },
+  "bios.ljuba.p2": {
+    "cir": "Прешао је цео пут пука — Брегалницу, Цер, Колубару, Албанску голготу и Кајмакчалан. Кроз његове очи серијал види рат не са командног брда, него из рова. Када француски генерал Сарај у депеши каже да је он најхрабрији официр пука, он даје легитимитет сваком војнику који је стајао поред њега.",
+    "lat": "Prešao je ceo put puka — Bregalnicu, Cer, Kolubaru, Albansku golgotu i Kajmakčalan. Kroz njegove oči serijal vidi rat ne sa komandnog brda, nego iz rova. Kada francuski general Saraj u depeši kaže da je on najhrabriji oficir puka, on daje legitimitet svakom vojniku koji je stajao pored njega.",
+    "en":  "He walked the regiment's entire path — Bregalnica, Cer, Kolubara, the Albanian Golgotha and Kajmakčalan. Through his eyes the series sees the war not from the command hill but from the trench. When the French general Sarrail writes in a dispatch that he is the bravest officer in the regiment, he lends legitimacy to every soldier who stood beside him."
+  },
+  "bios.ljuba.p3": {
+    "cir": "Погинуо је при форсирању Црне реке 1916, и сахрањен стотинама километара од куће — у македонском селу Живојино. Споменик му стоји у Коњарнику, а прави гроб далеко на југу: тачно тај раскорак серијал претвара у причу о завету и сећању.",
+    "lat": "Poginuo je pri forsiranju Crne reke 1916, i sahranjen stotinama kilometara od kuće — u makedonskom selu Živojino. Spomenik mu stoji u Konjarniku, a pravi grob daleko na jugu: tačno taj raskorak serijal pretvara u priču o zavetu i sećanju.",
+    "en":  "He was killed crossing the Crna River in 1916, and buried hundreds of kilometers from home — in the Macedonian village of Živojino. His monument stands in Konjarnik, while his real grave lies far to the south: it is exactly that gap the series turns into a story of vow and remembrance."
+  },
+  "bios.ljuba.stat": {
+    "cir": "Три Карађорђеве звезде · најхрабрији официр пука · водич кроз свих десет епизода",
+    "lat": "Tri Karađorđeve zvezde · najhrabriji oficir puka · vodič kroz svih deset epizoda",
+    "en":  "Three Stars of Karađorđe · the regiment's bravest officer · guide through all ten episodes"
+  },
+
+  "bios.others.eyebrow": {
+    "cir": "Саборци и команданти",
+    "lat": "Saborci i komandanti",
+    "en":  "Comrades and commanders"
+  },
+  "bios.others.title": {
+    "cir": "Они којима серијал <em>даје глас.</em>",
+    "lat": "Oni kojima serijal <em>daje glas.</em>",
+    "en":  "Those the series <em>gives a voice.</em>"
+  },
+  "bios.others.lead": {
+    "cir": "Жене које су јуришале раме уз раме са мушкарцима, пуковник који је ушао у песму и војводе чија су имена постала синоними за победу.",
+    "lat": "Žene koje su jurišale rame uz rame sa muškarcima, pukovnik koji je ušao u pesmu i vojvode čija su imena postala sinonimi za pobedu.",
+    "en":  "Women who charged shoulder to shoulder with the men, a colonel who passed into song, and field marshals whose names became synonyms for victory."
+  },
+  "bios.milunka.name": {
+    "cir": "Милунка Савић",
+    "lat": "Milunka Savić",
+    "en":  "Milunka Savić"
+  },
+  "bios.milunka.meta": {
+    "cir": "1890—1973 · наредник · Гвоздени пук",
+    "lat": "1890—1973 · narednik · Gvozdeni puk",
+    "en":  "1890—1973 · sergeant · the Iron Regiment"
+  },
+  "bios.milunka.body": {
+    "cir": "Најодликованија жена у историји ратовања. Под мушким именом отишла је уместо брата, а онда остала — јер је на бојишту вредела колико десеторица. Носилац Карађорђеве звезде, француског Ратног крста са златном палмом и Легије части. У серијалу је не видимо као споменик, већ као <em>саборца који крвари у истом блату</em>.",
+    "lat": "Najodlikovanija žena u istoriji ratovanja. Pod muškim imenom otišla je umesto brata, a onda ostala — jer je na bojištu vredela koliko desetorica. Nosilac Karađorđeve zvezde, francuskog Ratnog krsta sa zlatnom palmom i Legije časti. U serijalu je ne vidimo kao spomenik, već kao <em>saborca koji krvari u istom blatu</em>.",
+    "en":  "The most decorated woman in the history of warfare. She went in her brother's place under a man's name, then stayed — because on the battlefield she was worth ten. A bearer of the Star of Karađorđe, the French Croix de Guerre with golden palm and the Legion of Honour. In the series we see her not as a monument, but as <em>a comrade bleeding in the same mud</em>."
+  },
+  "bios.brka.name": {
+    "cir": "Миливоје Стојановић Брка",
+    "lat": "Milivoje Stojanović Brka",
+    "en":  "Milivoje Stojanović Brka"
+  },
+  "bios.brka.meta": {
+    "cir": "†1914 · пуковник · легенда пука",
+    "lat": "†1914 · pukovnik · legenda puka",
+    "en":  "†1914 · colonel · legend of the regiment"
+  },
+  "bios.brka.body": {
+    "cir": "Командант чије су име и физичка појава ушли у легенду пука. Водио је своје људе кроз Цер и Колубару, а погинуо на Кременици 1914. Његова епопеја носи цео трећи део серијала — јуриш праћен звуцима <em>„Марша на Дрину“</em>.",
+    "lat": "Komandant čije su ime i fizička pojava ušli u legendu puka. Vodio je svoje ljude kroz Cer i Kolubaru, a poginuo na Kremenici 1914. Njegova epopeja nosi ceo treći deo serijala — juriš praćen zvucima <em>„Marša na Drinu“</em>.",
+    "en":  "A commander whose name and very presence entered the regiment's legend. He led his men through Cer and Kolubara, and fell at Kremenica in 1914. His epic carries the whole third episode — a charge to the strains of <em>\"March on the Drina.\"</em>"
+  },
+  "bios.flora.name": {
+    "cir": "Флора Сандс",
+    "lat": "Flora Sands",
+    "en":  "Flora Sandes"
+  },
+  "bios.flora.meta": {
+    "cir": "1876—1956 · Енглескиња · добровољац",
+    "lat": "1876—1956 · Engleskinja · dobrovoljac",
+    "en":  "1876—1956 · Englishwoman · volunteer"
+  },
+  "bios.flora.body": {
+    "cir": "Енглеска племкиња која је дошла као болничарка, а остала као војник. Једина жена из Британије која се званично борила у Првом светском рату — и то у српској војсци, раме уз раме са Топличанима. Њен лик отвара врата страним тржиштима и показује колико је пут Гвозденог пука одјекнуо у свету.",
+    "lat": "Engleska plemkinja koja je došla kao bolničarka, a ostala kao vojnik. Jedina žena iz Britanije koja se zvanično borila u Prvom svetskom ratu — i to u srpskoj vojsci, rame uz rame sa Topličanima. Njen lik otvara vrata stranim tržištima i pokazuje koliko je put Gvozdenog puka odjeknuo u svetu.",
+    "en":  "An English gentlewoman who came as a nurse and stayed as a soldier. The only British woman to officially fight in the First World War — and she did it in the Serbian army, shoulder to shoulder with the men of Toplica. Her figure opens doors to foreign markets and shows how far the Iron Regiment's path echoed in the world."
+  },
+  "bios.misic.name": {
+    "cir": "Војвода Живојин Мишић",
+    "lat": "Vojvoda Živojin Mišić",
+    "en":  "Vojvoda Živojin Mišić"
+  },
+  "bios.misic.meta": {
+    "cir": "1855—1921 · војвода · командант Прве армије",
+    "lat": "1855—1921 · vojvoda · komandant Prve armije",
+    "en":  "1855—1921 · field marshal · commander of the First Army"
+  },
+  "bios.misic.body": {
+    "cir": "Када је све деловало изгубљено и када је војска одступала кроз снег, дао је заповест за противнапад на Колубари. Битка је завршена сломом аустроугарске Балканске армије, а Мишић је постао војвода. Његово <em>„чудо“</em> серијал приказује не као генијалност појединца, него као веру у уморног војника.",
+    "lat": "Kada je sve delovalo izgubljeno i kada je vojska odstupala kroz sneg, dao je zapovest za protivnapad na Kolubari. Bitka je završena slomom austrougarske Balkanske armije, a Mišić je postao vojvoda. Njegovo <em>„čudo“</em> serijal prikazuje ne kao genijalnost pojedinca, nego kao veru u umornog vojnika.",
+    "en":  "When all seemed lost and the army was retreating through the snow, he gave the order to counterattack at Kolubara. The battle ended with the collapse of the Austro-Hungarian Balkan Army, and Mišić was made vojvoda. The series shows his <em>\"miracle\"</em> not as the genius of one man, but as faith in the exhausted soldier."
+  },
+  "bios.stepa.name": {
+    "cir": "Војвода Степа Степановић",
+    "lat": "Vojvoda Stepa Stepanović",
+    "en":  "Vojvoda Stepa Stepanović"
+  },
+  "bios.stepa.meta": {
+    "cir": "1856—1929 · војвода · командант Друге армије",
+    "lat": "1856—1929 · vojvoda · komandant Druge armije",
+    "en":  "1856—1929 · field marshal · commander of the Second Army"
+  },
+  "bios.stepa.body": {
+    "cir": "На падинама Цера његова Друга армија однела је прву савезничку победу Великог рата — пре него што су на западу схватили да рат уопште почиње. Чин војводе добио је на самом бојишту. Скроман до краја, остао је симбол команданта који дели судбину са својим људима.",
+    "lat": "Na padinama Cera njegova Druga armija odnela je prvu savezničku pobedu Velikog rata — pre nego što su na zapadu shvatili da rat uopšte počinje. Čin vojvode dobio je na samom bojištu. Skroman do kraja, ostao je simbol komandanta koji deli sudbinu sa svojim ljudima.",
+    "en":  "On the slopes of Cer his Second Army won the first Allied victory of the Great War — before the West had even grasped the war had begun. He earned the rank of vojvoda on the battlefield itself. Modest to the end, he remained the symbol of a commander who shares his men's fate."
+  },
+  "bios.bojovic.name": {
+    "cir": "Војвода Петар Бојовић",
+    "lat": "Vojvoda Petar Bojović",
+    "en":  "Vojvoda Petar Bojović"
+  },
+  "bios.bojovic.meta": {
+    "cir": "1858—1945 · војвода · командант на Кајмакчалану",
+    "lat": "1858—1945 · vojvoda · komandant na Kajmakčalanu",
+    "en":  "1858—1945 · field marshal · commander at Kajmakčalan"
+  },
+  "bios.bojovic.body": {
+    "cir": "Под његовом командом, на 2.521 метар висине, Прва армија је турским бајонетом и кундаком узела највиши врх Солунског фронта. После четири дана борбе прса у прса, Прва пешадијска бригада уписала се у историју — <em>отада је Гвоздени пук</em>.",
+    "lat": "Pod njegovom komandom, na 2.521 metar visine, Prva armija je turskim bajonetom i kundakom uzela najviši vrh Solunskog fronta. Posle četiri dana borbe prsa u prsa, Prva pešadijska brigada upisala se u istoriju — <em>otada je Gvozdeni puk</em>.",
+    "en":  "Under his command, at 2,521 meters, the First Army took the highest peak of the Salonika Front with bayonet and rifle-butt. After four days of hand-to-hand fighting, the First Infantry Brigade wrote itself into history — <em>from then on, the Iron Regiment</em>."
+  },
+  "bios.aleksandar.name": {
+    "cir": "Регент Александар Карађорђевић",
+    "lat": "Regent Aleksandar Karađorđević",
+    "en":  "Regent Alexander Karađorđević"
+  },
+  "bios.aleksandar.meta": {
+    "cir": "1888—1934 · регент · врховни командант",
+    "lat": "1888—1934 · regent · vrhovni komandant",
+    "en":  "1888—1934 · regent · supreme commander"
+  },
+  "bios.aleksandar.body": {
+    "cir": "Врховни командант који је остао са војском и у најцрњим данима повлачења преко Албаније. Симбол отпора и каснији <em>„Уједињитељ“</em>. У серијалу је присутан као далека, али стална тачка ослонца — глас државе која ни у изгнанству није престала да постоји.",
+    "lat": "Vrhovni komandant koji je ostao sa vojskom i u najcrnjim danima povlačenja preko Albanije. Simbol otpora i kasniji <em>„Ujedinitelj“</em>. U serijalu je prisutan kao daleka, ali stalna tačka oslonca — glas države koja ni u izgnanstvu nije prestala da postoji.",
+    "en":  "The supreme commander who stayed with the army even in the blackest days of the retreat across Albania. A symbol of resistance and, later, <em>\"the Unifier.\"</em> In the series he is present as a distant but constant anchor — the voice of a state that did not cease to exist even in exile."
+  },
+
+  "gallery.eyebrow": {
+    "cir": "Визуелни метод",
+    "lat": "Vizuelni metod",
+    "en":  "Visual method"
+  },
+  "gallery.title": {
+    "cir": "Први српски <em>АИ документарац.</em>",
+    "lat": "Prvi srpski <em>AI dokumentarac.</em>",
+    "en":  "Serbia's first <em>AI documentary.</em>"
+  },
+  "gallery.lead": {
+    "cir": "Уместо хиљаду статиста — генеративна вештачка интелигенција под строгом супервизијом историчара. Архивски кадар враћамо у покрет, а изгубљене битке рекреирамо у 4К резолуцији.",
+    "lat": "Umesto hiljadu statista — generativna veštačka inteligencija pod strogom supervizijom istoričara. Arhivski kadar vraćamo u pokret, a izgubljene bitke rekreiramo u 4K rezoluciji.",
+    "en":  "Instead of a thousand extras — generative artificial intelligence under strict historian supervision. We bring archival footage back into motion and recreate lost battles in 4K."
+  },
+  "gallery.demo.eyebrow": {
+    "cir": "Архив → екран",
+    "lat": "Arhiv → ekran",
+    "en":  "Archive → screen"
+  },
+  "gallery.demo.title": {
+    "cir": "Иста фотографија, <em>враћена у живот.</em>",
+    "lat": "Ista fotografija, <em>vraćena u život.</em>",
+    "en":  "The same photograph, <em>brought back to life.</em>"
+  },
+  "gallery.demo.p1": {
+    "cir": "Полазимо од оригиналне грађе — депеша, фотографија, ратних дневника. Свака сцена има документарни корен пре него што добије боју, покрет и звук.",
+    "lat": "Polazimo od originalne građe — depeša, fotografija, ratnih dnevnika. Svaka scena ima dokumentarni koren pre nego što dobije boju, pokret i zvuk.",
+    "en":  "We start from original material — dispatches, photographs, war diaries. Every scene has a documentary root before it gains color, motion and sound."
+  },
+  "gallery.demo.p2": {
+    "cir": "Десна страна није машта — то је иста сцена коју АИ оживљава тек пошто историчар потврди сваки детаљ униформе, оружја и терена.",
+    "lat": "Desna strana nije mašta — to je ista scena koju AI oživljava tek pošto istoričar potvrdi svaki detalj uniforme, oružja i terena.",
+    "en":  "The right side is not invention — it is the same scene, which AI revives only after a historian has confirmed every detail of uniform, weapon and terrain."
+  },
+  "gallery.demo.before": {
+    "cir": "Архив · 1916.",
+    "lat": "Arhiv · 1916.",
+    "en":  "Archive · 1916"
+  },
+  "gallery.demo.after": {
+    "cir": "4К рекреација",
+    "lat": "4K rekreacija",
+    "en":  "4K recreation"
+  },
+  "gallery.method.eyebrow": {
+    "cir": "Како настаје кадар",
+    "lat": "Kako nastaje kadar",
+    "en":  "How a shot is made"
+  },
+  "gallery.method.title": {
+    "cir": "Четири корака <em>до сваке сцене.</em>",
+    "lat": "Četiri koraka <em>do svake scene.</em>",
+    "en":  "Four steps <em>to every scene.</em>"
+  },
+  "gallery.method.lead": {
+    "cir": "Технологија је алат, не аутор. Свака фаза пролази кроз руке струке.",
+    "lat": "Tehnologija je alat, ne autor. Svaka faza prolazi kroz ruke struke.",
+    "en":  "Technology is a tool, not the author. Every stage passes through expert hands."
+  },
+  "gallery.method.m1.title": {
+    "cir": "Архивско истраживање",
+    "lat": "Arhivsko istraživanje",
+    "en":  "Archival research"
+  },
+  "gallery.method.m1.body": {
+    "cir": "Историчари и архивисти прикупљају депеше, фотографије и сведочанства за сваку сцену.",
+    "lat": "Istoričari i arhivisti prikupljaju depeše, fotografije i svedočanstva za svaku scenu.",
+    "en":  "Historians and archivists gather dispatches, photographs and testimonies for each scene."
+  },
+  "gallery.method.m2.title": {
+    "cir": "АИ за атмосферу",
+    "lat": "AI za atmosferu",
+    "en":  "AI for atmosphere"
+  },
+  "gallery.method.m2.body": {
+    "cir": "Дим, магла, силуете у даљини и масовни јуриши — све што би тражило хиљаду статиста.",
+    "lat": "Dim, magla, siluete u daljini i masovni juriši — sve što bi tražilo hiljadu statista.",
+    "en":  "Smoke, mist, distant silhouettes and mass charges — everything that would otherwise need a thousand extras."
+  },
+  "gallery.method.m3.title": {
+    "cir": "Прави људи у крупном плану",
+    "lat": "Pravi ljudi u krupnom planu",
+    "en":  "Real people in close-up"
+  },
+  "gallery.method.m3.body": {
+    "cir": "Лица, емоције и кључни дијалози снимају се са правим глумцима и аутентичном реквизитом.",
+    "lat": "Lica, emocije i ključni dijalozi snimaju se sa pravim glumcima i autentičnom rekvizitom.",
+    "en":  "Faces, emotion and key dialogue are filmed with real actors and authentic props."
+  },
+  "gallery.method.m4.title": {
+    "cir": "Супервизија и постпродукција",
+    "lat": "Supervizija i postprodukcija",
+    "en":  "Supervision and post"
+  },
+  "gallery.method.m4.body": {
+    "cir": "Историчар потврђује сваки кадар; финиш је 4К, Dolby Atmos и „Марш на Дрину“ у савременој оркестрацији.",
+    "lat": "Istoričar potvrđuje svaki kadar; finiš je 4K, Dolby Atmos i „Marš na Drinu“ u savremenoj orkestraciji.",
+    "en":  "A historian signs off on every frame; the finish is 4K, Dolby Atmos and \"March on the Drina\" in a modern orchestration."
+  },
+  "gallery.scenes.eyebrow": {
+    "cir": "Кадрови у изради",
+    "lat": "Kadrovi u izradi",
+    "en":  "Shots in the making"
+  },
+  "gallery.scenes.title": {
+    "cir": "Сцене <em>које рекреирамо.</em>",
+    "lat": "Scene <em>koje rekreiramo.</em>",
+    "en":  "Scenes <em>we are recreating.</em>"
+  },
+  "gallery.scenes.lead": {
+    "cir": "Преглед кључних сцена серијала. Финални кадрови биће објављени како продукција одмиче.",
+    "lat": "Pregled ključnih scena serijala. Finalni kadrovi biće objavljeni kako produkcija odmiče.",
+    "en":  "A preview of the series' key scenes. Final frames will be published as production advances."
+  },
+  "gallery.status": {
+    "cir": "У изради",
+    "lat": "U izradi",
+    "en":  "In progress"
+  },
+  "gallery.scenes.s1.title": {
+    "cir": "Ноћни јуриш на Брегалници",
+    "lat": "Noćni juriš na Bregalnici",
+    "en":  "The night assault at Bregalnica"
+  },
+  "gallery.scenes.s1.tag": {
+    "cir": "АИ атмосфера · 1913.",
+    "lat": "AI atmosfera · 1913.",
+    "en":  "AI atmosphere · 1913"
+  },
+  "gallery.scenes.s2.title": {
+    "cir": "Албанска голгота",
+    "lat": "Albanska golgota",
+    "en":  "The Albanian Golgotha"
+  },
+  "gallery.scenes.s2.tag": {
+    "cir": "Масовна сцена · 1915.",
+    "lat": "Masovna scena · 1915.",
+    "en":  "Mass scene · 1915"
+  },
+  "gallery.scenes.s3.title": {
+    "cir": "Освајање Кајмакчалана",
+    "lat": "Osvajanje Kajmakčalana",
+    "en":  "The taking of Kajmakčalan"
+  },
+  "gallery.scenes.s3.tag": {
+    "cir": "2.521 м · 1916.",
+    "lat": "2.521 m · 1916.",
+    "en":  "2,521 m · 1916"
+  },
+  "gallery.scenes.s4.title": {
+    "cir": "Форсирање Црне реке",
+    "lat": "Forsiranje Crne reke",
+    "en":  "Crossing the Crna River"
+  },
+  "gallery.scenes.s4.tag": {
+    "cir": "Играни део · 1916.",
+    "lat": "Igrani deo · 1916.",
+    "en":  "Dramatized · 1916"
+  },
+  "gallery.scenes.s5.title": {
+    "cir": "Пробој Солунског фронта",
+    "lat": "Proboj Solunskog fronta",
+    "en":  "The Salonika Front breakthrough"
+  },
+  "gallery.scenes.s5.tag": {
+    "cir": "Зора · 1918.",
+    "lat": "Zora · 1918.",
+    "en":  "Dawn · 1918"
+  },
+  "gallery.scenes.s6.title": {
+    "cir": "Улазак у ослобођени Београд",
+    "lat": "Ulazak u oslobođeni Beograd",
+    "en":  "Entry into liberated Belgrade"
+  },
+  "gallery.scenes.s6.tag": {
+    "cir": "Финале · 1918.",
+    "lat": "Finale · 1918.",
+    "en":  "Finale · 1918"
+  },
+  "gallery.cta.eyebrow": {
+    "cir": "Сарадња",
+    "lat": "Saradnja",
+    "en":  "Get involved"
+  },
+  "gallery.cta.quote": {
+    "cir": "Имате <em>архивски кадар?</em>",
+    "lat": "Imate <em>arhivski kadar?</em>",
+    "en":  "Have <em>archival footage?</em>"
+  },
+  "gallery.cta.lead": {
+    "cir": "Породичне фотографије, писма и филмови са фронта могу постати део серијала. Ако чувате такву грађу — јавите се.",
+    "lat": "Porodične fotografije, pisma i filmovi sa fronta mogu postati deo serijala. Ako čuvate takvu građu — javite se.",
+    "en":  "Family photographs, letters and films from the front can become part of the series. If you keep such material — get in touch."
+  },
+  "gallery.cta.primary": {
+    "cir": "Контакт",
+    "lat": "Kontakt",
+    "en":  "Contact"
   },
 
   "contact.eyebrow": {
-    "cir": "Контакт",
-    "lat": "Kontakt",
-    "en":  "Contact"
+    "cir": "Сарадња",
+    "lat": "Saradnja",
+    "en":  "Get involved"
   },
   "contact.title": {
+    "cir": "Спомен <em>се гради заједно.</em>",
+    "lat": "Spomen <em>se gradi zajedno.</em>",
+    "en":  "Remembrance <em>is built together.</em>"
+  },
+  "contact.lead": {
+    "cir": "„Пут Солунаца“ је отворен пројекат. Тражимо партнере, архиве, сведоке и сараднике на терену — свакога ко жели да ова прича буде испричана како заслужује.",
+    "lat": "„Put Solunaca“ je otvoren projekat. Tražimo partnere, arhive, svedoke i saradnike na terenu — svakoga ko želi da ova priča bude ispričana kako zaslužuje.",
+    "en":  "\"Put Solunaca\" is an open project. We are looking for partners, archives, witnesses and field collaborators — anyone who wants this story told the way it deserves."
+  },
+  "contact.author.eyebrow": {
+    "cir": "Аутор",
+    "lat": "Autor",
+    "en":  "Author"
+  },
+  "contact.author.name": {
+    "cir": "Немања Тонић",
+    "lat": "Nemanja Tonić",
+    "en":  "Nemanja Tonić"
+  },
+  "contact.author.role": {
+    "cir": "Аутор и идејни творац серијала",
+    "lat": "Autor i idejni tvorac serijala",
+    "en":  "Author and creator of the series"
+  },
+  "contact.author.body": {
+    "cir": "Иза „Пута Солунаца“ стоји идеја да се историја Гвозденог пука врати лицима и именима, уз помоћ струке и нове технологије. За све што се тиче пројекта — од партнерстава до архивске грађе — обратите се директно аутору.",
+    "lat": "Iza „Puta Solunaca“ stoji ideja da se istorija Gvozdenog puka vrati licima i imenima, uz pomoć struke i nove tehnologije. Za sve što se tiče projekta — od partnerstava do arhivske građe — obratite se direktno autoru.",
+    "en":  "Behind \"Put Solunaca\" is the idea of giving the history of the Iron Regiment back its faces and names, with the help of scholarship and new technology. For anything concerning the project — from partnerships to archival material — reach out to the author directly."
+  },
+  "contact.seek.eyebrow": {
+    "cir": "Кога тражимо",
+    "lat": "Koga tražimo",
+    "en":  "Who we're looking for"
+  },
+  "contact.seek.title": {
+    "cir": "Спомен <em>тражи савезнике.</em>",
+    "lat": "Spomen <em>traži saveznike.</em>",
+    "en":  "Remembrance <em>needs allies.</em>"
+  },
+  "contact.seek.lead": {
+    "cir": "Сваки од ова четири правца чини серијал већим од емисије — чини га трајним делом.",
+    "lat": "Svaki od ova četiri pravca čini serijal većim od emisije — čini ga trajnim delom.",
+    "en":  "Each of these four directions makes the series more than a show — it makes it a lasting work."
+  },
+  "contact.seek.c1.title": {
+    "cir": "Партнери и телевизије",
+    "lat": "Partneri i televizije",
+    "en":  "Partners and broadcasters"
+  },
+  "contact.seek.c1.body": {
+    "cir": "Емитери и продукцијски партнери који негују српску традицију и историју.",
+    "lat": "Emiteri i produkcijski partneri koji neguju srpsku tradiciju i istoriju.",
+    "en":  "Broadcasters and production partners who cherish Serbian tradition and history."
+  },
+  "contact.seek.c2.title": {
+    "cir": "Архиви и институције",
+    "lat": "Arhivi i institucije",
+    "en":  "Archives and institutions"
+  },
+  "contact.seek.c2.body": {
+    "cir": "Музеји, војни архиви и кинотеке са грађом о Гвозденом пуку и Солунском фронту.",
+    "lat": "Muzeji, vojni arhivi i kinoteke sa građom o Gvozdenom puku i Solunskom frontu.",
+    "en":  "Museums, military archives and film archives holding material on the Iron Regiment and the Salonika Front."
+  },
+  "contact.seek.c3.title": {
+    "cir": "Сведоци и потомци",
+    "lat": "Svedoci i potomci",
+    "en":  "Witnesses and descendants"
+  },
+  "contact.seek.c3.body": {
+    "cir": "Породице ратника које чувају писма, фотографије, ордење и предања са фронта.",
+    "lat": "Porodice ratnika koje čuvaju pisma, fotografije, ordenje i predanja sa fronta.",
+    "en":  "Soldiers' families who keep letters, photographs, medals and stories from the front."
+  },
+  "contact.seek.c4.title": {
+    "cir": "Сарадници на терену",
+    "lat": "Saradnici na terenu",
+    "en":  "Field collaborators"
+  },
+  "contact.seek.c4.body": {
+    "cir": "Чувари меморијала и водичи у Србији, Северној Македонији и Грчкој, дуж целог пута пука.",
+    "lat": "Čuvari memorijala i vodiči u Srbiji, Severnoj Makedoniji i Grčkoj, duž celog puta puka.",
+    "en":  "Memorial keepers and guides in Serbia, North Macedonia and Greece, along the regiment's entire path."
+  },
+  "contact.reach.eyebrow": {
     "cir": "Контакт",
     "lat": "Kontakt",
     "en":  "Contact"
   },
-  "contact.intro": {
-    "cir": "Форма и подаци за контакт — ускоро.",
-    "lat": "Forma i podaci za kontakt — uskoro.",
-    "en":  "Form and contact details — coming soon."
+  "contact.reach.title": {
+    "cir": "Јавите се.",
+    "lat": "Javite se.",
+    "en":  "Get in touch."
+  },
+  "contact.reach.body": {
+    "cir": "Напишите нам неколико речи о томе како желите да допринесете — и придружите се причи.",
+    "lat": "Napišite nam nekoliko reči o tome kako želite da doprinesete — i pridružite se priči.",
+    "en":  "Write us a few words about how you'd like to contribute — and join the story."
+  },
+  "contact.reach.emailLabel": {
+    "cir": "Е-пошта",
+    "lat": "E-pošta",
+    "en":  "Email"
+  },
+  "contact.reach.cta": {
+    "cir": "Пошаљите поруку",
+    "lat": "Pošaljite poruku",
+    "en":  "Send a message"
   }
 }

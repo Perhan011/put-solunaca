@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050609" />
-    <meta name="description" content="Put Solunaca — kontakt forma i podaci." />
-    <title>Put Solunaca — Kontakt</title>
+    <meta name="description" content="Put Solunaca — saradnja, partnerstva, arhivi i svedoci. Spomen se gradi zajedno." />
+    <title>Put Solunaca — Kontakt i saradnja</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,21 +16,102 @@
 
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/home.css" />
   </head>
   <body>
     <site-header class="site-header"></site-header>
 
-    <main class="container page-main">
-      <header class="page-header">
-        <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
-        <h1 data-i18n="contact.title">Kontakt</h1>
-      </header>
+    <main>
+      <!-- INTRO -->
+      <section class="section section--dark section--bordered">
+        <div class="container container-narrow">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="contact.eyebrow">Сарадња</p>
+            <h1 class="section__title" data-i18n="contact.title">
+              Спомен <em>се гради заједно.</em>
+            </h1>
+            <p class="section__lead" data-i18n="contact.lead">
+              „Пут Солунаца“ је отворен пројекат. Тражимо партнере, архиве, сведоке и сараднике на терену — свакога ко жели да ова прича буде испричана како заслужује.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <hr />
+      <!-- AUTOR -->
+      <section class="section section--elevated section--bordered">
+        <div class="container container-narrow">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="contact.author.eyebrow">Аутор</p>
+          </div>
+          <div class="author-card" data-reveal data-reveal-delay="1">
+            <div class="author-card__avatar" aria-hidden="true">НТ</div>
+            <div>
+              <p class="author-card__name" data-i18n="contact.author.name">Немања Тонић</p>
+              <p class="author-card__role" data-i18n="contact.author.role">Аутор и идејни творац серијала</p>
+              <p class="author-card__body" data-i18n="contact.author.body">
+                Иза „Пута Солунаца“ стоји идеја да се историја Гвозденог пука врати лицима и именима, уз помоћ струке и нове технологије. За све што се тиче пројекта — од партнерстава до архивске грађе — обратите се директно аутору.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <p class="lead" data-i18n="contact.intro" style="max-width: 60ch">
-        Forma i podaci za kontakt — uskoro.
-      </p>
+      <!-- KOGA TRAŽIMO -->
+      <section class="section section--dark section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="contact.seek.eyebrow">Кога тражимо</p>
+            <h2 class="section__title" data-i18n="contact.seek.title">
+              Спомен <em>тражи савезнике.</em>
+            </h2>
+            <p class="section__lead" data-i18n="contact.seek.lead">
+              Сваки од ова четири правца чини серијал већим од емисије — чини га трајним делом.
+            </p>
+          </div>
+
+          <div class="reach-grid">
+            <article class="reach-item" data-reveal data-reveal-delay="1">
+              <h3 class="reach-item__title" data-i18n="contact.seek.c1.title">Партнери и телевизије</h3>
+              <p class="reach-item__body" data-i18n="contact.seek.c1.body">Емитери и продукцијски партнери који негују српску традицију и историју.</p>
+            </article>
+            <article class="reach-item" data-reveal data-reveal-delay="2">
+              <h3 class="reach-item__title" data-i18n="contact.seek.c2.title">Архиви и институције</h3>
+              <p class="reach-item__body" data-i18n="contact.seek.c2.body">Музеји, војни архиви и кинотеке са грађом о Гвозденом пуку и Солунском фронту.</p>
+            </article>
+            <article class="reach-item" data-reveal data-reveal-delay="3">
+              <h3 class="reach-item__title" data-i18n="contact.seek.c3.title">Сведоци и потомци</h3>
+              <p class="reach-item__body" data-i18n="contact.seek.c3.body">Породице ратника које чувају писма, фотографије, ордење и предања са фронта.</p>
+            </article>
+            <article class="reach-item" data-reveal data-reveal-delay="4">
+              <h3 class="reach-item__title" data-i18n="contact.seek.c4.title">Сарадници на терену</h3>
+              <p class="reach-item__body" data-i18n="contact.seek.c4.body">Чувари меморијала и водичи у Србији, Северној Македонији и Грчкој, дуж целог пута пука.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- JAVITE SE -->
+      <section class="section section--dark">
+        <div class="container container-narrow cta">
+          <p class="eyebrow" data-reveal data-i18n="contact.reach.eyebrow">Контакт</p>
+          <h2 class="cta__quote" data-reveal data-reveal-delay="1" data-i18n="contact.reach.title">
+            Јавите се.
+          </h2>
+          <p class="cta__lead" data-reveal data-reveal-delay="2" data-i18n="contact.reach.body">
+            Напишите нам неколико речи о томе како желите да допринесете — и придружите се причи.
+          </p>
+          <div class="contact-email" data-reveal data-reveal-delay="3">
+            <span class="contact-email__label" data-i18n="contact.reach.emailLabel">Е-пошта</span>
+            <a class="contact-email__value" href="mailto:info@putsolunaca.rs">info@putsolunaca.rs</a>
+          </div>
+          <div class="cta__actions" data-reveal data-reveal-delay="3">
+            <a class="button button--accent" href="mailto:info@putsolunaca.rs">
+              <span data-i18n="contact.reach.cta">Пошаљите поруку</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <site-footer class="site-footer"></site-footer>

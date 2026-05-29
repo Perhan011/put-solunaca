@@ -4,16 +4,50 @@ import { applyScriptToElement } from "../i18n.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HERO_SEGMENTS = [
-  { key: "hero.seg1", start: 0.00, end: 0.13 },
-  { key: "hero.seg2", start: 0.17, end: 0.30 },
-  { key: "hero.seg3", start: 0.34, end: 0.48 },
-  { key: "hero.seg4", start: 0.52, end: 0.66 },
-  { key: "hero.seg5", start: 0.70, end: 0.84 },
-  { key: "hero.seg6", start: 0.88, end: 1.00 },
+// Scroll-driven hero text choreography, layered over the frame sequence.
+// Progress windows are tuned to the visual content of the 120-frame cut:
+//   0.00–0.21 ров · 0.22–0.31 јуриш · 0.32–0.41 експлозија
+//   0.42–0.83 мапа/путања · 0.84–1.00 хероични гребен
+// pos: "center" (centered title), "left"/"right" (flank the soldier).
+const HERO_TEXTS = [
+  {
+    pos: "center",
+    start: -0.06, end: 0.19, fade: 0.05,
+    lines: [
+      { tag: "p",  cls: "hero-text__kicker", key: "hero.intro.kicker" },
+      { tag: "h1", cls: "hero-text__title",  key: "hero.intro.title" },
+      { tag: "p",  cls: "hero-text__sub",    key: "hero.intro.sub" },
+    ],
+  },
+  {
+    pos: "left",
+    start: 0.225, end: 0.33, fade: 0.035,
+    lines: [{ tag: "p", cls: "hero-text__phrase", key: "hero.charge.left" }],
+  },
+  {
+    pos: "right",
+    start: 0.25, end: 0.33, fade: 0.035,
+    lines: [{ tag: "p", cls: "hero-text__phrase", key: "hero.charge.right" }],
+  },
+  {
+    pos: "left",
+    start: 0.34, end: 0.43, fade: 0.03,
+    lines: [{ tag: "p", cls: "hero-text__phrase", key: "hero.blast.left" }],
+  },
+  {
+    pos: "right",
+    start: 0.36, end: 0.43, fade: 0.03,
+    lines: [{ tag: "p", cls: "hero-text__phrase", key: "hero.blast.right" }],
+  },
+  {
+    pos: "right",
+    start: 0.87, end: 1.08, fade: 0.05,
+    lines: [
+      { tag: "p", cls: "hero-text__kicker",      key: "hero.closing.kicker" },
+      { tag: "p", cls: "hero-text__closingline", key: "hero.closing.title" },
+    ],
+  },
 ];
-
-const SEG_FADE = 0.04;
 
 // City pin markers shown over the map shots (Шот C → Шот D, progress ~0.40–0.78).
 // Arranged diagonally south (Solun) → north (Beograd) following Iron Regiment path.
@@ -77,10 +111,13 @@ class HeroScrollCanvas extends HTMLElement {
     });
 
     if (reducedMotion) {
-      this.loadFrame(this.frameCount - 1).then((img) => {
-        this.frames[this.frameCount - 1] = img;
-        this.currentFrameIndex = this.frameCount - 1;
+      // No scroll animation — show the opening trench frame with the title
+      // statically so the hero still reads (and stays accessible).
+      this.loadFrame(0).then((img) => {
+        this.frames[0] = img;
+        this.currentFrameIndex = 0;
         this.drawImage(img);
+        this.revealStaticIntro();
       });
       return;
     }
@@ -95,27 +132,44 @@ class HeroScrollCanvas extends HTMLElement {
     document.removeEventListener("click", this._delegatedScriptClick);
   }
 
-  updateSegments(progress) {
-    if (!this.segmentEls) return;
-    HERO_SEGMENTS.forEach((seg, i) => {
-      const el = this.segmentEls[i];
-      if (!el) return;
+  revealStaticIntro() {
+    const introInner = this.textInners?.[0];
+    if (introInner) {
+      introInner.style.opacity = "1";
+      introInner.style.transform = "none";
+    }
+  }
 
-      const inWindow = progress >= seg.start && progress <= seg.end;
-      let opacity = 0;
-      let translateY = 24;
+  updateOverlay(progress) {
+    // Scroll-driven text blocks: fade + directional drift per window.
+    if (this.textInners) {
+      HERO_TEXTS.forEach((def, i) => {
+        const inner = this.textInners[i];
+        if (!inner) return;
 
-      if (inWindow) {
-        const fadeIn = (progress - seg.start) / SEG_FADE;
-        const fadeOut = (seg.end - progress) / SEG_FADE;
-        const eased = Math.max(0, Math.min(1, Math.min(fadeIn, fadeOut)));
-        opacity = eased;
-        translateY = (1 - eased) * 24 * (progress < (seg.start + seg.end) / 2 ? 1 : -1);
-      }
+        let opacity = 0;
+        if (progress >= def.start && progress <= def.end) {
+          const fadeIn = (progress - def.start) / def.fade;
+          const fadeOut = (def.end - progress) / def.fade;
+          opacity = Math.max(0, Math.min(1, Math.min(fadeIn, fadeOut)));
+        }
 
-      el.style.opacity = opacity.toFixed(3);
-      el.style.transform = `translate(-50%, ${translateY.toFixed(1)}px)`;
-    });
+        const dist = (1 - opacity) * 26;
+        let transform;
+        if (def.pos === "left") {
+          transform = `translateX(${(-dist).toFixed(1)}px)`;
+        } else if (def.pos === "right") {
+          transform = `translateX(${dist.toFixed(1)}px)`;
+        } else {
+          const mid = (def.start + def.end) / 2;
+          const sign = progress < mid ? 1 : -1;
+          transform = `translateY(${(dist * sign).toFixed(1)}px)`;
+        }
+
+        inner.style.opacity = opacity.toFixed(3);
+        inner.style.transform = transform;
+      });
+    }
 
     // Fade hint out after any scroll
     if (this.hintEl) {
@@ -147,8 +201,17 @@ class HeroScrollCanvas extends HTMLElement {
   }
 
   renderShell() {
-    // Hero text segments removed — section content scrolls over the canvas instead.
-    const segmentMarkup = "";
+    const textMarkup = HERO_TEXTS.map(
+      (def, i) => `
+        <div class="hero-text hero-text--${def.pos}" data-text-index="${i}">
+          <div class="hero-text__inner">
+            ${def.lines
+              .map((l) => `<${l.tag} class="${l.cls}" data-i18n="${l.key}"></${l.tag}>`)
+              .join("")}
+          </div>
+        </div>
+      `
+    ).join("");
 
     const pinMarkup = HERO_PINS.map(
       (p, i) => `
@@ -171,7 +234,7 @@ class HeroScrollCanvas extends HTMLElement {
             <div class="hero-scroll__progress-bar"></div>
           </div>
           <div class="hero-scroll__text-layer">
-            ${segmentMarkup}
+            ${textMarkup}
           </div>
         </div>
         <div class="hero-scroll__hint" aria-hidden="true">
@@ -186,11 +249,11 @@ class HeroScrollCanvas extends HTMLElement {
     this.ctx = this.canvas.getContext("2d");
     this.progressBar = this.querySelector(".hero-scroll__progress-bar");
     this.progressWrap = this.querySelector(".hero-scroll__progress");
-    this.segmentEls = Array.from(this.querySelectorAll(".hero-scroll__segment"));
+    this.textInners = Array.from(this.querySelectorAll(".hero-text__inner"));
     this.pinEls = Array.from(this.querySelectorAll(".hero-scroll__pin"));
     this.hintEl = this.querySelector(".hero-scroll__hint");
 
-    // Apply current locale to segment text (and to hint)
+    // Apply current locale to hero text, pins and hint
     applyScriptToElement(this);
   }
 
@@ -354,9 +417,13 @@ class HeroScrollCanvas extends HTMLElement {
           this.drawImage(this.frames[useIndex]);
         }
 
-        this.updateSegments(self.progress);
+        this.updateOverlay(self.progress);
       },
     });
+
+    // Paint the initial overlay state so the title is visible at rest,
+    // before the visitor scrolls (onUpdate only fires once scrolling starts).
+    this.updateOverlay(this.scrollTrigger.progress || 0);
   }
 }
 

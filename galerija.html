@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050609" />
-    <meta name="description" content="Put Solunaca — galerija AI restauriranih slika i videa sa Solunskog fronta." />
-    <title>Put Solunaca — Galerija</title>
+    <meta name="description" content="Put Solunaca — vizuelni metod prvog srpskog AI dokumentarca: arhivski kadar vraćen u pokret i izgubljene bitke rekreirane u 4K." />
+    <title>Put Solunaca — Galerija i vizuelni metod</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,21 +16,173 @@
 
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/home.css" />
   </head>
   <body>
     <site-header class="site-header"></site-header>
 
-    <main class="container page-main">
-      <header class="page-header">
-        <p class="eyebrow" data-i18n="gallery.eyebrow">Galerija</p>
-        <h1 data-i18n="gallery.title">Slike i video</h1>
-      </header>
+    <main>
+      <!-- INTRO -->
+      <section class="section section--dark section--bordered">
+        <div class="container container-narrow">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="gallery.eyebrow">Визуелни метод</p>
+            <h1 class="section__title" data-i18n="gallery.title">
+              Први српски <em>АИ документарац.</em>
+            </h1>
+            <p class="section__lead" data-i18n="gallery.lead">
+              Уместо хиљаду статиста — генеративна вештачка интелигенција под строгом супервизијом историчара. Архивски кадар враћамо у покрет, а изгубљене битке рекреирамо у 4К резолуцији.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <hr />
+      <!-- ARHIV → EKRAN (pre/posle) -->
+      <section class="section section--elevated section--bordered">
+        <div class="container">
+          <div class="prepost">
+            <div class="prepost__copy" data-reveal>
+              <p class="eyebrow" data-i18n="gallery.demo.eyebrow">Архив → екран</p>
+              <h2 class="section__title" data-i18n="gallery.demo.title">
+                Иста фотографија, <em>враћена у живот.</em>
+              </h2>
+              <p data-i18n="gallery.demo.p1">
+                Полазимо од оригиналне грађе — депеша, фотографија, ратних дневника. Свака сцена има документарни корен пре него што добије боју, покрет и звук.
+              </p>
+              <p data-i18n="gallery.demo.p2">
+                Десна страна није машта — то је иста сцена коју АИ оживљава тек пошто историчар потврди сваки детаљ униформе, оружја и терена.
+              </p>
+            </div>
 
-      <p class="lead" data-i18n="gallery.intro" style="max-width: 60ch">
-        AI restaurirani kadrovi sa fronta — uskoro.
-      </p>
+            <div class="prepost__demo" data-reveal data-reveal-delay="2" aria-hidden="true">
+              <div class="prepost__half prepost__half--before" data-i18n="gallery.demo.before">Архив · 1916.</div>
+              <div class="prepost__half prepost__half--after" data-i18n="gallery.demo.after">4К рекреација</div>
+              <div class="prepost__divider"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KAKO NASTAJE KADAR -->
+      <section class="section section--dark section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="gallery.method.eyebrow">Како настаје кадар</p>
+            <h2 class="section__title" data-i18n="gallery.method.title">
+              Четири корака <em>до сваке сцене.</em>
+            </h2>
+            <p class="section__lead" data-i18n="gallery.method.lead">
+              Технологија је алат, не аутор. Свака фаза пролази кроз руке струке.
+            </p>
+          </div>
+
+          <div class="reach-grid">
+            <article class="reach-item" data-reveal data-reveal-delay="1">
+              <h3 class="reach-item__title" data-i18n="gallery.method.m1.title">Архивско истраживање</h3>
+              <p class="reach-item__body" data-i18n="gallery.method.m1.body">Историчари и архивисти прикупљају депеше, фотографије и сведочанства за сваку сцену.</p>
+            </article>
+            <article class="reach-item" data-reveal data-reveal-delay="2">
+              <h3 class="reach-item__title" data-i18n="gallery.method.m2.title">АИ за атмосферу</h3>
+              <p class="reach-item__body" data-i18n="gallery.method.m2.body">Дим, магла, силуете у даљини и масовни јуриши — све што би тражило хиљаду статиста.</p>
+            </article>
+            <article class="reach-item" data-reveal data-reveal-delay="3">
+              <h3 class="reach-item__title" data-i18n="gallery.method.m3.title">Прави људи у крупном плану</h3>
+              <p class="reach-item__body" data-i18n="gallery.method.m3.body">Лица, емоције и кључни дијалози снимају се са правим глумцима и аутентичном реквизитом.</p>
+            </article>
+            <article class="reach-item" data-reveal data-reveal-delay="4">
+              <h3 class="reach-item__title" data-i18n="gallery.method.m4.title">Супервизија и постпродукција</h3>
+              <p class="reach-item__body" data-i18n="gallery.method.m4.body">Историчар потврђује сваки кадар; финиш је 4К, Dolby Atmos и „Марш на Дрину“ у савременој оркестрацији.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE U IZRADI -->
+      <section class="section section--elevated section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="gallery.scenes.eyebrow">Кадрови у изради</p>
+            <h2 class="section__title" data-i18n="gallery.scenes.title">
+              Сцене <em>које рекреирамо.</em>
+            </h2>
+            <p class="section__lead" data-i18n="gallery.scenes.lead">
+              Преглед кључних сцена серијала. Финални кадрови биће објављени како продукција одмиче.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-tile" data-reveal data-reveal-delay="1">
+              <span class="gallery-tile__status"><span data-i18n="gallery.status">У изради</span></span>
+              <div class="gallery-tile__cap">
+                <p class="gallery-tile__label" data-i18n="gallery.scenes.s1.title">Ноћни јуриш на Брегалници</p>
+                <p class="gallery-tile__tag" data-i18n="gallery.scenes.s1.tag">АИ атмосфера · 1913.</p>
+              </div>
+            </article>
+
+            <article class="gallery-tile" data-reveal data-reveal-delay="2">
+              <span class="gallery-tile__status"><span data-i18n="gallery.status">У изради</span></span>
+              <div class="gallery-tile__cap">
+                <p class="gallery-tile__label" data-i18n="gallery.scenes.s2.title">Албанска голгота</p>
+                <p class="gallery-tile__tag" data-i18n="gallery.scenes.s2.tag">Масовна сцена · 1915.</p>
+              </div>
+            </article>
+
+            <article class="gallery-tile" data-reveal data-reveal-delay="3">
+              <span class="gallery-tile__status"><span data-i18n="gallery.status">У изради</span></span>
+              <div class="gallery-tile__cap">
+                <p class="gallery-tile__label" data-i18n="gallery.scenes.s3.title">Освајање Кајмакчалана</p>
+                <p class="gallery-tile__tag" data-i18n="gallery.scenes.s3.tag">2.521 м · 1916.</p>
+              </div>
+            </article>
+
+            <article class="gallery-tile" data-reveal data-reveal-delay="1">
+              <span class="gallery-tile__status"><span data-i18n="gallery.status">У изради</span></span>
+              <div class="gallery-tile__cap">
+                <p class="gallery-tile__label" data-i18n="gallery.scenes.s4.title">Форсирање Црне реке</p>
+                <p class="gallery-tile__tag" data-i18n="gallery.scenes.s4.tag">Играни део · 1916.</p>
+              </div>
+            </article>
+
+            <article class="gallery-tile" data-reveal data-reveal-delay="2">
+              <span class="gallery-tile__status"><span data-i18n="gallery.status">У изради</span></span>
+              <div class="gallery-tile__cap">
+                <p class="gallery-tile__label" data-i18n="gallery.scenes.s5.title">Пробој Солунског фронта</p>
+                <p class="gallery-tile__tag" data-i18n="gallery.scenes.s5.tag">Зора · 1918.</p>
+              </div>
+            </article>
+
+            <article class="gallery-tile" data-reveal data-reveal-delay="3">
+              <span class="gallery-tile__status"><span data-i18n="gallery.status">У изради</span></span>
+              <div class="gallery-tile__cap">
+                <p class="gallery-tile__label" data-i18n="gallery.scenes.s6.title">Улазак у ослобођени Београд</p>
+                <p class="gallery-tile__tag" data-i18n="gallery.scenes.s6.tag">Финале · 1918.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--dark">
+        <div class="container container-narrow cta">
+          <p class="eyebrow" data-reveal data-i18n="gallery.cta.eyebrow">Сарадња</p>
+          <h2 class="cta__quote" data-reveal data-reveal-delay="1" data-i18n="gallery.cta.quote">
+            Имате <em>архивски кадар?</em>
+          </h2>
+          <p class="cta__lead" data-reveal data-reveal-delay="2" data-i18n="gallery.cta.lead">
+            Породичне фотографије, писма и филмови са фронта могу постати део серијала. Ако чувате такву грађу — јавите се.
+          </p>
+          <div class="cta__actions" data-reveal data-reveal-delay="3">
+            <a class="button button--accent" href="/kontakt.html">
+              <span data-i18n="gallery.cta.primary">Контакт</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="button button--ghost" href="/biografije.html">
+              <span data-i18n="nav.biographies">Биографије</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <site-footer class="site-footer"></site-footer>

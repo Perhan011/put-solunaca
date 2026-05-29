@@ -165,7 +165,136 @@ hero-scroll-canvas {
   pointer-events: none;
 }
 
-/* Tekst segmenti uklonjeni — sadržaj sekcija (.home > .section) sada se kreće preko canvasa. */
+/* === Scroll-driven hero text === */
+/* Each block spans the full hero; alignment decides where the copy sits so it
+   frames the soldier in the center of the cut. JS animates only .__inner. */
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(var(--space-6), 8vw, var(--space-11));
+}
+
+.hero-text--center { justify-content: center; text-align: center; }
+.hero-text--left   { justify-content: flex-start; text-align: left; }
+.hero-text--right  { justify-content: flex-end; text-align: right; }
+
+.hero-text__inner {
+  opacity: 0;
+  max-width: min(92vw, 60rem);
+  will-change: opacity, transform;
+}
+
+.hero-text--left .hero-text__inner,
+.hero-text--right .hero-text__inner {
+  max-width: min(70vw, 30rem);
+}
+
+/* Accent tick above the flanking phrases — brand red */
+.hero-text--left .hero-text__inner::before,
+.hero-text--right .hero-text__inner::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-bottom: var(--space-4);
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(158, 27, 50, 0.6);
+}
+.hero-text--right .hero-text__inner::before { margin-left: auto; }
+
+.hero-text__kicker {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: clamp(var(--fs-xs), 1.4vw, var(--fs-sm));
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg);
+  opacity: 0.85;
+  margin: 0 0 var(--space-4);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+.hero-text--center .hero-text__kicker::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 2px;
+  margin: var(--space-3) auto 0;
+  background: var(--accent);
+}
+
+.hero-text__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.75rem, 9vw, var(--fs-6xl));
+  line-height: 0.98;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+  margin: 0;
+  text-shadow:
+    0 2px 18px rgba(0, 0, 0, 0.85),
+    0 0 64px rgba(5, 6, 9, 0.6);
+}
+
+.hero-text__sub {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: clamp(var(--fs-base), 2.2vw, var(--fs-md));
+  color: var(--fg);
+  opacity: 0.9;
+  margin: var(--space-5) 0 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Flanking phrases on the charge + explosion shots */
+.hero-text__phrase {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(1.5rem, 4.4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+  margin: 0;
+  white-space: pre-line;
+  text-shadow:
+    0 2px 14px rgba(0, 0, 0, 0.95),
+    0 0 48px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text__closingline {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.75rem, 5vw, var(--fs-3xl));
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-white);
+  margin: var(--space-3) 0 0;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
+}
+
+/* Mobile: stack the L/R split vertically (top vs bottom) so the two phrases
+   never collide on a narrow screen. */
+@media (max-width: 767px) {
+  .hero-text { padding: 0 var(--space-6); }
+
+  .hero-text--left,
+  .hero-text--right {
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-text--left  { align-items: flex-start; padding-top: 22vh; }
+  .hero-text--right { align-items: flex-end;   padding-bottom: 22vh; }
+
+  .hero-text--left .hero-text__inner,
+  .hero-text--right .hero-text__inner { max-width: 86vw; }
+
+  .hero-text--left .hero-text__inner::before,
+  .hero-text--right .hero-text__inner::before {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .hero-scroll__hint {
   position: absolute;
