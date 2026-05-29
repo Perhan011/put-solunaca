@@ -5,7 +5,7 @@ import { applyScriptToElement } from "../i18n.js";
 gsap.registerPlugin(ScrollTrigger);
 
 // Bump when the hero frame sequence is regenerated (busts stale caches).
-const FRAME_VERSION = "3";
+const FRAME_VERSION = "4";
 
 // Scroll-driven hero text choreography, layered over the frame sequence.
 // Progress windows are tuned to the visual content of the 120-frame cut:
