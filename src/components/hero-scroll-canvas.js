@@ -5,7 +5,7 @@ import { applyScriptToElement } from "../i18n.js";
 gsap.registerPlugin(ScrollTrigger);
 
 // Bump when the hero frame sequence is regenerated (busts stale caches).
-const FRAME_VERSION = "4";
+const FRAME_VERSION = "5";
 
 // Scroll-driven hero text choreography, layered over the frame sequence.
 // Progress windows are tuned to the visual content of the 120-frame cut:
@@ -53,24 +53,26 @@ const HERO_TEXTS = [
 ];
 
 // City pin markers shown over the map shots (Шот C → Шот D, progress ~0.40–0.78).
-// Arranged diagonally south (Solun) → north (Beograd) following Iron Regiment path.
+// Placed along the central river valley, south (Solun, bottom) → north (Beograd,
+// top), so the route hugs the river instead of cutting straight across mountains.
 // All pins must fade out before Шот E (heroic ridge shot) begins at progress 0.80.
 const HERO_PINS = [
-  { key: "hero.pin.solun",   x: "14%", y: "78%", appearAt: 0.42, hideAt: 0.74 },
-  { key: "hero.pin.skoplje", x: "32%", y: "62%", appearAt: 0.50, hideAt: 0.74 },
-  { key: "hero.pin.nis",     x: "54%", y: "44%", appearAt: 0.58, hideAt: 0.74 },
-  { key: "hero.pin.beograd", x: "76%", y: "26%", appearAt: 0.64, hideAt: 0.74 },
+  { key: "hero.pin.solun",   x: "42%", y: "88%", appearAt: 0.43, hideAt: 0.74 },
+  { key: "hero.pin.skoplje", x: "45%", y: "71%", appearAt: 0.51, hideAt: 0.74 },
+  { key: "hero.pin.nis",     x: "53%", y: "60%", appearAt: 0.56, hideAt: 0.74 },
+  { key: "hero.pin.beograd", x: "56%", y: "8%",  appearAt: 0.66, hideAt: 0.74 },
 ];
 
 const PIN_FADE_IN = 0.04;
 const PIN_FADE_OUT = 0.04;
 
-// Smooth route curve through the four city pins (same %-coordinate space):
-// solun (14,78) → skoplje (32,62) → niš (54,44) → beograd (76,26).
+// Winding route that follows the river valley up through the four city pins
+// (same %-coordinate space): solun (42,88) → skoplje (45,71) → niš (53,60) →
+// beograd (56,8). It bows right in the upper stretch like the real river bend.
 // viewBox is 0–100 on both axes, stretched to the viewport (preserveAspectRatio
 // none), so these coordinates line up with the pin x%/y% positions.
 const ROUTE_PATH_D =
-  "M 14 78 C 21 73 26 68 32 62 C 40 55 47 51 54 44 C 62 37 69 32 76 26";
+  "M 42 88 C 41 82 42 76 45 71 C 48 67 50 63 53 60 C 58 52 61 42 59 32 C 57 20 55 14 56 8";
 
 // The route "draws" across this scroll window, then fades before Шот E.
 const ROUTE_DRAW_START = 0.42;
@@ -222,8 +224,9 @@ class HeroScrollCanvas extends HTMLElement {
       // easeInOutQuad — accelerates then settles, like a tracing pen.
       const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
-      // Reveal clip grows in x from the first pin (~14) past the last (~76).
-      this.routeRevealEl.setAttribute("width", (16 + eased * 64).toFixed(2));
+      // Reveal clip wipes upward: its top edge climbs from below Solun (y~92)
+      // to the top (y~0), drawing the route bottom→top as the path is vertical.
+      this.routeRevealEl.setAttribute("y", (92 * (1 - eased)).toFixed(2));
 
       let opacity = 0;
       if (progress >= ROUTE_DRAW_START - 0.02 && progress <= ROUTE_FADE_START) {
@@ -263,7 +266,7 @@ class HeroScrollCanvas extends HTMLElement {
         <div class="hero-scroll__vignette" aria-hidden="true"></div>
         <svg class="hero-scroll__route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <clipPath id="hero-route-clip" clipPathUnits="userSpaceOnUse">
-            <rect class="hero-scroll__route-reveal" x="-2" y="0" width="0" height="100"></rect>
+            <rect class="hero-scroll__route-reveal" x="-5" y="92" width="110" height="200"></rect>
           </clipPath>
           <g clip-path="url(#hero-route-clip)">
             <path class="hero-scroll__route-casing" d="${ROUTE_PATH_D}" vector-effect="non-scaling-stroke"></path>
