@@ -3,7 +3,14 @@ import "./components/site-footer.js";
 import "./components/hero-scroll-canvas.js";
 import { initScriptToggle } from "./i18n.js";
 
-requestAnimationFrame(initScriptToggle);
+// Init i18n directly — module scripts are deferred, so the DOM is already
+// parsed here. Avoid requestAnimationFrame: rAF callbacks are paused in
+// background/hidden tabs, which would leave the toggle unwired.
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initScriptToggle);
+} else {
+  initScriptToggle();
+}
 
 // === Scroll reveal — fade elements into view as they enter viewport ===
 // Uses requestAnimationFrame poll — robust across browsers and embedded preview environments

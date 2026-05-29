@@ -30,6 +30,17 @@ body {
   text-rendering: optimizeLegibility;
   min-height: 100vh;
   overflow-x: hidden;
+  /* Gladak fade-in kada i18n ukloni .i18n-pending sa <html> (vidi flash guard niže). */
+  transition: opacity 0.2s ease;
+}
+
+/* === i18n flash guard ===
+   Statički HTML je pisan ćirilicom, pa domaći (ćirilični) posetioci vide sadržaj
+   odmah — bez skoka. Inline skripta u <head> doda .i18n-pending na <html> SAMO kada
+   treba prevod (en/lat); tada krijemo telo dok i18n.js ne primeni pismo i ukloni klasu.
+   Fallback tajmer u inline skripti garantuje da se sadržaj uvek prikaže. */
+html.i18n-pending body {
+  opacity: 0;
 }
 
 /* === ATMOSFERA — papir + dim u pozadini === */

@@ -1,9 +1,42 @@
 <!doctype html>
-<html lang="sr-Latn" data-script="lat">
+<html lang="sr-Cyrl" data-script="cir">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050609" />
+
+    <!-- i18n flash guard: odredi pismo PRE prvog iscrtavanja (domaći/ex-YU → ćirilica, strani → engleski). Mora biti usklađeno sa CIR_LANGS u src/i18n.js. -->
+    <script>
+      (function () {
+        try {
+          var KEY = "put-solunaca:script";
+          var VALID = { lat: 1, cir: 1, en: 1 };
+          var CIR = { sr: 1, bs: 1, hr: 1, me: 1, mk: 1, sl: 1, sh: 1, hbs: 1 };
+          var saved = null;
+          try { saved = localStorage.getItem(KEY); } catch (e) {}
+          var s;
+          if (saved && VALID[saved]) {
+            s = saved;
+          } else {
+            var langs = (navigator.languages && navigator.languages.length)
+              ? navigator.languages : [navigator.language || ""];
+            var domaci = false;
+            for (var i = 0; i < langs.length; i++) {
+              var base = String(langs[i] || "").toLowerCase().split("-")[0];
+              if (CIR[base]) { domaci = true; break; }
+            }
+            s = domaci ? "cir" : "en";
+          }
+          var el = document.documentElement;
+          el.setAttribute("data-script", s);
+          el.setAttribute("lang", s === "cir" ? "sr-Cyrl" : (s === "lat" ? "sr-Latn" : "en"));
+          if (s !== "cir") {
+            el.className += (el.className ? " " : "") + "i18n-pending";
+            setTimeout(function () { el.classList.remove("i18n-pending"); }, 1200);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta name="description" content="Put Solunaca — ličnosti serijala: Ljubomir Kojović, Milunka Savić, vojvode Mišić, Stepa i Bojović, Flora Sandes i regent Aleksandar." />
     <title>Put Solunaca — Biografije</title>
 
