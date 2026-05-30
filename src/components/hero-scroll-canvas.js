@@ -310,7 +310,10 @@ class HeroScrollCanvas extends HTMLElement {
   }
 
   sizeCanvas() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Cap DPR at 1.5: on 2x+ displays this cuts the canvas pixel count ~44%,
+    // making each scroll-driven frame redraw much cheaper on weaker GPUs.
+    // Negligible quality loss for a full-bleed photographic frame.
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     const w = window.innerWidth;
     const h = window.innerHeight;
     this.canvas.width = Math.round(w * dpr);

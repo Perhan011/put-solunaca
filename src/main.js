@@ -16,48 +16,43 @@ if (document.readyState === "loading") {
 }
 
 // === Scroll reveal — fade elements into view as they enter viewport ===
-// Uses requestAnimationFrame poll — robust across browsers and embedded preview environments
-// where programmatic scrolling does not always fire 'scroll' events.
+// IntersectionObserver: fires off the scroll path with no per-scroll layout
+// reads, so it stays smooth on weaker machines (the old version polled
+// getBoundingClientRect every 80ms AND on every scroll event = layout thrash).
 function initScrollReveal() {
-  window.__revealRuns = 0;
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let pending = Array.from(document.querySelectorAll("[data-reveal]"));
-  if (!pending.length) return;
-  window.__revealPending = pending.length;
+  const els = Array.from(document.querySelectorAll("[data-reveal]"));
+  if (!els.length) return;
 
-  if (reduced) {
-    pending.forEach((el) => el.classList.add("is-revealed"));
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced || !("IntersectionObserver" in window)) {
+    els.forEach((el) => el.classList.add("is-revealed"));
     return;
   }
 
-  const check = () => {
-    const triggerY = window.innerHeight * 0.9;
-    const stillPending = [];
-    for (const el of pending) {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < triggerY) {
-        el.classList.add("is-revealed");
-      } else {
-        stillPending.push(el);
+  const io = new IntersectionObserver(
+    (entries, obs) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          obs.unobserve(entry.target); // reveal once, then stop watching
+        }
       }
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.01 }
+  );
+
+  els.forEach((el) => io.observe(el));
+
+  // Safety net: in a normal foreground browser the observer reveals on-screen
+  // elements within a frame. If after 1.5s NOTHING was revealed, the observer
+  // isn't computing intersections (e.g. a non-rendered/background tab) — reveal
+  // everything so content is never stuck invisible. On every page at least one
+  // element is on screen at load, so this never wrongly fires in a real browser.
+  setTimeout(() => {
+    if (!document.querySelector("[data-reveal].is-revealed")) {
+      els.forEach((el) => el.classList.add("is-revealed"));
     }
-    pending = stillPending;
-  };
-
-  // Poll every 80 ms — robust across browsers, embedded previews, and inactive tabs.
-  // Self-cancels once all elements are revealed.
-  const intervalId = setInterval(() => {
-    check();
-    if (!pending.length) clearInterval(intervalId);
-  }, 80);
-
-  // Also listen to scroll/resize for immediate response on real user input.
-  const onChange = () => check();
-  window.addEventListener("scroll", onChange, { passive: true });
-  window.addEventListener("resize", onChange, { passive: true });
-
-  // Initial check (catches anything already in view on load).
-  check();
+  }, 1500);
 }
 
 if (document.readyState === "loading") {
