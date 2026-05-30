@@ -158,6 +158,33 @@
         </div>
       </section>
 
+      <!-- 2b. METOD — pre/posle slajder -->
+      <section class="section section--dark section--bordered">
+        <div class="container">
+          <div class="prepost">
+            <div class="prepost__copy" data-reveal>
+              <p class="eyebrow" data-i18n="gallery.demo.eyebrow">Архив → екран</p>
+              <h2 class="section__title" data-i18n="gallery.demo.title">
+                Иста фотографија, <em>враћена у живот.</em>
+              </h2>
+              <p data-i18n="gallery.demo.p1">
+                Полазимо од оригиналне грађе — депеша, фотографија, ратних дневника. Свака сцена има документарни корен пре него што добије боју, покрет и звук.
+              </p>
+              <p data-i18n="gallery.demo.p2">
+                Десна страна није машта — то је иста сцена коју АИ оживљава тек пошто историчар потврди сваки детаљ униформе, оружја и терена.
+              </p>
+            </div>
+            <before-after
+              data-reveal data-reveal-delay="1"
+              before="/compare/home-before.webp"
+              after="/compare/home-after.webp"
+              before-key="gallery.demo.before" before-label="Архив · 1916."
+              after-key="gallery.demo.after" after-label="4К рекреација"
+            ></before-after>
+          </div>
+        </div>
+      </section>
+
       <!-- 3. RAZMERE -->
       <section class="section section--dark section--bordered">
         <div class="container">
@@ -215,8 +242,8 @@
       <section class="section section--elevated section--bordered">
         <div class="container">
           <div class="guide">
-            <div class="guide__portrait" data-reveal aria-hidden="true">
-              <span class="guide__initials">ЉК</span>
+            <div class="guide__portrait" data-reveal>
+              <img src="/bios/ljuba.webp" alt="Љубомир Којовић" />
             </div>
             <div class="guide__copy" data-reveal data-reveal-delay="1">
               <p class="eyebrow" data-i18n="home.guide.eyebrow">Наш водич</p>
@@ -236,6 +263,59 @@
                 Три Карађорђеве звезде · први на листи најхрабријих · француско признање
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4b. LICNOSTI — teaser -->
+      <section class="section section--dark section--bordered">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="eyebrow" data-i18n="home.people.eyebrow">Личности</p>
+            <h2 class="section__title" data-i18n="home.people.title">
+              Лица иза <em>сваког кадра.</em>
+            </h2>
+            <p class="section__lead" data-i18n="home.people.lead">
+              Серијал прати људе са именом и презименом — од наредника Милунке до војвода који су командовали целим армијама.
+            </p>
+          </div>
+
+          <div class="people-strip" data-reveal data-reveal-delay="1">
+            <a class="person-thumb" href="/biografije.html">
+              <img class="person-thumb__img" src="/bios/milunka.webp" alt="" loading="lazy" decoding="async" />
+              <span class="person-thumb__name" data-i18n="bios.milunka.name">Милунка Савић</span>
+            </a>
+            <a class="person-thumb" href="/biografije.html">
+              <img class="person-thumb__img" src="/bios/brka.webp" alt="" loading="lazy" decoding="async" />
+              <span class="person-thumb__name" data-i18n="bios.brka.name">Миливоје Стојановић Брка</span>
+            </a>
+            <a class="person-thumb" href="/biografije.html">
+              <img class="person-thumb__img" src="/bios/flora.webp" alt="" loading="lazy" decoding="async" />
+              <span class="person-thumb__name" data-i18n="bios.flora.name">Флора Сандс</span>
+            </a>
+            <a class="person-thumb" href="/biografije.html">
+              <img class="person-thumb__img" src="/bios/misic.webp" alt="" loading="lazy" decoding="async" />
+              <span class="person-thumb__name" data-i18n="bios.misic.name">Војвода Живојин Мишић</span>
+            </a>
+            <a class="person-thumb" href="/biografije.html">
+              <img class="person-thumb__img" src="/bios/stepa.webp" alt="" loading="lazy" decoding="async" />
+              <span class="person-thumb__name" data-i18n="bios.stepa.name">Војвода Степа Степановић</span>
+            </a>
+            <a class="person-thumb" href="/biografije.html">
+              <img class="person-thumb__img" src="/bios/bojovic.webp" alt="" loading="lazy" decoding="async" />
+              <span class="person-thumb__name" data-i18n="bios.bojovic.name">Војвода Петар Бојовић</span>
+            </a>
+            <a class="person-thumb" href="/biografije.html">
+              <img class="person-thumb__img" src="/bios/aleksandar.webp" alt="" loading="lazy" decoding="async" />
+              <span class="person-thumb__name" data-i18n="bios.aleksandar.name">Регент Александар Карађорђевић</span>
+            </a>
+          </div>
+
+          <div class="cta__actions cta__actions--center" data-reveal data-reveal-delay="2">
+            <a class="button button--ghost" href="/biografije.html">
+              <span data-i18n="home.people.cta">Све биографије</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </section>

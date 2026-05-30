@@ -25,6 +25,56 @@
     "lat": "Kontakt",
     "en":  "Contact"
   },
+  "nav.donate": {
+    "cir": "Донирај",
+    "lat": "Doniraj",
+    "en":  "Donate"
+  },
+  "donate.eyebrow": {
+    "cir": "Подршка",
+    "lat": "Podrška",
+    "en":  "Support"
+  },
+  "donate.title": {
+    "cir": "Подржите пројекат",
+    "lat": "Podržite projekat",
+    "en":  "Support the project"
+  },
+  "donate.body": {
+    "cir": "„Пут Солунаца“ настаје независно, изван великих редакција. Свака подршка значи још један снимљени кадар и још једна исприповедана судбина.",
+    "lat": "„Put Solunaca“ nastaje nezavisno, izvan velikih redakcija. Svaka podrška znači još jedan snimljeni kadar i još jedna ispripovedana sudbina.",
+    "en":  "“Put Solunaca” is made independently, outside the big newsrooms. Every bit of support means one more scene filmed and one more story told."
+  },
+  "donate.note": {
+    "cir": "Подаци за директне уплате биће ускоро доступни на овом месту. До тада нас можете контактирати.",
+    "lat": "Podaci za direktne uplate biće uskoro dostupni na ovom mestu. Do tada nas možete kontaktirati.",
+    "en":  "Details for direct donations will be available here soon. Until then, you can reach out to us."
+  },
+  "donate.contact": {
+    "cir": "Контакт за подршку",
+    "lat": "Kontakt za podršku",
+    "en":  "Contact to support"
+  },
+  "home.people.eyebrow": {
+    "cir": "Личности",
+    "lat": "Ličnosti",
+    "en":  "The figures"
+  },
+  "home.people.title": {
+    "cir": "Лица иза <em>сваког кадра.</em>",
+    "lat": "Lica iza <em>svakog kadra.</em>",
+    "en":  "The faces behind <em>every frame.</em>"
+  },
+  "home.people.lead": {
+    "cir": "Серијал прати људе са именом и презименом — од наредника Милунке до војвода који су командовали целим армијама.",
+    "lat": "Serijal prati ljude sa imenom i prezimenom — od narednika Milunke do vojvoda koji su komandovali celim armijama.",
+    "en":  "The series follows people with a first and last name — from Sergeant Milunka to the field marshals who commanded entire armies."
+  },
+  "home.people.cta": {
+    "cir": "Све биографије",
+    "lat": "Sve biografije",
+    "en":  "All biographies"
+  },
 
   "hero.hint": {
     "cir": "Скролуј",

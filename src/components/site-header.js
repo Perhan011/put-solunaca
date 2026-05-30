@@ -18,10 +18,14 @@ class SiteHeader extends HTMLElement {
           </ul>
         </nav>
 
-        <div class="lang-switch" role="group" aria-label="Pismo / Language">
-          <button type="button" class="lang-switch__btn" data-script-set="lat" aria-label="Srpski (latinica)">LAT</button>
-          <button type="button" class="lang-switch__btn" data-script-set="cir" aria-label="Српски (ћирилица)">ЋИР</button>
-          <button type="button" class="lang-switch__btn" data-script-set="en"  aria-label="English">EN</button>
+        <div class="header-actions">
+          <a href="/kontakt.html" class="btn-donate" data-donate data-i18n="nav.donate">Донирај</a>
+
+          <div class="lang-switch" role="group" aria-label="Pismo / Language">
+            <button type="button" class="lang-switch__btn" data-script-set="lat" aria-label="Srpski (latinica)">LAT</button>
+            <button type="button" class="lang-switch__btn" data-script-set="cir" aria-label="Српски (ћирилица)">ЋИР</button>
+            <button type="button" class="lang-switch__btn" data-script-set="en"  aria-label="English">EN</button>
+          </div>
         </div>
       </div>
     `;

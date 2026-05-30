@@ -1,7 +1,10 @@
 import "./components/site-header.js";
 import "./components/site-footer.js";
 import "./components/hero-scroll-canvas.js";
+import "./components/before-after.js";
 import { initScriptToggle } from "./i18n.js";
+import { initLightbox } from "./components/lightbox.js";
+import { initDonate } from "./components/donate.js";
 
 // Init i18n directly — module scripts are deferred, so the DOM is already
 // parsed here. Avoid requestAnimationFrame: rAF callbacks are paused in
@@ -61,4 +64,15 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initScrollReveal);
 } else {
   initScrollReveal();
+}
+
+// Gallery lightbox + donate modal
+function initInteractions() {
+  initLightbox();
+  initDonate();
+}
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initInteractions);
+} else {
+  initInteractions();
 }
