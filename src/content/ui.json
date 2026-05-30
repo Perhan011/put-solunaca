@@ -46,14 +46,49 @@
     "en":  "“Put Solunaca” is made independently, outside the big newsrooms. Every bit of support means one more scene filmed and one more story told."
   },
   "donate.note": {
-    "cir": "Подаци за директне уплате биће ускоро доступни на овом месту. До тада нас можете контактирати.",
-    "lat": "Podaci za direktne uplate biće uskoro dostupni na ovom mestu. Do tada nas možete kontaktirati.",
-    "en":  "Details for direct donations will be available here soon. Until then, you can reach out to us."
+    "cir": "Опције за уплату биће ускоро активне.",
+    "lat": "Opcije za uplatu biće uskoro aktivne.",
+    "en":  "Payment options will be active here soon."
   },
   "donate.contact": {
-    "cir": "Контакт за подршку",
-    "lat": "Kontakt za podršku",
-    "en":  "Contact to support"
+    "cir": "Контакт",
+    "lat": "Kontakt",
+    "en":  "Contact"
+  },
+  "donate.soon": {
+    "cir": "Ускоро",
+    "lat": "Uskoro",
+    "en":  "Soon"
+  },
+  "donate.m.card.label": {
+    "cir": "Платна картица",
+    "lat": "Platna kartica",
+    "en":  "Bank card"
+  },
+  "donate.m.card.sub": {
+    "cir": "Visa · Mastercard · Maestro",
+    "lat": "Visa · Mastercard · Maestro",
+    "en":  "Visa · Mastercard · Maestro"
+  },
+  "donate.m.paypal.label": {
+    "cir": "PayPal",
+    "lat": "PayPal",
+    "en":  "PayPal"
+  },
+  "donate.m.paypal.sub": {
+    "cir": "Брзо и сигурно",
+    "lat": "Brzo i sigurno",
+    "en":  "Fast and secure"
+  },
+  "donate.m.crypto.label": {
+    "cir": "Криптовалуте",
+    "lat": "Kriptovalute",
+    "en":  "Crypto"
+  },
+  "donate.m.crypto.sub": {
+    "cir": "BTC · ETH · USDT",
+    "lat": "BTC · ETH · USDT",
+    "en":  "BTC · ETH · USDT"
   },
   "home.people.eyebrow": {
     "cir": "Личности",

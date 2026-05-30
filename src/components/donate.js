@@ -1,9 +1,42 @@
 import { applyScriptToElement } from "../i18n.js";
 
-// Donate button (header, all pages) → opens a modal. Payment method is a
-// placeholder for now; wired via event delegation so it works with the
-// component-rendered header button.
+// === Donation destinations ===========================================
+// Fill these in once the accounts exist. An empty string renders that
+// method as "coming soon" (disabled). No keys/secrets live here — these
+// are just public payment URLs (Stripe Payment Link, PayPal, crypto).
+const PAYMENT = {
+  card: "", // Stripe Payment Link (cards) → https://buy.stripe.com/...
+  paypal: "", // PayPal.me / PayPal donate link
+  crypto: "", // Crypto checkout link (Coinbase Commerce / NOWPayments / wallet)
+};
+
+const METHODS = [
+  { id: "card", labelKey: "donate.m.card.label", subKey: "donate.m.card.sub" },
+  { id: "paypal", labelKey: "donate.m.paypal.label", subKey: "donate.m.paypal.sub" },
+  { id: "crypto", labelKey: "donate.m.crypto.label", subKey: "donate.m.crypto.sub" },
+];
+
 let overlay, lastFocus;
+
+function methodMarkup(m) {
+  const href = PAYMENT[m.id];
+  const active = Boolean(href);
+  const tag = active ? "a" : "button";
+  const attrs = active
+    ? `href="${href}" target="_blank" rel="noopener noreferrer"`
+    : `type="button" disabled aria-disabled="true"`;
+  const action = active
+    ? `<span class="donate-method__arrow" aria-hidden="true">→</span>`
+    : `<span class="donate-method__soon" data-i18n="donate.soon">Ускоро</span>`;
+  return `
+    <${tag} class="donate-method${active ? "" : " donate-method--soon"}" ${attrs}>
+      <span class="donate-method__main">
+        <span class="donate-method__label" data-i18n="${m.labelKey}"></span>
+        <span class="donate-method__sub" data-i18n="${m.subKey}"></span>
+      </span>
+      ${action}
+    </${tag}>`;
+}
 
 function ensureOverlay() {
   if (overlay) return overlay;
@@ -16,19 +49,21 @@ function ensureOverlay() {
       <button type="button" class="donate-modal__close" aria-label="Zatvori" data-donate-close>&times;</button>
       <p class="eyebrow" data-i18n="donate.eyebrow">Подршка</p>
       <h2 class="donate-modal__title" id="donateTitle" data-i18n="donate.title">Подржите пројекат</h2>
-      <p class="donate-modal__body" data-i18n="donate.body">„Пут Солунаца“ настаје независно, изван великих редакција. Свака подршка значи још један снимљени кадар и још једна исприповедана судбина.</p>
-      <p class="donate-modal__note" data-i18n="donate.note">Подаци за директне уплате биће ускоро доступни на овом месту. До тада нас можете контактирати.</p>
-      <a class="button button--accent" href="/kontakt.html">
-        <span data-i18n="donate.contact">Контакт за подршку</span>
-        <span class="button__arrow" aria-hidden="true">→</span>
-      </a>
+      <p class="donate-modal__body" data-i18n="donate.body">„Пут Солунаца“ настаје независно. Свака подршка значи још један снимљени кадар.</p>
+      <div class="donate-methods">
+        ${METHODS.map(methodMarkup).join("")}
+      </div>
+      <p class="donate-modal__note">
+        <span data-i18n="donate.note">Опције за уплату ускоро. До тада нас можете контактирати.</span>
+        <a href="/kontakt.html" data-i18n="donate.contact">Контакт</a>
+      </p>
     </div>`;
   document.body.appendChild(overlay);
   overlay.addEventListener("click", (e) => {
     if (e.target.closest("[data-donate-close]")) close();
   });
   document.addEventListener("keydown", (e) => {
-    if (!overlay.hidden && e.key === "Escape") close();
+    if (overlay.classList.contains("is-open") && e.key === "Escape") close();
   });
   return overlay;
 }
