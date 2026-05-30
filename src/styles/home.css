@@ -1366,9 +1366,16 @@ before-after { display: block; }
   justify-content: center;
   padding: var(--space-5);
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.24s ease, visibility 0s linear 0.24s;
+}
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   transition: opacity 0.24s ease;
 }
-.lightbox.is-open { opacity: 1; }
 .lightbox__backdrop {
   position: absolute;
   inset: 0;
@@ -1452,9 +1459,16 @@ before-after { display: block; }
   justify-content: center;
   padding: var(--space-5);
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.24s ease, visibility 0s linear 0.24s;
+}
+.donate-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   transition: opacity 0.24s ease;
 }
-.donate-modal.is-open { opacity: 1; }
 .donate-modal__backdrop {
   position: absolute;
   inset: 0;
