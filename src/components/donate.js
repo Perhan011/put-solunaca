@@ -6,7 +6,7 @@ import { applyScriptToElement } from "../i18n.js";
 // are just public payment URLs (Stripe Payment Link, PayPal, crypto).
 const PAYMENT = {
   card: "", // Stripe Payment Link (cards) → https://buy.stripe.com/...
-  paypal: "https://paypal.me/putsolunaca", // PayPal.me link
+  paypal: "https://www.paypal.com/ncp/payment/DV5HLVHXX5JWL", // PayPal hosted checkout (no-code payment link) — guest card checkout supported
   crypto: "", // Crypto checkout link (Coinbase Commerce / NOWPayments / wallet)
 };
 
