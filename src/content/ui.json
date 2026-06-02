@@ -76,9 +76,9 @@
     "en":  "PayPal"
   },
   "donate.m.paypal.sub": {
-    "cir": "Брзо и сигурно",
-    "lat": "Brzo i sigurno",
-    "en":  "Fast and secure"
+    "cir": "Картицом или PayPal налогом",
+    "lat": "Karticom ili PayPal nalogom",
+    "en":  "Card or PayPal account"
   },
   "donate.m.crypto.label": {
     "cir": "Криптовалуте",
