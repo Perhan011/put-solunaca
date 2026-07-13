@@ -1608,7 +1608,7 @@ before-after { display: block; }
   gap: var(--space-4);
 }
 @media (min-width: 600px) { .people-strip { grid-template-columns: repeat(4, 1fr); } }
-@media (min-width: 980px) { .people-strip { grid-template-columns: repeat(7, 1fr); } }
+@media (min-width: 980px) { .people-strip { grid-template-columns: repeat(5, 1fr); } }
 .person-thumb {
   display: flex;
   flex-direction: column;

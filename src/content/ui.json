@@ -295,14 +295,14 @@
     "en":  "No heroics. No pathos. The plain numbers of the Great War — exactly as they were."
   },
   "home.numbers.n1.label": {
-    "cir": "мобилисаних Срба",
-    "lat": "mobilisanih Srba",
-    "en":  "Serbs mobilized"
+    "cir": "одазив на мобилизацију",
+    "lat": "odaziv na mobilizaciju",
+    "en":  "responded to the call"
   },
   "home.numbers.n1.note": {
-    "cir": "28% укупног становништва Краљевине Србије 1914.",
-    "lat": "28% ukupnog stanovništva Kraljevine Srbije 1914.",
-    "en":  "28% of the entire population of the Kingdom of Serbia in 1914."
+    "cir": "Гвоздени пук — најбрже мобилисана јединица у историји српске војске.",
+    "lat": "Gvozdeni puk — najbrže mobilisana jedinica u istoriji srpske vojske.",
+    "en":  "The Iron Regiment — the fastest-mobilized unit in the history of the Serbian army."
   },
   "home.numbers.n2.label": {
     "cir": "погинулих војника",
@@ -1135,6 +1135,51 @@
     "cir": "Врховни командант који је остао са војском и у најцрњим данима повлачења преко Албаније. Симбол отпора и каснији <em>„Уједињитељ“</em>. У серијалу је присутан као далека, али стална тачка ослонца — глас државе која ни у изгнанству није престала да постоји.",
     "lat": "Vrhovni komandant koji je ostao sa vojskom i u najcrnjim danima povlačenja preko Albanije. Simbol otpora i kasniji <em>„Ujedinitelj“</em>. U serijalu je prisutan kao daleka, ali stalna tačka oslonca — glas države koja ni u izgnanstvu nije prestala da postoji.",
     "en":  "The supreme commander who stayed with the army even in the blackest days of the retreat across Albania. A symbol of resistance and, later, <em>\"the Unifier.\"</em> In the series he is present as a distant but constant anchor — the voice of a state that did not cease to exist even in exile."
+  },
+  "bios.ristic.name": {
+    "cir": "Пуковник Владимир Ристић",
+    "lat": "Pukovnik Vladimir Ristić",
+    "en":  "Colonel Vladimir Ristić"
+  },
+  "bios.ristic.meta": {
+    "cir": "пуковник · командант пука пре Брке · мобилизација у Прокупљу 1912.",
+    "lat": "pukovnik · komandant puka pre Brke · mobilizacija u Prokuplju 1912.",
+    "en":  "colonel · regimental commander before Brka · 1912 mobilization in Prokuplje"
+  },
+  "bios.ristic.body": {
+    "cir": "Пре него што је пук добио име по Брки, њиме је командовао пуковник Владимир Ристић. Он је 1912. у Прокупљу преузео пук у тренутку мобилизације — на самом почетку пута који ће, годинама касније, постати Гвоздени пук. Прича почиње са њим.",
+    "lat": "Pre nego što je puk dobio ime po Brki, njime je komandovao pukovnik Vladimir Ristić. On je 1912. u Prokuplju preuzeo puk u trenutku mobilizacije — na samom početku puta koji će, godinama kasnije, postati Gvozdeni puk. Priča počinje sa njim.",
+    "en":  "Before the regiment took its name from Brka, it was commanded by Colonel Vladimir Ristić. In 1912, in Prokuplje, he took command at the moment of mobilization — right at the start of the road that, years later, would become the Iron Regiment. The story begins with him."
+  },
+  "bios.jovic.name": {
+    "cir": "Наредник Јанаћко Јовић",
+    "lat": "Narednik Janaćko Jović",
+    "en":  "Sergeant Janaćko Jović"
+  },
+  "bios.jovic.meta": {
+    "cir": "наредник · Гвоздени пук",
+    "lat": "narednik · Gvozdeni puk",
+    "en":  "sergeant · Iron Regiment"
+  },
+  "bios.jovic.body": {
+    "cir": "Наредник Гвозденог пука чија је судбина уплетена у причу Флоре Сендс — енглеске болничарке и добровољца која се у њега заљубила на бојишту. Кроз њега серијал показује да ни рат, ни различити свет из кога је Флора дошла, нису могли да зауставе људску причу усред блата и ватре.",
+    "lat": "Narednik Gvozdenog puka čija je sudbina upletena u priču Flore Sends — engleske bolničarke i dobrovoljca koja se u njega zaljubila na bojištu. Kroz njega serijal pokazuje da ni rat, ni različiti svet iz koga je Flora došla, nisu mogli da zaustave ljudsku priču usred blata i vatre.",
+    "en":  "A sergeant of the Iron Regiment whose fate became entwined with the story of Flora Sandes — the English nurse and volunteer who fell in love with him on the battlefield. Through him, the series shows that neither the war nor the different world Flora came from could stop a human story unfolding in the mud and fire."
+  },
+  "bios.milacici.name": {
+    "cir": "Браћа Милачић",
+    "lat": "Braća Milačić",
+    "en":  "The Milačić brothers"
+  },
+  "bios.milacici.meta": {
+    "cir": "петорица браће · Гвоздени пук",
+    "lat": "petorica braće · Gvozdeni puk",
+    "en":  "five brothers · Iron Regiment"
+  },
+  "bios.milacici.body": {
+    "cir": "Пет браће из исте куће, у истом пуку. У доба када је цела Топлица опанак замењивала чизмом, породица Милачић послала је на пут свих петорицу синова. Њихова прича стоји за сваку српску кућу која је у рат дала више него једног члана.",
+    "lat": "Pet braće iz iste kuće, u istom puku. U doba kada je cela Toplica opanak zamenjivala čizmom, porodica Milačić poslala je na put svih petoricu sinova. Njihova priča stoji za svaku srpsku kuću koja je u rat dala više od jednog člana.",
+    "en":  "Five brothers from the same house, in the same regiment. At a time when all of Toplica was trading peasant sandals for boots, the Milačić family sent all five sons down that road. Their story stands for every Serbian household that gave the war more than one of its own."
   },
 
   "gallery.eyebrow": {
