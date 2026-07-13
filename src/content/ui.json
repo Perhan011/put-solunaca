@@ -60,25 +60,15 @@
     "lat": "Uskoro",
     "en":  "Soon"
   },
-  "donate.m.card.label": {
-    "cir": "Платна картица",
-    "lat": "Platna kartica",
-    "en":  "Bank card"
-  },
-  "donate.m.card.sub": {
-    "cir": "Visa · Mastercard · Maestro",
-    "lat": "Visa · Mastercard · Maestro",
-    "en":  "Visa · Mastercard · Maestro"
-  },
   "donate.m.paypal.label": {
-    "cir": "PayPal",
-    "lat": "PayPal",
-    "en":  "PayPal"
+    "cir": "Картица / PayPal",
+    "lat": "Kartica / PayPal",
+    "en":  "Card / PayPal"
   },
   "donate.m.paypal.sub": {
-    "cir": "Картицом или PayPal налогом",
-    "lat": "Karticom ili PayPal nalogom",
-    "en":  "Card or PayPal account"
+    "cir": "Visa, Mastercard или PayPal — без отварања налога",
+    "lat": "Visa, Mastercard ili PayPal — bez otvaranja naloga",
+    "en":  "Visa, Mastercard, or PayPal — no account needed"
   },
   "donate.m.crypto.label": {
     "cir": "Криптовалуте",

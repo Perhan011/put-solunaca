@@ -5,13 +5,13 @@ import { applyScriptToElement } from "../i18n.js";
 // method as "coming soon" (disabled). No keys/secrets live here — these
 // are just public payment URLs (Stripe Payment Link, PayPal, crypto).
 const PAYMENT = {
-  card: "", // Stripe Payment Link (cards) → https://buy.stripe.com/...
+  // PayPal's hosted checkout accepts guest card payments too, so there's no
+  // separate "card" row — one link covers both (see donate.m.paypal.* copy).
   paypal: "https://www.paypal.com/ncp/payment/DV5HLVHXX5JWL", // PayPal hosted checkout (no-code payment link) — guest card checkout supported
   crypto: "", // Crypto checkout link (Coinbase Commerce / NOWPayments / wallet)
 };
 
 const METHODS = [
-  { id: "card", labelKey: "donate.m.card.label", subKey: "donate.m.card.sub" },
   { id: "paypal", labelKey: "donate.m.paypal.label", subKey: "donate.m.paypal.sub" },
   { id: "crypto", labelKey: "donate.m.crypto.label", subKey: "donate.m.crypto.sub" },
 ];
